@@ -1,0 +1,386 @@
+\newcommand{\OxyRedTab}[9]{%
+\begin{center}
+\begin{tikzpicture}[x=5.2em,y=1.6em]
+\foreach \x in {1,2,3} {
+	\foreach \y in {1,...,4} {
+		\node (N-\x-\y) at (\x,-\y) {\strut};
+	}
+}
+\foreach \x in {1,2,3} {
+	\fill[ETred] ($(N-\x-1)+(-2.5em,-0.7em)$) rectangle ($(N-\x-1)+(+2.5em,+0.7em)$);
+	\fill[Etablightred!50] ($(N-\x-2)+(-2.5em,-0.7em)$) rectangle ($(N-\x-2)+(+2.5em,+0.7em)$);
+	\fill[Etablightred] ($(N-\x-3)+(-2.5em,-0.7em)$) rectangle ($(N-\x-3)+(+2.5em,+0.7em)$);
+	\fill[Etablightred!50] ($(N-\x-4)+(-2.5em,-0.7em)$) rectangle ($(N-\x-4)+(+2.5em,+0.7em)$);
+}
+\node[white] at (N-1-1) {\textsf{\textbf{\strut Oxydant}}};
+\node[white] at (N-2-1) {\textsf{\textbf{\strut Réducteur}}};
+\node[white] at (N-3-1) {\textsf{\textbf{\strut P.S. Redox}}};
+\node (n-1-2) at (N-1-2) {\strut \ce{#1}};
+\node at (N-2-2) {\strut \ce{#2}};
+\node at (N-3-2) {\strut \SI{#3}{\volt}};
+\node (n-1-3) at (N-1-3) {\strut \ce{#4}};
+\node (n-2-3) at (N-2-3) {\strut \ce{#5}};
+\node at (N-3-3) {\strut \SI{#6}{\volt}};
+\node at (N-1-4) {\strut \ce{#7}};
+\node (n-2-4) at (N-2-4) {\strut \ce{#8}};
+\node at (N-3-4) {\strut \SI{#9}{\volt}};
+\draw[->] (n-1-2) -- (n-2-3);
+\draw[->] (n-1-2) -- (n-2-4);
+\draw[->] (n-1-3) -- (n-2-4);
+\end{tikzpicture}
+\end{center}}
+
+% Version 0.3 17/02/02
+% Chem figure elements
+
+% Règle du gamma #1 #2 #3 #4 #5: gamma
+\newcommand{\regledugamma}[5]{
+\begin{center}\tikz{%
+\draw[->] (-1,-1) --++(90:2) node[at end,left,align=right,text width=9em] {Pouvoir croissant\\ de l'oxydant};
+\draw[<-] (1,-1) --++(90:2) node[at start,right,align=left,text width=9em] {Pouvoir croissant\\ du réducteur};
+\begin{scope}[every node/.style={inner sep=0pt}]
+\node (O1) at (-0.4,0.55) {\strut\ce{#1}};
+\node at (0,0.55) {\strut/};
+\node (O2) at (0.4,0.55) {\strut\ce{#2}};
+\node at (-0.4,-0.55) {\strut\ce{#3}};
+\node (R) at (0,-0.55) {\strut/};
+\node at (0.4,-0.55) {\strut\ce{#4}};
+\end{scope}
+\draw (-1.15,0.55) -- (-0.85,0.55);
+\draw (-1.15,-0.55) -- (-0.85,-0.55);
+\draw[->,#5] (O1.south) to[out=-25,in=0,looseness=1.5] (R.north) to[out=180,in=215,looseness=1.5] (O2.south);
+\node at (0,1.5) {\boldosf{Règle du ``gamma''}};
+}\end{center}}
+
+% Règle du gamma {#1 #2 #3} {#4 #5 #6} #7: gamma
+\newcommand{\regledugammavalue}[7]{
+\begin{center}\tikz{%
+\draw[->] (-1,-1) --++(90:2) node[at end,left,align=right,text width=9em] {Pouvoir croissant\\ de l'oxydant} node[at end,right] {$E_0 (\si{\volt})$};
+\draw[<-] (1,-1) --++(90:2) node[at start,right,align=left,text width=9em] {Pouvoir croissant\\ du réducteur};
+\begin{scope}[every node/.style={inner sep=0pt}]
+\node (O1) at (-0.4,0.55) {\strut\ce{#1}};
+\node at (0,0.55) {\strut/};
+\node (O2) at (0.4,0.55) {\strut\ce{#2}};
+\node at (-0.4,-0.55) {\strut\ce{#4}};
+\node (R) at (0,-0.55) {\strut/};
+\node at (0.4,-0.55) {\strut\ce{#5}};
+\end{scope}
+\draw (-1.15,0.55) -- (-0.85,0.55) node[at start,left] {$#3$};
+\draw (-1.15,-0.55) -- (-0.85,-0.55) node[at start,left] {$#6$};
+\draw[->,#7] (O1.south) to[out=-25,in=0,looseness=1.5] (R.north) to[out=180,in=215,looseness=1.5] (O2.south);
+\node at (0,1.5) {\boldosf{Règle du ``gamma''}};
+}\end{center}}
+
+% Règle du gamma {#1 #2 #3} {#4 #5 #6} #7: gamma
+\newcommand{\regledugammavalueNN}[7]{
+\begin{center}\boldosf{Règle du ``gamma''}\\\tikz{%
+\draw[->] (-1,-1) --++(90:2);% node[at end,left,align=right,text width=9em] {Pouvoir croissant\\ de l'oxydant} node[at end,right] {$E_0 (\si{\volt})$};
+%\draw[<-] (1,-1) --++(90:2);% node[at start,right,align=left,text width=9em] {Pouvoir croissant\\ du réducteur};
+\begin{scope}[every node/.style={inner sep=0pt}]
+\node (O1) at (-0.4,0.55) {\strut\ce{#1}};
+\node at (0,0.55) {\strut/};
+\node (O2) at (0.4,0.55) {\strut\ce{#2}};
+\node at (-0.4,-0.55) {\strut\ce{#4}};
+\node (R) at (0,-0.55) {\strut/};
+\node at (0.4,-0.55) {\strut\ce{#5}};
+\end{scope}
+\draw (-1.15,0.55) -- (-0.85,0.55) node[at start,left] {\SI{#3}{\volt}};
+\draw (-1.15,-0.55) -- (-0.85,-0.55) node[at start,left] {\SI{#6}{\volt}};
+\draw[->,#7] (O1.south) to[out=-25,in=0,looseness=1.5] (R.north) to[out=180,in=215,looseness=1.5] (O2.south);
+%\node at (0,1.3) {\boldosf{Règle du ``gamma''}};
+}\end{center}}
+
+
+% Règle du gamma {#1 #2 #3} {#4 #5 #6} #7 delta #8: gamma
+\newcommand{\regledugammadelta}[8]{
+\begin{center}\tikz{%
+\draw[->] (-1,-1) --++(90:2);
+%\draw[<-] (1,-1) --++(90:2);
+\begin{scope}[every node/.style={inner sep=0pt}]
+\node (O1) at (-0.4,0.55) {\strut\ce{#1}};
+\node at (0,0.55) {\strut/};
+\node (O2) at (0.4,0.55) {\strut\ce{#2}};
+\node at (-0.4,-0.55) {\strut\ce{#4}};
+\node (R) at (0,-0.55) {\strut/};
+\node at (0.4,-0.55) {\strut\ce{#5}};
+\end{scope}
+\draw (-1.15,0.55) -- (-0.85,0.55) node[at start] (PT) {} node[at start,left] {\SI{#3}{\volt}};
+\draw (-1.15,-0.55) -- (-0.85,-0.55) node[at start] (PB) {} node[at start,left] {\SI{#6}{\volt}};
+\draw[<->] (PT.center) -- (PB.center) node[midway,left] {$E=\SI{#7}{\volt}$};
+\draw[->,#8] (O1.south) to[out=-25,in=0,looseness=1.5] (R.north) to[out=180,in=215,looseness=1.5] (O2.south);
+\node[text width=15em,align=center] at (-0.8,1.4) {Diagramme des potentiels standard\\ + règle du ``gamma''};
+}\end{center}}
+
+
+% Bunsen burner no flame
+\newcommand{\ChemBB}{\tikz{%
+\draw (0,0) -- (2,0) -- (2,0.2) to[bend left] (0.5,2) -- (-0.5,2) to[bend left] (-2,0.2) -- (-2,0) -- (0,0);
+\draw (-0.7,2) rectangle (0.7,2.5);
+\draw (-0.3,2.5) rectangle (0.3,6);
+\draw (0.7,2.2) rectangle (0.9,2.3);
+\draw (0.9,2.1) rectangle (1.2,2.4);
+\draw (1.2,2.1) to[out=0,in=90] (2,1) to[out=270,in=180] (2.8,0);
+\draw (1.2,2.4) to[out=0,in=90] (2.3,1) to[out=270,in=180] (2.8,0.3);
+\draw[opacity=0] (-1.2,2.4) to[out=180,in=90] (-2.3,1) to[out=270,in=0] (-2.8,0.3);
+}}
+
+% Bunsen burner with flame
+\newcommand{\ChemBBflame}{\tikz{%
+\draw (0,0) -- (2,0) -- (2,0.2) to[bend left] (0.5,2) -- (-0.5,2) to[bend left] (-2,0.2) -- (-2,0) -- (0,0);
+\draw (-0.7,2) rectangle (0.7,2.5);
+\draw (-0.1,6) to[bend left] (0,7.2) to[bend left] (0.1,6);
+\fill[gray] (-0.05,6) to[bend left] (0,6.6) to[bend left] (0.05,6);
+\draw (-0.3,2.5) rectangle (0.3,6);
+\draw (0.7,2.2) rectangle (0.9,2.3);
+\draw (0.9,2.1) rectangle (1.2,2.4);
+\draw (1.2,2.1) to[out=0,in=90] (2,1) to[out=270,in=180] (2.8,0);
+\draw (1.2,2.4) to[out=0,in=90] (2.3,1) to[out=270,in=180] (2.8,0.3);
+\draw[opacity=0] (-1.2,2.4) to[out=180,in=90] (-2.3,1) to[out=270,in=0] (-2.8,0.3);
+}}
+
+% Empty glass
+\newcommand{\ChemEG}{\tikz{%
+\draw (-0.5,7) -- (-0.5,0.5) arc (180:360:0.5) -- (0.5,7);
+}}
+
+% Glass with solution
+\newcommand{\ChemSG}[1]{\tikz{%
+\fill[#1] (-0.5,3) -- (-0.5,0.5) arc (180:360:0.5) -- (0.5,3);
+\draw (-0.5,7) -- (-0.5,0.5) arc (180:360:0.5) -- (0.5,7);
+}}
+
+% Glass with solution rotated
+\newcommand{\ChemSGrot}[1]{\tikz{%
+\fill[rotate=245,#1] (-0.5,1) -- (-0.5,0.5) arc (180:360:0.5) -- (0.5,7);
+\draw[rotate=245] (-0.5,7) -- (-0.5,0.5) arc (180:360:0.5) -- (0.5,7);
+}}
+
+% Glass with solution and tap
+\newcommand{\ChemSGT}[1]{\tikz{%
+\fill[#1] (-0.5,3) -- (-0.5,0.5) arc (180:360:0.5) -- (0.5,3);
+\fill[gray] (-0.5,5.7) rectangle (0.5,6.7);
+\draw (-0.5,7) -- (-0.5,0.5) arc (180:360:0.5) -- (0.5,7);
+}}
+
+% Glass with solution and tap
+\newcommand{\ChemSGTout}[1]{\tikz{%
+\fill[#1] (-0.5,3) -- (-0.5,0.5) arc (180:360:0.5) -- (0.5,3);
+\fill[gray] (-0.5,5.7) rectangle (0.5,6.7);
+\draw (-0.5,7) -- (-0.5,0.5) arc (180:360:0.5) -- (0.5,7);
+\fill[white] (-0.15,5.5) rectangle (0.15,7.3);
+\draw (-0.15,5.3) -- (-0.15,7.5) node[at end] (outl) {};
+\draw (0.15,5.3) -- (0.15,7.5) node[at end] (outr) {};
+}}
+
+% Free flame
+\newcommand{\ChemFlame}{\tikz{%
+\fill[gray] (0,6) to[bend left] (0,6.6) to[bend left] (0,6);
+\draw (0,6) to[bend left] (0,7.2) to[bend left] (0,6);
+}}
+
+% Empty recipient
+\newcommand{\ChemER}{\tikz{%
+\draw (0,0) -- (-2,0) --++(95:5);
+\draw (0,0) -- (2,0) --++(85:5);
+}}
+
+% Full recipient
+\newcommand{\ChemFR}[1]{\tikz{%
+\draw (0,0) -- (-2,0) --++(95:5) node[pos=0.7] (limil) {};
+\draw (0,0) -- (2,0) --++(85:5) node[pos=0.7] (limir) {};
+\begin{scope}[on background layer]
+\fill[#1] (0,0) -- (-2,0) -- (limil.center)  -- (limir.center) -- (2,0) -- (0,0);
+\end{scope}
+}}
+
+% Bicchiere
+\newcommand{\ChemBIC}[1]{\tikz{%
+\fill[gray,draw=black] (-1.2,-0.2) rectangle (1.2,0);
+\draw (0,0) -- (-1,0) --++(100:2) node[pos=0.75,inner sep=0pt] (bbicl) {};
+\draw (0,0) -- (1,0) --++(80:2) node[pos=0.75,inner sep=0pt] (bbicr) {};
+\begin{scope}[on background layer]
+\fill[#1,line width=0.3pt,draw opacity=1,draw=gray] (0,0) -- (-1,0) -- (bbicl.center) -- (bbicr.center) -- (1,0) --cycle;
+\end{scope}
+}}
+
+% Bicchiere rovesciato
+\newcommand{\ChemBICrov}[1]{\tikz{%
+\begin{scope}[rotate=-50]
+\fill[gray,draw=black] (-1.2,-0.2) rectangle (1.2,0);
+\draw (0,0) -- (-1,0) --++(100:2);
+\draw (0,0) -- (1,0) --++(80:2);
+\begin{scope}[on background layer]
+\fill[#1,line width=0.3pt,draw opacity=1,draw=gray] (0,0) -- (1,0) --++(80:2) node[at end,inner sep=0pt] (bbice) {} -- (-0.8,0) --cycle;
+\end{scope}
+\end{scope}
+}}
+
+% Bicchierino
+\newcommand{\ChemBICrino}[1]{\tikz{%
+\draw[rounded corners] (0,0) -- (-0.75,0) -++(90:2);
+\draw[rounded corners] (0,0) -- (0.75,0) -++(90:2);
+\begin{scope}[on background layer]
+\fill[#1] (0,0) to[rounded corners] (-0.75,0) -- (-0.75,1.6) --(0.75,1.6) to[rounded corners] (0.75,0) --cycle;
+\end{scope}
+}}
+
+% Bicchiere con Lame
+\newcommand{\ChemBICLame}[5]{\tikz{%
+\fill[gray,draw=black] (-1.2,-0.2) rectangle (1.2,0);
+\draw (0,0) -- (-1,0) --++(100:2) node[pos=0.75,inner sep=0pt] (bbicl) {};
+\draw (0,0) -- (1,0) --++(80:2) node[pos=0.75,inner sep=0pt] (bbicr) {};
+% Bicchiere #1
+\begin{scope}[on background layer]
+\fill[#1,line width=0.3pt,draw opacity=1,draw=gray] (0,0) -- (-1,0) -- (bbicl.center) -- (bbicr.center) -- (1,0) --cycle;
+\path[name path=ST] (bbicl.center) -- (bbicr.center);
+\end{scope}
+\begin{scope}[rotate=-30]
+\path[name path=Ll] (-0.5,0.2) -- (-0.5,3.5);
+\path[name path=Lr] (0,0.2) -- (0,3.5);
+\path[name intersections={of=ST and Ll,by=STLl}];
+\path[name intersections={of=ST and Lr,by=STLr}];
+% Full #2
+\fill[#2] (-0.5,0.2) rectangle (0,3.5);
+% Bottom #3
+\fill[#3] (-0.5,0.2) -- (STLl.center) -- (STLr.center) --(0,0.2) --cycle;
+% Top #4
+\fill[#4] (STLl.center) -- (STLr.center) --(0,3.5) --(-0.5,3.5) --cycle;
+% Bottom random #5
+\fill[#5] (-0.45,0.25) --++(40:0.2) --++(100:0.1) --++(120:0.2) --++ (30:0.1) --++(160:0.1) --++(45:0.1) --++(65:0.1) --++(175:0.1) --++(70:0.1) --++(45:0.1) --++(130:0.1) --++(100:0.1) --++(40:0.1) --++(120:0.1) -- (STLl.center) -- (STLr.center) --++(60:-0.2) --++(100:-0.1) --++(120:-0.1) --++ (40:-0.15) --++(160:-0.1) --++(45:-0.1) --++(65:-0.1)
+ --++(175:-0.1) --++(70:-0.1) --++(45:-0.1) --++(130:-0.1) --++(150:-0.1) --++(40:-0.1) --++(10:-0.1) --++(140:-0.1) --++(120:-0.1) to[rounded corners] (0,0.2) --++(150:0.2) --++(200:0.1) --cycle;
+\end{scope}
+\begin{scope}[rotate=30]
+\path (0,3.5) --(0.5,3.5);
+\end{scope}
+}}
+
+% Node 1=anchor, 2=label, 3=position, 4=contents
+\newcommand{\ChemBICnode}[4]{
+\node[anchor=#1,text width=9em,align=center,inner sep=0pt] (#2) at (#3) {#4};
+}
+
+% Copeau
+\newcommand{\ChemCopeau}[1]{\tikz{%
+\fill[#1] (-0.4,0.4) to[out=0,in=135] (0,0.2) to[out=315,in=180] (0.4,0) --++(270:0.4) to[out=180,in=315] (0,-0.2) to[out=135,in=0] (-0.4,0) --cycle;
+}}
+
+% Thermometer
+\newcommand{\ChemTherm}[2]{\tikz{%
+\fill[ETred] (0,-0.25) circle (0.3);
+\fill[ETred] (-0.06,0) rectangle (0.06,#1);
+\draw (-0.15,0) -- (-0.15,3) -- (0.15,3) -- (0.15,0) arc (60:-240:0.3);
+\foreach \n in {0,1,...,13} {\draw (0.15,{0.2+0.2*\n}) --++(180:0.15);
+\draw (0.15,{0.3+0.2*\n}) -- ++(180:0.1);}
+\node[right] at (0.15,#1) {#2};
+\node[left,opacity=0] at (-0.15,#1) {#2};
+}}
+
+% Pipetta
+\newcommand{\ChemPip}[1]{\tikz{%
+\begin{scope}[rotate=-40]
+\fill[#1] (-0.1,0) --++(90:0.75) --++(115:0.5) --++(90:1) --++(65:0.5) --++(90:0.75) --++(0:0.2) --++(90:-0.75) --++(115:-0.5) --++(90:-1) --++(65:-0.5) --++(90:-0.75);
+\fill[white,rotate=40] (0,1.1) rectangle (2.5,2.8);
+\draw (-0.2,0) --++(90:0.75) --++(115:0.5) --++(90:1) --++(65:0.5) --++(90:0.75);
+\draw (0.2,0) --++(90:0.75) --++(65:0.5) node (PipN) {} --++(90:1) --++(115:0.5) --++(90:0.75);
+\end{scope}
+\begin{scope}[rotate=40]
+\path (-0.2,0) --++(90:0.75) --++(115:0.5) --++(90:1) --++(65:0.5) --++(90:0.75);
+\path (0.2,0) --++(90:0.75) --++(65:0.5) --++(90:1) --++(115:0.5) --++(90:0.75);
+\end{scope}
+\fill[#1] (0,0) to[out=270,in=0] (0,-1) to[out=180,in=270] (0,0);
+}}
+
+% Goccia -1
+\newcommand{\ChemDrop}[1]{\tikz{%
+\fill[#1] (0,0) to[out=90,in=180] (0,1) to[out=0,in=90] (0,0);
+}}
+
+% Match
+\newcommand{\ChemMatch}{\tikz{%
+\draw[rotate=160,opacity=0] (0,0) to[bend left] (0.6,0.12) --(3,0.12) --(3,-0.12) --(0.6,-0.12) to[bend left] cycle;
+\fill[rotate=20,left color=black,right color=black!70] (0,0) to[bend left] (0.6,0.12) --(0.6,-0.12) to[bend left] cycle;
+\draw[rotate=20] (0,0) to[bend left] (0.6,0.12) --(3,0.12) --(3,-0.12) --(0.6,-0.12) to[bend left] cycle;
+\fill[gray] (0,0) to[bend left] (0,0.6) to[bend left] (0,0);
+\draw (0,0) to[bend left] (0,1.2) to[bend left] (0,0);
+}}
+
+% explosion
+\newcommand{\ChemExplo}{\tikz[rotate=10]{%
+\foreach \n in {1,...,4} {\coordinate (A\n) at ({(\n*90-45)}:1);}
+\foreach \n in {1,...,4} {\coordinate (B\n) at ({(\n*90)}:0.7);}
+\foreach \n in {1,...,4} {\coordinate (1C\n) at ({(\n*90-20)}:0.4);
+\coordinate (2C\n) at ({(\n*90+20)}:0.5);
+}
+\draw
+(A1) -- (1C1) -- (B1) -- (2C1) --
+(A2) -- (1C2) -- (B2) -- (2C2) --
+(A3) -- (1C3) -- (B3) -- (2C3) --
+(A4) -- (1C4) -- (B4) -- (2C4)
+--cycle;
+}}
+
+% Glass for pile
+\newcommand{\ChemPiGla}[1]{\tikz{%
+\fill[#1] (-2,2) -- (-2,0) -- (2,0) -- (2,2);
+\draw (-2,2) -- (2,2);
+\draw (-2,3) -- (-2,0) -- (2,0) -- (2,3);
+}}
+
+% Lame for pile
+\newcommand{\ChemPiLame}[1]{\tikz{%
+\fill[draw=black,#1] (-0.4,0) rectangle (0.4,5);
+}}
+
+% Pont for pile
+\newcommand{\ChemPiPont}{\tikz{%
+\fill[black!50] (-2,0) rectangle (-2.5,2.5) rectangle (2.5,2) rectangle (2,0);
+\node[above] at (0,2.5) {Pont électrolytique};
+}}
+
+% Pont for pile
+\newcommand{\ChemPiPontNN}{\tikz{%
+\fill[black!50] (-2,0) rectangle (-2.5,2.5) rectangle (2.5,2) rectangle (2,0);
+}}
+
+% Vase for pile
+\newcommand{\ChemPiVase}[1]{\tikz{%
+\fill[#1] (-2,-0.5) -- (-2.5,-3) -- (2.5,-3) -- (2,-0.5) --cycle;
+\fill[black!50] (-2,0) rectangle (-2.5,-3.5) rectangle (2.5,-3) rectangle (2,0);
+\node[below] at (0,-2.5) {Vase poreux};
+}}
+
+% Narrow Tube
+\newcommand{\ChemNarrTube}[1]{\tikz{%
+\draw[rounded corners] (0,0) -- (-0.85,0) --++(76:2.9)node[pos=0.65,inner sep=0pt] (bl){}--++(90:0.6)--++(104:0.15);
+\draw[rounded corners] (0,0) -- (0.85,0) --++(104:2.9)node[pos=0.65,inner sep=0pt] (br){}--++(90:0.6)--++(76:0.15);
+\begin{scope}[on background layer]
+\fill[#1] (0,0) to[rounded corners] (-0.85,0) -- (bl.center) --(br.center) to[rounded corners] (0.85,0) --cycle;
+\end{scope}
+}}
+
+% Narrow Tube rotate
+\newcommand{\ChemNarrTubeR}[1]{\tikz{%
+\draw[rotate=80,rounded corners] (0,0) -- (-0.85,0) --++(76:2.9)node[inner sep=0pt](bl){} --++(90:0.6)--++(104:0.15);
+\draw[rotate=80,rounded corners] (0,0) -- (0.85,0) --++(104:2.9)node[pos=0.15,inner sep=0pt] (br){}--++(90:0.6)--++(76:0.15);
+\begin{scope}[on background layer]
+\draw[rotate=80,rounded corners,very thick,#1] (0.3,0.05)node(bp){} -- (-0.8,0.05)node(bc){} --++(76:2.9)node(be){} --++(90:0.6)--++(104:0.15)node(bv){};
+\fill[rotate=80,#1] (bp.center) to [rounded corners](bc.center)--(be.center)--cycle;
+\draw[#1, very thick] ([shift={(-1:0.05)}]bp.center)--(bv.center)--++(-4:2.5);
+\end{scope}
+}}
+
+% Cupping-glass empty
+\newcommand{\CupGl}{\tikz{%
+\draw (0,0) to [rounded corners] (-1.7,0) --++(90:3) arc (180:125:2)--++(90:1);
+\draw (0,0) to [rounded corners] (1.7,0) --++(90:3)arc (0:55:2)--++(90:1);
+}}
+
+% Cupping-glass with solution
+\newcommand{\CupGlS}[1]{\tikz{%
+\draw (0,0) to  [rounded corners](-1.7,0) --++(90:3)node[pos=0.5](l){} arc (180:125:2)--++(90:1);
+\draw (0,0) to [rounded corners] (1.7,0) --++(90:3)node[pos=0.5](r){}arc (0:55:2)--++(90:1);
+\begin{scope}[on background layer]
+\fill[#1] (0,0) to[rounded corners] (-1.7,0) -- (l.center) --(r.center) to[rounded corners] (1.7,0) --cycle;
+\end{scope}
+}}
+

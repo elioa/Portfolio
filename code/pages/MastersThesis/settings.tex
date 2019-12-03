@@ -1,0 +1,72 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{enumitem}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+\usepackage{url}
+\urlstyle{same}
+
+\usepackage{mathpazo}
+
+\usepackage[backend=bibtex,style=numeric,natbib=true]{biblatex}
+\addbibresource{projectreport.bib}
+
+\usepackage[autostyle=true]{csquotes}
+\geometry{paper=a4paper,inner=2.5cm,outer=3.8cm,bindingoffset=.5cm,top=1.5cm,bottom=1.5cm,%showframe,
+}
+
+\usepackage{setspace}
+\usepackage{subcaption}
+%\pagestyle{plain}
+\usepackage{amsmath}
+\usepackage{amssymb,graphicx,color}
+\usepackage{amsfonts}
+%\usepackage{latexsym}
+%\usepackage{a4wide}
+
+\definecolor{COL0}{HTML}{03899c}
+\colorlet{COL1}{COL0!50}
+\definecolor{COL2}{HTML}{ffb600}
+\definecolor{COL3}{HTML}{fb000d}
+
+
+\newcommand{\nats}{\mbox{\( \mathbb N \)}}
+\newcommand{\rat}{\mbox{\(\mathbb Q\)}}
+\newcommand{\rats}{\mbox{\(\mathbb Q\)}}
+\newcommand{\reals}{\mbox{\(\mathbb R\)}}
+\newcommand{\ints}{\mbox{\(\mathbb Z\)}}
+
+%\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing,calc,shapes.symbols,backgrounds}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage[super]{nth}
+\newcommand{\RFQ}{\mathrm{RFQ}}
+\newcommand{\KL}{\mathrm{KL}}
+\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\Loss}{Loss}
+\newcommand{\harpoon}{\mathrlap{\overset{\rightharpoonup}{\phantom{v}}}\,}
+\newcommand{\harpoontheta}{\harpoon\theta}
+\newcommand{\bigCI}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
+\newcommand{\notbiCI}{\cancel{\bigCI}}
+
+\AtBeginDocument{
+    \hypersetup{pdftitle=\ttitle}
+    \hypersetup{pdfauthor=\authorname}
+    \hypersetup{pdfkeywords=\keywordnames}
+}
+
+\newenvironment{microabstract}{\begin{center}
+\begin{minipage}{0.8\linewidth}\itshape
+}{\end{minipage}\end{center}}
+
+\newenvironment{conclusions}{\begingroup\itshape
+}{\endgroup}
+

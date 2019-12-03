@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% michael-cv.cls
+% 
+% LaTeX class template for Curriculum Vitae
+% Version 1.0 (15/05/17)
+% 
+% Sponsor and maintainer Michael Rouba michael.rouba@roubacon.de
+% Design by Andreas Wichmann wichmann@solution-scout.de
+% Code by Elio. A. Farina elio.farina@gmail.com
+% 
+% Created under the Creative Commons "Namensnennung 3.0 DE" License.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Customize version
+\documentclass{michael-cv}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\definecolor{margin}{RGB}{100,20,50}
+\definecolor{titlec}{RGB}{200,40,100}
+\definecolor{marule}{RGB}{200,40,100}
+\definecolor{martit}{gray}{1}
+\definecolor{martex}{RGB}{200,40,100}
+\definecolor{footer}{gray}{0.75}
+\renewcommand{\CVleftmargin}{30}
+\renewcommand{\CVrightmargin}{250}
+\renewcommand{\CValign}{\RaggedLeft}
+\renewcommand{\leftfoot}{\thepage}
+
+\input contents.tex
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[oneside,12pt,english,onehalfspacing,nolistspacing,headsepline,
+%liststotoc,toctotoc,parskip,nohyperref,
+chapterinoneline,
+%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+]{MastersDoctoralThesis}
+
+\input{settings.tex}
+
+% THESIS INFORMATION
+\university{\TeX\ Academy}
+\thesistitle{Another Title for a Thesis Template}
+\supervisor{Prof. Arturo \textsc{Farina}}
+\author{Elio \textsc{Farina}}
+\degree{}
+\examiner{Prof. Arturo \textsc{Farina}}
+\addresses{}
+\subject{}
+\keywords{}
+\department{}
+\group{}
+\faculty{}
+
+\begin{document}
+
+\frontmatter
+\pagestyle{plain}
+\input{./contents/titlepage.tex}
+
+\end{document}
+\input{./contents/abstract.tex}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+\mainmatter
+\pagestyle{thesis}
+%\input{./contents/chapter1.tex}% chapter 1
+%\input{./contents/chapter2.tex}% chapter 2
+%%\input{./contents/chapter3.tex}% chapter REMOVED
+%%\input{./contents/chapter4.tex}% chapter REMOVED
+%%\input{./contents/chapter5.tex}% chapter REMOVED
+%\input{./contents/chapter6.tex}% chapter 3
+%\input{./contents/chapter7.tex}% chapter 4
+%\input{./contents/chapter8.tex}% chapter 5
+%\input{./contents/chapter9.tex}% chapter 6
+%\input{./contents/chapter10.tex}% chapter 7
+
+\appendix
+\input{./contents/appendixA.tex}
+\input{./contents/appendixB.tex}
+\input{./contents/appendixC.tex}
+
+\nocite{*}
+\printbibliography[heading=bibintoc]
+
+\end{document}

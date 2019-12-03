@@ -1,0 +1,30 @@
+%\usepackage{physics}
+%\usepackage{lmodern}	
+\usepackage[b]{esvect}
+%\usepackage[mathscr]{eucal}
+\usepackage{pifont}
+
+\renewcommand{\vec}{\vv}
+%\DeclareSIUnit\gr{gr}
+\DeclareSIUnit\division{div} %% 1 division on oscilloscope
+\DeclareSIUnit\diopter{D}	%% diopter (D) in US, dpt - DIN recomendation
+\newcommand{\me}{\si{\electronmass}} %%% electronmass 
+
+\newcommand{\ddv}[1]{\mathop{\textnormal{d}#1}} %% differential operator (simple dx) 
+\newcommand{\ddf}[3][]{\dfrac{\mathop{\textnormal{d}^{#1}#2}}{\mathop{\textnormal{d}#3^{#1}}}} %% differential operator (fraction dx/dy or d^2x/dy^2)
+
+\renewcommand{\lparen}{\textnormal{(}} %% left parenthesis in chemical formulas
+\renewcommand{\rparen}{\textnormal{)}\vphantom{I}} %% right parenthesis 
+\newcommand{\vt}{\upsilon} %% chemical reaction rate
+
+\renewcommand{\boxed}[1]{#1}
+
+\newcommand{\examenintro}[6]{
+	\begin{Tabella}
+	\begin{tabular}{l|c|||l|c}
+	Examen:  & #1  	 & Séries: & #2 \\\hline
+	Session: & #3    & Durée: & #4 \\\hline
+	Épreuve: & #5    & Coef.: & #6 \\
+	\end{tabular}
+	\end{Tabella}
+}

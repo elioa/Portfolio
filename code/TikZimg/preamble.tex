@@ -1,0 +1,25 @@
+% THIS IS THE PREAMBLE DO NOT TOUCH!
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{xcolor}
+\definecolor{greencode}{RGB}{30,200,30}
+% FIGURE SETTING
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing,decorations.markings,decorations.pathreplacing}
+\tikzstyle{arm}=[line width=0.8pt,double distance=10pt,line cap=round]
+\tikzstyle{shaderect}=[bottom color=black!30,top color=black!0]
+\tikzstyle{rect}=[line width=0.6pt]
+\tikzstyle{axis}=[dashed,gray,->]
+\tikzstyle{vecax}=[dashed,gray]
+\tikzstyle{triangle}=[dashed,gray]
+\tikzstyle{vec}=[->]
+\tikzstyle{vecret}=[]
+\tikzstyle{ground1}=[fill,pattern=north east lines,draw=none,minimum width=40,minimum height=4]
+\tikzstyle{ground2}=[fill,pattern=north east lines,draw=none,minimum width=140,minimum height=4]
+\def\centerarc[#1](#2)(#3:#4:#5){ \draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5);}
+\newcommand{\sysan}[1]{%
+    \draw[fill=white] (#1) circle (0.25);
+    \draw ([shift={(0,-0.5)}]#1) -- ([shift={(0,0.5)}]#1);
+    \draw ([shift={(-0.5,0)}]#1) -- ([shift={(0.5,0)}]#1);%
+}

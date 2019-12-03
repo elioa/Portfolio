@@ -1,0 +1,386 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% michael-cv.cls
+% 
+% LaTeX class template for Curriculum Vitae
+% Version 1.0 (15/05/17)
+% 
+% Sponsor and maintainer Michael Rouba michael.rouba@roubacon.de
+% Design by Andreas Wichmann wichmann@solution-scout.de
+% Code by Elio. A. Farina elio.farina@gmail.com
+% 
+% Created under the Creative Commons "Namensnennung 3.0 DE" License.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[english]{michael-cv}
+\usepackage[utf8]{inputenc}
+
+\usepackage{booktabs}
+\definecolor{marginins}{RGB}{0,54,68}
+\definecolor{titlecins}{RGB}{253,89,0}
+\definecolor{martexins}{RGB}{166,166,166}
+\definecolor{martitins}{RGB}{217,217,217}
+\definecolor{footerins}{RGB}{32,93,111}
+\definecolor{maruleins}{gray}{0}
+\definecolor{margininsg}{gray}{1}
+\definecolor{maruleinsg}{gray}{0.3}
+\definecolor{titlecinsg}{gray}{0.2}
+\definecolor{martexinsg}{gray}{0.3}
+\definecolor{martitinsg}{gray}{0.3}
+\definecolor{footerinsg}{gray}{0.3}
+\begin{document}
+
+\renewcommand{\CVrightmargin}{150}
+\renewcommand{\CVleftmargin}{50}
+
+\renewcommand{\CVProfil}{CV Template}
+\renewcommand{\CVCV}{Manual}
+
+\renewcommand{\infoot}{michael-cv.cls}
+\renewcommand{\outfoot}{Page~\thepage}
+\renewcommand{\leftfoot}{\small Created under the Creative Commons ``Namensnennung 3.0 DE'' License.}
+
+\newcommand{\titolo}[1]{\vspace{2ex}
+\textcolor{titlec}{\Large\bf #1}\\[1ex]}
+
+\CVname{Michael Rouba CV class}
+\CVprof{Instruction manual}
+\CVpict{logoEAF}
+\CVtele{}
+\CVcell{}
+\CVmail{}
+\CVmadd{}
+\CVaddr{}
+\CVinfo{}
+\CVtitle
+
+\begin{para}{}
+\bf These are the instructions of michael-cv.cls, a class for your CV.
+\end{para}
+
+\vspace{4\baselineskip}
+\entry{Credits}{Sponsor and maintainer}{Michael Rouba\hfill \textcolor{titlec}{michael.rouba@roubacon.de}}{}
+\entry{\null}{Design by}{Andreas Wichmann\hfill \textcolor{titlec}{wichmann@solution-scout.de}}{}
+\entry{\null}{Code by}{Elio. A. Farina\hfill \textcolor{titlec}{elio.farina@gmail.com}}{}
+ 
+\entry{License}{Created under the}{Creative Commons ``Namensnennung 3.0 DE'' License.}{}
+
+\vfill
+\titolo{Class options}
+
+\begin{para}{Class options: printable version}
+You can create a coloured version of your curriculum by default.\\
+If you want to switch all the colors off you can easily declare the \texttt{print} option:\\
+\null\hspace{4ex}\verb+\documentclass[print]{michael-cv}+\\[2ex]
+The \texttt{print} version turns all colours from RGB into gray scale.
+\end{para}
+
+\begin{para}{Class options: language}
+Your document is set to be in German, but you can switch to English using \texttt{english} option:\\
+\null\hspace{4ex}\verb+\documentclass[english]{michael-cv}+
+\end{para}
+
+\begin{para}{Class options: noborder}
+The default version of the layout is with the picture with the same alignment of the rest of the text in the margin and with a black border. The \texttt{noborder} option\\
+\null\hspace{4ex}\verb+\documentclass[noborder]{michael-cv}+\\[2ex]
+turn off the border colour an move the picture next to it. In the \texttt{print} version the border remains gray.
+\end{para}
+
+\newpage
+\titolo{CV commands}
+
+\begin{para}{Your personal info commands}
+At the begining of your document, soon after\\
+\null\hspace{4ex}\verb+\begin{document}+\\[2ex]
+you must write these commands, in order to set your personal info:\\[2ex]
+\begin{tabular}{ll}
+\toprule
+Command			& \texttt{info} stands for\dots	\\
+\midrule
+\verb+\CVname{info}+	& Your full name	\\
+\verb+\CVprof{info}+	& Your profile info	\\
+\verb+\CVpict{info}+	& *Your picture file	\\
+\verb+\CVtele{info}+	& *Telephone number	\\
+\verb+\CVcell{info}+	& *Mobile phone number	\\
+\verb+\CVmail{info}+	& *E-mail		\\
+\verb+\CVmadd{info}+	& *Additional e-mail	\\
+\verb+\CVinfo{info}+	& *Other infos		\\
+\verb+\CVaddr{info}+	& *Adress info		\\
+\bottomrule
+\end{tabular}
+
+\vspace{1ex}
+You can write these commands sorted as you want. The commands marked by * are not mandatory: if your leave them empty, or you even never write them at all, \LaTeX\ won't print anything.
+
+Soon after these commands, you must write\\
+\null\hspace{4ex}\verb+\CVtitle+\\[1ex]
+in order to print that commands in the right position:
+\begin{itemize}
+\item \texttt{CVname} will be the title of the document and the inner side of the right footer, where \texttt{CVaddr} is printed on the outer side;
+\item \texttt{CVprof} info is the subtitle of the document;
+\item The picture is set to be in the right margin, followed by all the other infos in this order:\\
+\texttt{CVtele}, \texttt{CVcell}, \texttt{CVmail}, \texttt{CVmadd}, \texttt{CVinfo}.\\
+You cannot change this order unless you change it in your class file.
+\end{itemize}
+\end{para}
+
+\begin{para}{Writing paragraph}
+To write the paragraph you can use the environment \texttt{para}:\\
+\null\hspace{4ex}\verb+\begin{para}{title}+\\
+\null\hspace{4ex}\verb+Your contents+\\
+\null\hspace{4ex}\verb+\end{para}+\\[1ex]
+This will print a paragraph as width as the text width with a distance from above of one base line space, like these ones I'm writing on. \texttt{title}, if present, will print the title of the paragraph in bold and coloured. If you need to write in \textbf{bold}, or \textit{italic}, just set the \LaTeX\ commands within the environment.
+\end{para}
+
+\newpage
+\begin{para}{Writing CV entries}
+To write the entries in a three columns environment there is just one command:\\
+\null\hspace{4ex}\verb+\entry{title}{subtitle}{contents}{margin}+\\[1ex]
+\verb+\entry+ command takes 4 mandatory argument. Some argument could be left empty leaving the \verb+{}+ blank, but you must write all 4 \verb+{}+.
+\begin{itemize}
+\item \texttt{title}: this prints the title in the first column in orange or gray.
+\item \texttt{subtitle}: this prints the title in the second column in bold.
+\item \texttt{contents}: this argument prints the contents in the second column.
+\item \texttt{margin}: this argument prints the contents in the margin column. If \texttt{title} is present, they will appears white, or black in the printable version, and bolded. If \texttt{title} is not present, they will be printed in gray. If you want to print them in white but the \texttt{title} argument is not present, you must write \verb+\null+ instead of a title. If you want to write a list, or simply break the line, use the breakline command \verb+\\+ at the end of the word(s).
+\end{itemize}
+You can see some example below made by these commands.
+\end{para}
+\vfill
+\begin{para}{}
+With title and subtitle:\\
+\verb+\entry{Title in orange}{Subtitle bolded}%+\\\verb+{Some contents}{Margin contents in white}+\\
+\end{para}
+\entry{Title in orange}{Subtitle bolded}{Some contents}{Margin contents in white}
+\vfill
+\begin{para}{}
+With no title but subtitle:\\
+\verb+\entry{}{Subtitle bolded}{Some contents\\ in two lines}%+\\\verb+{Margin contents\\ in gray}+\\
+\end{para}
+\entry{}{Subtitle bolded}{Some contents\\ in two lines}{Margin contents\\ in gray}
+\vfill
+\begin{para}{}
+With title but no subtitle:\\
+\verb+\entry{Title in orange}{}{Some contents and many more}%+\\\verb+{Margin contents in white}+\\
+\end{para}
+\entry{Title in orange}{}{Some contents and many more}{Margin contents in white}
+\vfill
+\begin{para}{}
+\emph{Null} title, bolded subtitle and margin contents in white:\\
+\verb+\entry{\null}{Subtitle bolded}%+\\\verb+{Some contents and many more}{Margin\\ contents\\ in white}+\\
+\end{para}
+\entry{\null}{Subtitle bolded}{Some contents and many more}{Margin\\ contents\\ in white}
+
+\newpage
+\begin{para}{No panic}
+If this\\
+\null\hspace{4ex}\verb+\entry{Title}{Subtitle}{A very long content that you don't know how to see it in one line}{Too\\ much\\ information\\ needed}+\\[1ex]
+could drive you crazy, you can easily write the same command in multiple lines, as you can do with any \LaTeX\ command:\\
+\null\hspace{4ex}\verb+\entry%+\\[-2ex]
+\null\hspace{4ex}\verb+{Title}%+\\[-2ex]
+\null\hspace{4ex}\verb+{Subtitle}%+\\[-2ex]
+\null\hspace{4ex}\verb+{A very long content that you don't know how to see it in one line}%+\\[-2ex]
+\null\hspace{4ex}\verb+{Too\\ much\\ information\\ needed}+\\
+\end{para}
+
+\entry{Title}{Subtitle}{A very long content that you don't know how to see it in one line}{Too\\ much\\ information\\ needed}
+
+\titolo{Basic \LaTeX}
+
+\begin{para}{Additional packages}
+If you need additional packages you can write the command\\
+\null\hspace{4ex}\verb+\usepackage{package}+\\[2ex]
+in the preamble as usual.
+\end{para}
+
+\begin{para}{\LaTeX\ line and page breaking commands}
+You can use basic \LaTeX\ layout commands like \verb+\\+ to break a line or \verb+\newpage+ to break a page.
+\end{para}
+
+\begin{para}{\LaTeX\ sectioning}
+This class is based on \texttt{article} standard class. Sections are not set in this class, so if you'll use \verb+\section{}+ it will appear like a normal basic section.
+\end{para}
+
+\begin{para}{\LaTeX\ commands and environment}
+You can use \texttt{itemize}, \texttt{enumerate} and \texttt{description} and (quite) all the other \LaTeX\ commands and environment. If you see any bug, please contact me.
+\end{para}
+
+\newpage
+\titolo{Deep customizations}
+
+\begin{para}{Customize your template}
+You can easily customize your template using the \verb+\renewcommand+ with these already made commands:\\[1ex]
+\begin{tabular}{ll}
+\toprule
+Command to be \emph{renewed}	& Default		\\
+\midrule
+\verb+\CVProfil+		& Profil		\\
+\verb+\CVCV+			& Curriculum Vitae	\\
+\verb+\CVTeleicon+		& \Telefon		\\
+\verb+\CVMobiicon+		& \Mobilefone		\\
+\verb+\CVmailicon+		& \MVAt			\\
+\verb+\CVmaddicon+		& \MVAt			\\
+\bottomrule
+\end{tabular}
+
+\vspace{1ex}
+\begin{itemize}
+\item \verb+\CVProfil+ is the right header in the first page;
+\item \verb+\CVCV+ is the right header in all the others pages.
+\end{itemize}
+
+This manual is made by changing:\\
+\null\hspace{4ex}\verb+\renewcommand{\CVProfil}{CV Template}+\\[-2ex]
+\null\hspace{4ex}\verb+\renewcommand{\CVCV}{Manual}+\\[1ex]
+
+Default icons use \texttt{marvosym} package; you can use any package for symbols you like, just remember to include it in your preamble.
+\end{para}
+\begin{para}{Customize the footer}
+To change the footer you have just to \verb+\renewcommand+ these commands:\\[1ex]
+\begin{tabular}{lll}
+\toprule
+Command to be \emph{renewed}	& Default	& Where	\\
+\midrule
+\verb+\infoot+			& The CVname	& inner right footer		\\
+\verb+\outfoot+			& The CVaddress	& outer right footer			\\
+\verb+\leftfoot+		& \emph{empty}	& left footer	\\
+\bottomrule
+\end{tabular}
+
+\vspace{1ex}
+This manual is made by changing:\\
+\null\hspace{4ex}\verb+\renewcommand{\infoot}{michael-cv.cls}+\\[-2ex]
+\null\hspace{4ex}\verb+\renewcommand{\outfoot}{Page~\thepage}+\\[-2ex]
+\null\hspace{4ex}\verb+\renewcommand{\leftfoot}{\small Created under the Creative Commons...}+\\[1ex]
+\end{para}
+
+\newpage
+\begin{para}{Customize the colours}
+You can change the appearence using the \texttt{print} class option, or changing these colours using\\
+\null\hspace{4ex}\verb+\definecolor{colour}{model}{color-spec}+\\[1ex]
+
+In the next table you can see the colours in the coloured version:\\[1ex]
+\begin{tabular}{lccc}
+\toprule
+Colour		& Model		& Color-spec	& Appearence	\\
+\midrule
+\verb+margin+	& RGB		& 0,54,68		& \textcolor{marginins}{Right margin}	\\
+\verb+marule+	& gray		& 0			& \textcolor{maruleins}{Right margin border}			\\
+\verb+titlec+	& RGB		& 253,89,0		& \textcolor{titlecins}{Titles}	\\
+\verb+martit+	& RGB		& 217,217,217		& \textcolor{martitins}{Title in the margin}	\\
+\verb+martex+	& RGB 		& 166,166,166		& \textcolor{martexins}{Text in the margin}	\\
+\verb+footer+	& RGB		& 32,93,111		& \textcolor{footerins}{Footer}	\\
+\bottomrule
+\end{tabular}
+
+\vspace{2ex}
+In this table the same colours with \verb+print+ option:\\[1ex]
+\begin{tabular}{lccc}
+\toprule
+Colour		& Model		& Color-spec	& Appearence	\\
+\midrule
+\verb+margin+	& gray 		& 1		& \textcolor{margininsg}{Right margin}	\\
+\verb+marule+	& gray 		& 0.3 		& \textcolor{maruleinsg}{Right margin border}	\\
+\verb+titlec+	& gray 		& 0.2		& \textcolor{titlecinsg}{Titles}	\\
+\verb+martit+	& gray 		& 0.3		& \textcolor{martitinsg}{Title in the margin}	\\
+\verb+martex+	& gray 		& 0.3		& \textcolor{martexinsg}{Text in the margin}	\\
+\verb+footer+	& gray 		& 0.3		& \textcolor{footerinsg}{Footer}	\\
+\bottomrule
+\end{tabular}
+\end{para}
+
+\begin{para}{Customize align}
+Your document is left aligned by default.\\
+To customize the alignment write:\\[1ex]
+\begin{tabular}{ll}
+\toprule
+Command				& Effect\\
+\midrule
+\verb+\newcommand{\CValign}{}+	& justified	\\
+\verb+\newcommand{\CValign}{\RaggedRight}+	& left align	\\
+\verb+\newcommand{\CValign}{\RaggedLeft}+	& right align	\\
+\bottomrule
+\end{tabular}
+\end{para}
+
+\newpage
+\begin{para}{Customize the lengths}
+You can customize the dimensions of any lenght an the paper with\\
+\null\hspace{4ex}\verb+\renewcommand{thelength}{number(unit)}+\\[1ex]
+For the * length in the next table you must express the unit of measure, for the rest the number must be set as absolute value of pt (points):\\[1ex]
+\begin{tabular}{llp{140pt}}
+\toprule
+Length			& Default value	& Set	\\
+\midrule
+\verb+\CVtitparlen+	& $-$\verb+\baselineskip+	& *Distance after the paragraph title	\\
+\verb+\CVpardis+	& \verb+\baselineskip+	& *Distance between two paragraphs or two entries	\\
+\verb+\CVtsdisp+	& 1ex			& *Distance between CV title and subtitle	\\
+\verb+\CVinfodis+	& 1ex			& *Distance between info below the picture		\\
+\verb+\CVinmargin+	& 2ex			& *Inner margins (between elements)	\\
+\verb+\CVleftmargin+	& 1/9 of paper width	& *Left margin	\\
+\verb+\CVrightmargin+	& 1/3 of paper width	& *Right margin	\\
+\verb+\CVtopmargin+	& 120			& Top margin	\\
+\verb+\CVheadsep+	& 50			& Head sep	\\
+\verb+\CVbottommargin+	& 50			& Bottom margin	\\
+\verb+\CVentry+		& 1/3 of text width	& Length of the first column in \verb+\entry+	\\
+\verb+\CVborder+	& 1			& Width of the margin border	\\
+\verb+\CVtitlesep+	& \texttt{CVheadsep}$-$\texttt{CVtopmargin}$-$12~pt	& *Position of the title in the first page	\\
+\verb+\CVpictwid+	& $-$6.5		& *Additional width of the picture$\dagger$	\\
+\verb+\CVxinfobox+	& $-$1 & *Additional $x$ position of the infobox$\dagger$	\\
+\verb+\CVyinfobox+	& \texttt{CVtopmargin}$-$20~pt		& *$y$ position of the infobox	\\
+\verb+\CVpictalign+	& 0pt			& *Additional position in $x$ of the picture$\dagger$\\
+\verb+\CVinfoalign+	& 0pt			& *Additional position in $x$ of the info$\dagger$\\
+\bottomrule
+\end{tabular}
+
+\vspace{2ex}
+The $\dagger$ length set an additional amount; \textit{i.e.}, the picture width is as width as the right margin, the value of \verb+\CVpictwid+ increase or decrease it by that amount.
+
+\vspace{2ex}
+This manual is made by changing:\\
+\null\hspace{4ex}\verb+\renewcommand{\CVrightmargin}{150}+\\[-2ex]
+\null\hspace{4ex}\verb+\renewcommand{\CVleftmargin}{50}+
+\end{para}
+
+\newpage
+\begin{para}{Customize the font}
+This class use\\[1ex]
+\verb+\RequirePackage[sfdefault,lf]{carlito}+\\
+to set the font. If you want to choose another one use the same \LaTeX\ commands and packages as usual or change these lines in the class file.
+\end{para}
+
+\begin{para}{Customize font size}
+As for the length, here the font size (in points) to change:\\[1ex]
+\begin{tabular}{lll}
+\toprule
+Length			& Default value	& Set	\\
+\midrule
+\verb+\CVfsnorm+	& 10		& Contents	\\
+\verb+\CVfstit+		& 11		& Title	\\
+\verb+\CVfssub+		& 12		& Subtitle	\\
+\verb+\CVfshead+	& 16		& Header	\\
+\bottomrule
+\end{tabular}
+
+\vspace{1ex}
+And here the baseline skip (in points):\\[1ex]
+\begin{tabular}{lcc}
+\toprule
+Length		& Default value	& Set	\\
+\midrule
+\verb+\CVbsnorm+	& 13		& Contents	\\
+\verb+\CVbstit+	& 13.3		& Title	\\
+\verb+\CVbssub+	& 14.4		& Subtitle	\\
+\verb+\CVbshead+	& 19.2		& Header	\\
+\bottomrule
+\end{tabular}
+\end{para}
+
+\begin{para}{Panic?}
+No, just remember: personal info commands, \texttt{para} environment, with or without title, \texttt{entry} command for your entries, and that's it!\\
+If you find any bugs or issues, please contact me, and don't forget to bring a towel.\\[2ex]
+\end{para}
+
+
+\end{document}

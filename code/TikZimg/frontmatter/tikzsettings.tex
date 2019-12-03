@@ -1,0 +1,64 @@
+% Version 1.0 17/04/19
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colors
+\definecolor{ECred}{RGB}{221,0,44}
+\definecolor{EClightred}{RGB}{251,224,230}
+\definecolor{ECgray}{RGB}{190,179,181}
+\definecolor{ETred}{RGB}{221,0,44}
+\definecolor{ETlightred}{RGB}{251,224,230}
+\definecolor{ETgray}{RGB}{190,179,181}
+\definecolor{Etabred}{RGB}{221,0,44}
+\definecolor{Etablightred}{RGB}{251,224,230}
+\definecolor{Etabgray}{RGB}{190,179,181}
+
+% Tikz settings
+\RequirePackage{tikz}
+% Library
+\usetikzlibrary{calc,positioning,arrows,arrows.meta,patterns,backgrounds,decorations.markings,decorations.pathmorphing,intersections,trees,matrix,babel,shapes}
+
+% style
+\tikzset{>=latex}
+\tikzset{griglia/.style={gray,very thin}}
+\tikzset{desc/.style={>=latex'}}
+\tikzset{vec/.style={>=latex,thick}}
+\tikzset{every node/.style={font={\footnotesize}}}
+\tikzset{tangent/.style={decoration={markings,mark=at position #1 with {
+ \coordinate (tangent point-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,0pt);
+ \coordinate (tangent unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (1,0pt);
+ \coordinate (tangent orthogonal unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,1);}},
+ postaction=decorate},use tangent/.style={shift=(tangent point-#1),x=(tangent unit vector-#1),y=(tangent orthogonal unit vector-#1)},
+ use tangent/.default=1}
+\tikzset{extended line/.style={shorten >=-#1,shorten <=-#1}}
+\tikzset{venn circle/.style={draw=black,circle,minimum width=10em,fill=ETred,opacity=0.2,text=black,text opacity=1,draw opacity=1}}
+\tikzset{insert node/.style args={#1 at #2}{postaction=decorate,decoration={markings,mark= at position #2 with {#1}}}}
+
+% Plots
+\tikzset{asse/.style={->}}
+\tikzset{funzione/.style={line width=1pt,ETred}}
+\tikzset{funzione2/.style={line width=1pt,black}}
+\tikzset{nord/.style={ETred!70!white}}
+\tikzset{geometria/.style={line width=1.5pt,ETred}}
+\tikzset{figura/.style={line width=1pt,ETred}}
+\tikzset{asintoto/.style={line width=0.5pt,ETred!50!white}}
+\tikzset{bollino/.style={ETred}}
+\newlength{\bollino}\setlength{\bollino}{2pt}
+\tikzset{minmax/.style={>=stealth,line width=0.6pt,<->,ETred}}
+\newlength{\xylabel}\setlength{\xylabel}{3pt}
+\newlength{\xyztick}\setlength{\xyztick}{3pt}
+\tikzstyle{terra}=[fill,pattern=north east lines,draw=none,minimum width=0.75cm,minimum height=0.3cm]
+
+% New macros
+\newcommand{\eye}[4]% size, x, y, rotation
+{   \draw[rotate around={#4:(#2,#3)}] (#2,#3) -- ++(-.5*50:#1) (#2,#3) -- ++(.5*50:#1);
+    \draw[black] (#2,#3) ++(#4+25:.85*#1) arc (#4+25:#4-25:.85*#1);
+    % IRIS
+    \draw[fill=gray] (#2,#3) ++(#4+50/3:.85*#1) arc (#4+180-50:#4+180+50:.30*#1);
+    %PUPIL, a filled arc
+    \draw[fill=black] (#2,#3) ++(#4+50/3:.85*#1) arc (#4+50/3:#4-50/3:.80*#1);
+}
+
+\newcommand{\Bollino}{\tikz{\fill[bollino] (0,0) circle (\bollino);}}
+\newcommand{\circolo}{\tikz{\fill[ETred] (0,0) circle (2pt);}}
+\newcommand{\angolo}{}
+
+\usepackage{tkz-fct}

@@ -1,0 +1,56 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{pdfpages}
+\usepackage{calc}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+\definecolor{COLV}{RGB}{148,0,0}
+\definecolor{COLT}{RGB}{20,20,20}
+\usepackage{adforn}
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+\usepackage{ebgaramond-maths}
+\usepackage{trajan}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+\newcommand\twocolouri{\hspace*{0pt}\raisebox{\heightof{\i}+0.2ex}{\rlap{\textcolor{COLV}{.}}}\i}
+\newcommand\blackcolouri{\hspace*{0pt}\raisebox{\heightof{\i}+0.2ex}{\rlap{\textcolor{COLT}{.}}}\i}
+\newlength{\titlew}\setlength{\titlew}{\widthof{\fontsize{50pt}{20pt}\selectfont\color{COLV}Portfolio}}
+\setlength{\parindent}{0pt}
+\newcommand{\titlesize}{\fontsize{30pt}{30pt}\selectfont}
+\newcommand{\fleuronsize}[1]{\scalebox{4}{#1}}
+\newcommand{\titlefleuron}[2]{\clearpage%
+    \begin{center}\titlesize
+        #1\\
+        \vfill
+        \fleuronsize{#2}
+        \vfill
+        \null
+    \end{center}\clearpage
+}
+\newcommand{\titlenofleuron}[2]{\clearpage%
+    \begin{center}\titlesize
+        #1\\
+        \vfill
+        #2
+        \vfill
+        \null
+    \end{center}\clearpage
+}
+\newcommand{\simpletitle}[1]{\clearpage%
+    \begin{center}\titlesize
+        #1\\
+    \end{center}
+}
+\newcommand{\centerfleuron}[1]{\vfill\begin{center}\fleuronsize{#1}\end{center}\vfill\null}
+\newcommand{\collaboration}[2]{%
+    \vfill
+    \begin{minipage}{0.6\linewidth}\raggedright\Large#1\end{minipage}%
+    \begin{minipage}{0.4\linewidth}\raggedleft\includegraphics[width=\linewidth]{./images/#2}\end{minipage}
+}
+\newcommand{\pcollaboration}[1]{{\LARGE #1}\\\strut\\}
+\newcommand{\feedback}[2][\large]{%
+    \begin{minipage}{\linewidth}#1
+    ``#2''
+    \end{minipage}\\[1.5\baselineskip]
+}

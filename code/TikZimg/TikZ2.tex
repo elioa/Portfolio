@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{tikz}\usetikzlibrary{calc,patterns}
+\definecolor{ETred}{rgb}{1,0,0}
+\input{./frontmatter/CPsettings.tex}
+\begin{document}\begin{tikzpicture}[x=8pt,y=8pt]
+\node[anchor=north] at (0,0) {\ChemBBflame};
+\node[anchor=south] (SG1) at (0,0) {\ChemSGTout{ETred,fill opacity=0.5}};
+\node[anchor=south] at ($(outl)!0.5!(outr)$) {\ChemFlame};
+\begin{scope}[every node/.style={font=\footnotesize,inner sep=1pt}]
+\draw[->] (SG1.east) -- ++(0:6) node[midway,above] {A la fin de} node[midway,below] {l'expérience} node[at end] (SG2) {};
+\node[anchor=west] at (SG2) {\ChemSG{pattern=crosshatch}};
+    \draw[<-] (-0.6,-4)  -- ++(180:12)  node[at end,anchor=south west] {\strut Dispositif de chauffage};
+    \draw[<-] (-0.6,2)   -- ++(180:12)   node[at end,anchor=south west] {\strut Sucre ou sciure de bois};
+    \draw[<-] (-0.6,4.5) -- ++(180:12) node[at end,anchor=south west] {\strut Gax inflammables};
+    \draw[<-] (8.4,2)    -- ++(0:6)       node[at end,anchor=south east] {\strut Solide noir} node[at end,anchor=north east] {\strut et poreaux};
+\end{scope}
+\end{tikzpicture}
+\end{document}

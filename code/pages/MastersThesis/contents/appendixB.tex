@@ -1,0 +1,39 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendix B
+\chapter{KL Divergence Non-negative Proof}\label{AppB}
+
+Proof: $\text{KL divergence} \geq 0$
+
+\begin{enumerate}[leftmargin=*]
+    % 1
+    \item Consider a function $y=\log (x)$ bound by $y=x-1$ per below:
+    \begin{center}
+        \begin{tikzpicture}[x=25pt,y=25pt]
+            \draw[->] (-1.5,0)--(5,0) node[at end,below] {$x$};
+            \draw[->] (0,-2.5)--(0,4) node[at end,left] {$y$};
+            \draw (0,-1)--++(180:5pt) node[at end,left] {$-1$};
+            \draw (1,0)--++(270:5pt) node[at end,below] {$1$};
+            \draw[COL1,thick,variable=\x,domain={-1:4.5},samples=200] plot (\x,{\x-1});
+            \node[right] at (4.5,3.5) {$y=x-1$};
+            \draw[COL2,thick,variable=\x,domain={e^(-2):4.5},samples=200] plot ({\x},{ln(\x)});
+            \node[right] at (4.5,{ln(4.5)}) {$y=\log (x)$};
+        \end{tikzpicture}
+    \end{center}
+    % 2
+    \item It follows that:\\[2pt]
+    $\log(x)\leq x-1$\\[2pt]
+    with equality at $x=1$ (note: $\dfrac{\mathrm{d}y}{\mathrm{d}x}=1$)
+    % 3
+    \item Let $x=\dfrac{p(x)}{q(x)}$\\[2pt]
+    $\Rightarrow$ $\log\dfrac{p(x)}{q(x)} \leq \dfrac{p(x)}{q(x)}-1$
+    % 4
+    \item Therefore:\\[2pt]
+    $\Rightarrow$ $q\log p- q\log q \leq p-q$
+    % 5
+    \item Summing over $x$:\\[2pt]
+    $\Rightarrow$ ${\langle \log q \rangle}_q - {\langle \log p \rangle}_q \leq 0$
+    % 6
+    \item Multiplying throughout by $-1$\\[2pt]
+    $\Rightarrow$ ${\langle \log q \rangle}_q - {\langle \log p \rangle}_q \geq 0$\\[2pt]
+    $\equiv \text{KL} (q|p) \geq 0$
+\end{enumerate}

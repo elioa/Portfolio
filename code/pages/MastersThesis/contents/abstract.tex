@@ -1,0 +1,63 @@
+%\begin{abstract}\addchaptertocentry{\abstractname}\singlespacing
+\chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}
+\begin{singlespacing}
+This thesis is an investigation into the predictability of currency (FX)
+option derivative requests for quotes (RFQs). The source of the RFQs was a
+single-dealer electronic trading platform from a sell-side financial
+institution. The investigation researched two different philosophical
+approaches to machine learning, namely the Bayesian and Classical
+techniques, by evaluating a series of supervised and unsupervised models
+which straddled both philosophies. The Bayesian Hidden Markov Model (HMM)
+was used as the unsupervised learning model which was compared to the
+Classical and Bayesian supervised models. All models had some degree of
+success in predicting patterns in the data. In addition, the Bayesian Hidden
+Markov Model was able to infer the hidden underlying RFQ market regime (e.g. increasing, decreasing or level).
+
+Background research suggested that the ability to predict RFQs
+along with knowledge of the hidden underlying state of the market regime
+could potentially be pivotal for sales and trading outfits of investment
+banks. In an industry where volumes are declining and deals are lost by the
+thinnest of margins, this level of insight will allow banks to better
+configure their offerings, price quotes more competitively and provide more
+targeted sales interventions. All of these will result in either an increase
+in the probability of conversion of a quote into an actual trade or the
+average size of the trade.\\
+
+This thesis consists of the following three experiments:
+\begin{enumerate}
+\item Predicting RFQs using supervised learning models. This first experiment investigates the ability of three different models to predict RFQs. A feed-forward neural network regressor, a ridge regression and a Bayesian ridge regression model were trained, evaluated and compared against each other.
+
+\item Predicting RFQs using the unsupervised hidden Markov model. The objective of the second experiment was to create and fit a hidden Markov model to predict RFQs using emission distribution of the most likely hidden state. 
+
+\item Inferring RFQ hidden states using the unsupervised hidden Markov model. This final experiment explored the hidden Markov model much deeper to give insight into the underlying hidden process by using the visible data to predict the most likely hidden market regime of the RFQ data.
+
+\end{enumerate}
+
+This research was conducted in collaboration with Dr. Graham Barrett of BNP Paribas and it presents the following contributions to research:
+\begin{enumerate}
+
+\item Bayesian versus Classical techniques -- This study is believed to be the
+first academic study to predict and find patterns in electronic FX option RFQs using both Bayesian and Classical methods. Further, the methodology could be readily applied to many other business-to-business order processes with a time-series repeatable order aspect.
+
+\item Application of the hidden Markov model to a new domain - the RFQ data
+was transformed into a Markovian state fit for consumption by the Hidden
+Markov Model using a 'differences' method. This unsupervised Bayesian
+model was used to investigate not only the predictability of RFQs but also
+to infer the hidden ('latent') states of the underlying visible RFQ data
+using the Baum-Welch expectation maximisation algorithm. As a
+result, at any point in time the underlying RFQ regime could be determined.
+
+\item Provision of simulated RFQ data - due to data protection and privacy
+laws, RFQ data is not publicly available thus limiting research
+opportunities. To the best of our knowledge this is the only example of
+simulated FX option RFQs constructed leveraging intimate knowledge of the FX
+options market. The data set provides production quality RFQ data for EUR-USD
+Vanilla European options centred around London trading hours which could be
+utilised for future machine learning research in this area. This data has
+been pre-processed for both supervised and unsupervised learning methods.
+
+\end{enumerate}
+For accompanying data files and code see: \url{https://github.com/shahroozaz/MastersThesis}.
+
+\end{singlespacing}
+%\end{abstract}

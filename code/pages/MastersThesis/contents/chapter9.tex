@@ -1,0 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter 6
+\chapter{Conclusion}
+
+Managed to predict RFQs with some success using both Classical and Bayesian methods.
+
+Used classical models X, model Y that is Bayesian in terms of its parameters but not the data, and the HMM that is fully Bayesian.
+
+Explored the HMM much deeper, showing how it is able to give insight on an underlying, unobservable, process using the observable data. It can also be used to make predictions, via the hidden states. This is a very different method of making predictions than the classical models examined in this thesis, as it performs the predictions via inferring the hidden states. In some ways it could be argued that this is a more insightful prediction method than, say, regression, as it is attempting to modelling the underlying phenomenon rather than just matching patterns.
+
+Models like the HMM that treat the data in a Bayesian manner also have the advantage that they have a principled way of treating missing values -- by just normalising those variables out so they are not considered. Classical methods typically need to select a method of data imputation, which may impact the results.

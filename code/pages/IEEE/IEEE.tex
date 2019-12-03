@@ -1,0 +1,136 @@
+% This is LLNCS.DEM the demonstration file of
+% the LaTeX macro package from Springer-Verlag
+% for Lecture Notes in Computer Science,
+% version 2.4 for LaTeX2e as of 16. April 2010
+%
+\documentclass[a4paper,conference]{IEEEtran}
+%
+\usepackage{makeidx}  % allows for indexgeneration
+
+%\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[table]{xcolor}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.10}
+\usepackage{siunitx}
+\sisetup{range-phrase = --,range-units = single,detect-all}
+
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{easyReview}
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@makecaption}{\scshape}{}{}{}
+%\patchcmd{\@makecaption}{\\}{.\ }{}{}
+\makeatother
+\def\tablename{Table}
+
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+%\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+%\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{multicol}
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{todonotes}
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\newcommand{\comment}[1]{\todo[inline]{#1}}
+\definecolor{lightgray}{gray}{0.9}
+
+%\usepackage{lipsum}
+\usepackage{tikz}
+%Block Diagrams
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20,
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes,fit} %use shapes library if you need ellipse
+
+\usepackage{adjustbox}
+
+
+%\usepackage[section]{placeins}
+%\makeatletter
+%\AtBeginDocument{%
+%  \expandafter\renewcommand\expandafter\subsection\expandafter{%
+%    \expandafter\@fb@secFB\subsection
+%  }%
+%}
+
+\newcommand{\onionlayer}{\textit{onion layer}}
+\newcommand{\onionlayers}{\textit{onion layers}}
+\newcommand{\JOIN}{\texttt{JOIN}}
+\newcommand{\RND}{\texttt{RND}}
+\newcommand{\DET}{\texttt{DET}}
+\newcommand{\OPE}{\texttt{OPE}}
+\newcommand{\OPEJOIN}{\texttt{OPE-JOIN}}
+\newcommand{\HOM}{\texttt{HOM}}
+\newcommand{\SEARCH}{\texttt{SEARCH}}
+\newcommand{\SELECT}{\texttt{SELECT}}
+\newcommand{\SELECTEQ}{\texttt{SELECT~EQUAL}}
+\newcommand{\SELECTRANGE}{\texttt{SELECT~RANGE}}
+\newcommand{\SELECTALL}{\texttt{SELECT~ALL}}
+\newcommand{\SELECTSUM}{\texttt{SELECT~SUM}}
+\newcommand{\INSERT}{\texttt{INSERT}}
+\newcommand{\UNIQUE}{\texttt{UNIQUE}}
+\newcommand{\DELETE}{\texttt{DELETE}}
+\newcommand{\RANGE}{\texttt{RANGE}}
+\newcommand{\CryptDB}{\textit{CryptDB}}
+\newcommand{\MySQL}{MySQL}
+\newcommand{\MySQLSlap}{MySQLSlap}
+\newcommand{\sfpenalty}{storage factor penalty}
+\newcommand{\unsecure}{\textit{unsecure}}
+\newcommand{\partiallysecure}{\textit{partially secure}}
+\newcommand{\secure}{\textit{secure}}
+\newcommand{\mb}{micro-benchmark}
+\newcommand{\Mb}{Micro-benchmark}
+\newcommand{\MBing}{Micro-Benchmarking}
+
+
+\title{This is the title for IEEE class for Elio's portfolio}
+
+\author{%
+    \IEEEauthorblockN{Elio A. Farina}
+    \IEEEauthorblockA{
+    TeX Academy\\
+    Email: elio.farina@gmail.com}}
+
+\usepackage{lipsum}
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Some lorem ipsum as filler. \lipsum[1]
+\end{abstract}
+
+\begin{IEEEkeywords}
+Some, keywords, to complete, the page
+\end{IEEEkeywords}
+
+
+\section{Introduction}
+\lipsum[1]
+
+\section{A section}
+\lipsum[2-3]
+
+\subsection{A subsection}
+\lipsum[4]
+
+\subsection{Another subsection}
+\lipsum[5]
+
+\section{Another section}
+\lipsum[6-7]
+\end{document}

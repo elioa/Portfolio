@@ -1,0 +1,75 @@
+\documentclass{standalone}
+\usepackage{tikz}\usetikzlibrary{calc,patterns,backgrounds}
+\definecolor{ETred}{rgb}{1,0,0}
+\input{./frontmatter/CPsettings.tex}
+\begin{document}\begin{tikzpicture}[y=0.3pt,x=0.3pt,yscale=-1]
+\path[draw=black,fill=ETred!30,line width=1pt] (466,303) ..
+controls (444,300) and (409,280) .. (404,277) ..
+controls (399,274) and (376,249) .. (364,230) ..
+controls (352,211) and (341,188) .. (337,175) ..
+controls (333,162) and (329,149) .. (328,142) ..
+controls (327,135) and (329,119) .. (332,112) ..
+controls (325,107) and (311,106) .. (305,119) ..
+controls (299,132) and (294,152) .. (294,165) ..
+controls (294,178) and (316,220) .. (302,226) ..
+controls (288,232) and (285,240) .. (213,222) ..
+controls (141,204) and (111,202) .. (104,216) ..
+controls (97,230) and (138,236) .. (160,240) ..
+controls (182,244) and (233,262) .. (225,272) ..
+controls (221,278) and (216,276) .. (205,280) ..
+controls (185,287) and (185,290) .. (161,299) ..
+controls (137,307) and (138,331) .. (146,335) ..
+controls (153,339) and (160,341) .. (192,323) ..
+controls (207,317) and (224,314) .. (239,313) ..
+controls (255,311) and (264,369) .. (281,377) ..
+controls (297,386) and (317,385) .. (329,385) ..
+controls (341,385) and (347,387) .. (354,384) ..
+controls (361,381) and (379,385) .. (389,391) ..
+controls (389,391) and (428,409) .. (431,413) --cycle;
+\begin{scope}[draw=ETred!30!black,line width=0.4pt]
+\draw (234,270) .. controls  (268,268) and (280,301) .. (288,318);
+\draw (306,245) .. controls  (306,270) and (317,292) .. (331,300);
+\draw (239,230) .. controls  (231,232) and (222,250) .. (226,256);
+\draw (197,220) .. controls  (191,224) and (181,233) .. (183,238);
+\draw (149,212) .. controls  (142,216) and (140,227) .. (138,230);
+\draw (222,280) .. controls  (230,284) and (234,297) .. (231,306);
+\draw (201,287) .. controls  (207,291) and (208,311) .. (205,315);
+\draw (175,298) .. controls  (184,305) and (185,314) .. (180,325);
+\draw (293,236) .. controls  (289,246) and (286,254) .. (287,260);
+\draw (294,165) .. controls  (306,166) and (297,168) .. (319,164);
+\draw (399,286) .. controls  (395,298) and (391,302) .. (384,306);
+\end{scope}
+\path[draw=black,fill=ETred!30!white,line width=1pt] (299,374) ..
+controls (315,371) and (327,369) .. (335,366) ..
+controls (344,363) and (357,356) .. (360,349) ..
+controls (363,343) and (361,341) .. (359,337) ..
+controls (357,332) and (335,335) .. (329,337) ..
+controls (324,339) and (319,341) .. (297,344) ..
+controls (275,347) and (269,349) .. (258,348) ..
+controls (249,347) and (259,370) .. (264,373) ..
+controls (269,375) and (269,380) .. (299,374) --  cycle;
+\path[draw=black,fill=ETred!30!white,line width=1pt] (316,311) ..
+controls (335,310) and (345,309) .. (350,314) ..
+controls (355,319) and (353,325) .. (351,326) ..
+controls (350,327) and (333,335) .. (324,337) ..
+controls (316,340) and (314,338) .. (297,342) ..
+controls (279,346) and (278,347) .. (273,349) ..
+controls (268,351) and (257,351) .. (248,343) ..
+controls (239,336) and (240,323) .. (241,319) ..
+controls (241,315) and (242,307) .. (260,305) ..
+controls (278,304) and (273,310) .. (296,311) ..
+controls (319,311) and (316,311) .. (316,311) --
+cycle;
+\begin{scope}[draw=ETred!30!black,line width=0.4pt]
+\draw (245,318) .. controls (243,335) and (246,336) .. (256,343);
+\draw (275,318) .. controls (275,324) and (276,336) .. (276,336);
+\draw (308,317) .. controls (308,319) and (309,330) .. (309,334);
+\draw (314,347) .. controls (314,351) and (321,364) .. (321,364);
+\draw (282,354) .. controls (283,357) and (285,369) .. (289,370);
+\draw (405,318) .. controls (399,330) and (395,361) .. (388,368);
+\end{scope}
+\node (O) at (318,260) {};
+\draw[->] (O.center) --++(90:-220) node[right] {$\vec{k}$};
+\draw[->] (O.center) --++(12:-290) node[left] {$\vec{i}$};
+\draw[->] (O.center) --++(-20:-260) node[below] {$\vec{j}$};
+\end{tikzpicture}\end{document}

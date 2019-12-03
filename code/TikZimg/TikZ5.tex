@@ -1,0 +1,52 @@
+\documentclass{standalone}
+\usepackage{tikz}\usetikzlibrary{calc,patterns,backgrounds}
+\definecolor{ETred}{rgb}{1,0,0}
+\input{./frontmatter/CPsettings.tex}
+\begin{document}\begin{tikzpicture}[y=0.6pt,x=0.6pt,yscale=-1,xscale=1]
+% Axis
+\draw[dashdotted,line width=0.5pt] (10,110) -- (290,110);
+% Cristallino
+\draw[] (115,80) to[bend left] (115,140) to[bend left] cycle;
+% Retina up
+\draw[] (266,196) -- (212,157) .. controls ++(210:10) and ++(120:10) .. (212,135) .. controls ++(290:60) and ++(325:67) .. (118,58) .. controls ++(125:10) and ++(280:10) .. (119,88);
+% Retina down
+\draw[] (212,157) .. controls ++(210:10) and ++(320:5) .. (193,157) .. controls ++(150:20) and ++(25:30) .. (119,160) .. controls ++(-125:10) and ++(-280:10) .. (119,132);
+% Muscoli Diaframma
+\draw[] (111,132) to [out=180,in=0] (100,146);
+\draw[] (111,88) to [out=180,in=0] (100,74);
+% Iride
+\draw[] (95,70) to [out=140,in=220,looseness=0.9] (95,150);
+% Cornea
+\draw[] (275,187) -- (231,154) .. controls ++(225:5) and ++(110:5) .. (227,137) .. controls ++(290:110) and ++(300:90) .. (90,70) to [out=140,in=220] (90,150) .. controls ++(60:45) and ++(160:40) .. (197,175) .. controls ++(-20:5) and ++(210:5) .. (212,176) -- ++(34:55);
+% UP
+\draw[fill=red!50] (95,70) .. controls ++(90:10) and ++(180:5) .. (98,90) .. controls ++(0:5) and ++(90:10) .. (100,74) .. controls ++(295:72) and ++(290:95) .. (217,133) .. controls ++(110:5) and ++(230:10) .. (223,150) .. controls ++(245:5) and ++(110:10) .. (222,136) .. controls ++(290:100) and ++(300:85) .. cycle;
+% Down
+\draw[fill=red!50] (95,150) .. controls ++(270:10) and ++(180:5) .. (98,130) .. controls ++(0:5) and ++(270:10) .. (100,146) .. controls ++(60:35) and ++(160:35) .. (190,164) .. controls ++(340:5) and ++(225:5) .. (212,170) .. controls ++(225:5) and ++(340:5) .. (195,168) .. controls ++(160:45) and ++(60:35) .. cycle;
+% Labels
+\node (X) at (50,110) {};
+\node (L8) at (-50,-30) {};
+\node (L7) at (-50,0) {};
+\node (L6) at (-50,30) {};
+\node (L5) at (-50,60) {};
+\node (L4) at (-50,90) {};
+\node (L3) at (-50,130) {};
+\node (L2) at (-50,160) {};
+\node (L1) at (-50,190) {};
+\node (L0) at (-50,220) {};
+\node (Lm1) at (-50,250) {};
+\node (Lm2) at (-50,280) {};
+
+\begin{scope}[every node/.style={inner sep=1pt,at end,anchor=south west,scale=0.8}]
+\draw[<-] (145,38)  --(X|-L8)-- (L8.center) node {\strut Choroïde};
+\draw[<-] (118,39)  --(X|-L7)-- (L7.center) node {\strut Sclérotique};
+\draw[<-] (135,80)  --(X|-L6)-- (L6.center) node {\strut Humeur vitrée};
+\draw[<-] (94,82)   --(X|-L5)-- (L5.center) node {\strut Iris};
+\draw[<-] (77,97)   --(X|-L4)-- (L4.center) node {\strut Cornée};
+\draw[<-] (105,111) --(X|-L3)-- (L3.center) node {\strut Pupille};
+\draw[<-] (94,121)  --(X|-L2)-- (L2.center) node {\strut Humeur aqueuse};
+\draw[<-] (115,121) --(X|-L1)-- (L1.center) node {\strut Cristallin};
+\draw[<-] (215,110) --(X|-L0)-- (L0.center) node {\strut Tache jaune};
+\draw[<-] (219,119) --(X|-Lm1)-- (Lm1.center) node {\strut Rétine};
+\draw[<-] (244,181) --(X|-Lm2)-- (Lm2.center) node {\strut Nerf optique};
+\end{scope}
+\end{tikzpicture}\end{document}

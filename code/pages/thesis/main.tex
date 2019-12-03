@@ -1,0 +1,766 @@
+% DOES THE INTRODUCTION OF THE EURO REDUCE FIRM-LEVEL EXCHANGE RATE RISK EXPOSURE?
+\documentclass[11pt]{article}
+    \usepackage{marvosym}
+    \usepackage{chngpage}
+    \usepackage{geometry}
+
+    \geometry{letterpaper,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{pdflscape}
+    \usepackage{pdfpages}
+    \usepackage{multirow}
+    \usepackage{setspace}
+    \usepackage{graphicx}
+
+    \usepackage{threeparttable}
+    \usepackage{booktabs}
+    \usepackage{hyperref}
+    \usepackage{subfig}
+    \usepackage{titlesec}
+    \usepackage{amssymb}
+    \usepackage{amsfonts}
+    \usepackage{nth}
+
+    \usepackage{titlesec}
+
+    \titleformat*{\section}{\large\bfseries}
+    \titleformat*{\subsection}{\normalsize\bfseries}
+
+    \usepackage{rotating}
+    \usepackage{siunitx}
+    \usepackage{multirow}
+    \usepackage{natbib}
+    \bibliographystyle{apalike}
+    \bibpunct[,~]{(}{)}{,}{a}{}{;}
+
+    \usepackage[font={bf}]{caption}
+
+    \newcommand{\tabfigfoot}[1]{\strut\\[0.5\baselineskip]
+    \noindent\begin{minipage}[t]{\linewidth}#1\end{minipage}}
+    \usepackage{lipsum}
+\begin{document}
+
+%Cover Page%
+\title{\textbf{Is this a title for a thesis?}}
+\vspace{1 in}
+\author{
+\textit{Elio A. Farina}
+\thanks{\TeX\ Academy}}
+\date{September, 2121}
+\maketitle
+\thispagestyle{empty}
+% abstract %
+\begin{abstract}\noindent
+This is the bastract with some info.
+
+\lipsum[1-2]
+\end{abstract}
+\textbf{Key words}: Key, Words, Some \\
+\textbf{JEL classification}: G15, F23, F31, F41
+%cover end%
+
+
+\end{document}
+\pagebreak
+\setcounter{page}{1}
+
+\doublespacing
+
+\section{Introduction}\label{Sec:1}
+The exchange rate risk exposure is an important topic that has received greater attention in financial studies in the last 10 years. Surprisingly, few empirical papers have investigated it in the context of the Euro. One of the central motivations for the creation of the euro was to enable European firms to avoid the transaction loss caused by the uncertainties of exchange rate movements. Nonetheless, the eurozone crisis which began from late 2009 raised an important question: did joining a monetary union in terms of gains in liquidity and financial stability continuously benefit most firms? This article performs a firm-level dynamic analysis of the Euro's impact on exchange rate exposure worldwide from 1993 to 2011.
+
+Showing such an impact of common currency adoption on exchange rate exposure is challenging because, firstly, there is an exchange rate exposure puzzle. Financial theory predicts that firm value should be affected by foreign exchange rate risk. However, existing empirical studies to date have had limited success in identifying significant exposure of nonfinancial firms with regard to unexpected exchange rate movements. \citet{jorion1990exchange}, \citet{dominguez1998dollar}, \citet{he1998foreign}, \citet{griffin2001international}, \citet{bodnar2003estimating}, \citet{kathryn2001atrade,kathryn2001bre,dominguez2006exchange}, \citet{ihrig2005effect}, \citet{doidge2006measuring}, \citet{bartram2007exchange}, \citet{hutson2010firm}, \citet{bartram2012crossing}, and others have various findings regarding the nature of the exchange rate exposure, and highlight the need for a systematic comparison of exchange rate exposure across time, countries, and determinants. This paper examines the exchange rate risk exposure in a very broad context. Our sample comprises 6,574 nonfinancial firms from eleven euro zone countries, six non-euro European countries, and two countries outside of Europe (the United States and Japan). The full sample period covers the pre-euro period (1993--1998), post-euro period (1999--2007), and the financial crisis period (2008--2011).
+
+Secondly, defining which firms were affected by the euro's launch is a big and complex project. A firm's stock return can be affected by unexpected exchange rate movements both directly and indirectly. \citet{dominguez2006exchange} indicate that even firms that do not have international business directly could be affected by exchange rate through competition with foreign firms in the same industry. According to a high degree of detail on geographic segment data on foreign sales, we group sample firms into two categories: multinational corporations with European sales and non-multinational corporations (without European sales).\footnote{Multinational corporations with foreign sales but not in Europe are not included in sample firms. This is because the impact of the Euro's launch on them is complicated and ambiguous. It's hard to expect whether there is an impaction or not and to distinguish the channel of the impaction, so they cannot be classified into either group in this study.} Since the Euro is introduced in a specific set of European countries only, firms with foreign activities in these countries are expected to be affected differently in degree by the introduction of the Euro than other firms, and foreign sales or assets in Europe proxy for this euro currency exposure.
+
+Thirdly, as with market beta and the exchange rate risk exposure, the relationship between the exchange rate risk exposure and its determinants vary with time. Different from all the other existing research, in order to gain a full picture of the movements of market risk and exchange rate exposures, we employ the rolling regression with a window of 36 months to check for the changes in the exposure reflectors over time. For the first stage regression only, this yields 193 times of estimation for each firm and 351,067 times of estimation for the full sample.
+
+In the first stage, we show that the eurozone firms, as well as the firms in other areas, experience a decrease in the stock market risk temporarily around 1999--2002. Since then, market betas rose back to their former level gradually before the crisis of 2008. The exchange rate risk exposure of the eurozone firms exhibits a smaller increase after the euro's launch but a larger increase during the financial crisis period relative to other regions.
+
+The second stage of our dynamic analysis focuses on the determinants of exchange rate risk exposure. We take the estimated coefficients from the first stage regressions and regress these on a variety of potential explanatory variables. A relationship between foreign sales (foreign income, etc.) and exposure is discovered, but its size changes over time and its sign differs between positive-exposure and negative-exposure firms. This helps explain why it is so difficult to identify the determinants of the exposure. Among the significant results, foreign sales and foreign income have a positive impact on the exposure at most of the time. Foreign assets and debt ratio, however, have a negative impact at most of the time. The exchange rate exposure of a multinational firm incorporates the effects of any hedging activity undertaken by the firm. Hence, for a multinational firm having dominant foreign sales effect over other effect (such as import effect), we might see a low exchange risk exposure corresponding to a high foreign sales. However, the big exchange exposure caused by high debt ratio and large foreign assets is difficult to hedge.
+
+The paper is organized as follows. Section~\ref{Sec:2} describes our research approach and data sources. Section~\ref{Sec:3} investigates the market-level stock risk and foreign exchange rate volatility. In section~\ref{Sec:4} and~\ref{Sec:5}, we present the firm-level market risk and exchange rate risk exposure results and give an explanation. Robust checks and conclusions are offered in section~\ref{Sec:5} and~\ref{Sec:6}, respectively.
+
+
+\section{Model and Data}\label{Sec:2}
+In early studies, exchange rate exposure is defined in terms of a firm's risk of fluctuation in the foreign exchange rate. \citet{adler1984exposure} present a method of estimating a firm's foreign exchange exposure on the basis of a one-factor market regression model of the stock returns on the changes in exchange rates (the prices of currencies). The obtained coefficient of exchange rate changes in one-factor model measures the firm's \textit{total} exposure to exchange rates.
+
+
+\subsection{Model}
+\citet{jorion1990exchange} upgrades the one-factor model into a two-factor regression model distinguishing the effect of exchange rate risk inherent in the market index and the effect directly through exchange rate changes. The obtained coefficient of exchange rate changes is so called residual exposure, in excess of the total market's reaction to exchange rate movements.\footnote{\citet{dominguez2006exchange} call it marginal exposure in this context. They consider the advantage of marginal exposure is allowing one to distinguish between the direct effects of exchange rate changes and the effects of macroeconomic shocks that simultaneously affect firm value and exchange rates. Contrast to marginal exposure, total exposure measures the exposure of all firms as a group.} This two-factor model is later used in an extensive body of work, such as \citet{griffin2001international}, \citet{bodnar2003estimating}, \citet{kathryn2001atrade,kathryn2001bre,dominguez2006exchange}, \citet{bartram2006impact}, \citet{doidge2006measuring}, \citet{bartram2007exchange,bartram2012crossing}, \citet{hutson2010firm} and others. In this paper, we employ the following widely used two-factor regression model to measure exchange rate exposure:
+\begin{equation}\label{Eq:1}
+  R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt},
+\end{equation}
+where $R_{ijt}^{s}$ is the stock return of firm $i$ in country $j$ at time $t$, $R_{jt}^{m}$ is the return of market portfolio in country $j$, $X_{jt}$ is the percentage change of exchange rate of country $j$'s currency, and $\beta_{ij}$ is firm $i$'s market beta. Conditioning on market movements, this model well reflects the change in stock returns explained by exchange rate movements in coefficient $\delta_{ij}$. For $i=1,\dots,N$ firms, the disturbances are not only obviously autocorrelated but may also be correlated across stocks. This model is an unrestricted SUR model (the equations are linked only by their disturbances) with the same regressors in every equation. In this special case, GLS and maximum likelihood estimators are simply equation by equation OLS because all equations have identical regressors X. They are no more efficient than OLS.\footnote{William H. Greene gives a proof and a further discussion in his ``Econometrics Analysis'' \nth{5} edition, Chapter 14.2.2 and 14.2.5. ``In this special case that all regressors are identical, generalized least squares (GLS) is equivalent to equation-by-equation ordinary least squares (OLS)'', ``GMM estimation is irrelevant``, and ``Maximum likelihood estimation does not have any advantage compared to OLS''.}
+
+
+\subsection{Data}
+We collect data for all non-financial firms\footnote{Financial firms are characterized by different attitudes towards financial risks from non-financial firms given their business objectives.} which publicly traded during January 1993--December 2011 from eleven eurozone countries (Austria Belgium, Finland, France, Germany, Ireland, Italy, Luxembourg, the Netherlands, Portugal, and Spain),\footnote{Greece is excluded from the eurozone sample, because that it lunched euro in an inconsistent year (2001) with other eurozone countries, also, it does not have enough firm records existing from 1993 until 2011. For the same reason, Slovenia, Cyprus, Malta, Slovakia and Estonia which have joined eurozone since 2007, 2008, 2008, 2009, and 2011, respectively, are excluded in our sample too.} six non-eurozone Europe countries (Denmark, Norway, Poland, Sweden, Switzerland, and the United Kingdom),\footnote{Denmark and the United Kingdom joined EU in 1973. Sweden and Poland joined EU in 1995 and 2004 respectively. Norway and Switzerland do not join EU. Other non-eurozone Europe countries, such as Iceland, Bulgaria, Czech Republic, Hungary, Latvia, Lithuania, Romania, Croatia, Former Yugoslav Republic of Macedonia, Montenegro, Turkey, etc. don't have enough firm data before 1999, so they are excluded from our non-eurozone data sample.} and two outside Europe countries (Japan and the United States).\footnote{Our rationalization for including only firms from Japan and the US is in part from the fact that these two markets dominate the trade and capital flows between Europe and the rest of the world, and also in part from the pre-euro data availability of other countries} A total of 31,323 non-financial firms is our raw data sample, of which 5,028 firms are from eurozone area, 5,615 are from non-eurozone Europe area, and 20,680 are from outside the Europe area, i.e. Japan and the U.S. The sample period from January 1993 to December 2011 is chosen in order to minimize any specification problems stemming from the ERM crisis of 1992/1993,\footnote{On 16 September 1992, the British Conservative government was forced to withdraw the pound sterling from the European Exchange Rate Mechanism (ERM) since they were unable to keep it above its agreed lower limit.} and also help maintain a reasonable amount of non-financial firms in our test sample due to the firm-level data availability earlier than 1993.
+
+Firms with a non-zero amount of foreign sales, trade, services, or investment in the eurozone are expected to be affected differently in degree by the introduction of the Euro than other firms. Hence, firstly, we use foreign sales or assets in Europe as a proxy for the Euro currency exposure following \citet{bartram2006impact}.\footnote{\citet{bartram2006impact} use foreign sales or assets in Europe rather than eurozone as a proxy for Euro currency exposure though they ``have finer segment data on sales and assets specific to Euro-area countries``. Their choice ``stems from the fact that the much smaller breadth of the sample with such finer segment data''. Here, we consider an additional reason for following this choice in our study is the fact that the euro has been using (or using as accounting currency) broadly in non-eurozone European countries at varying degrees of foreign sales, trade, or services transactions.} In each area, we define the MNCs sample based on foreign sales and foreign assets in Europe. Thomson One Worldscope contains 10-scale geographic segment data for a large number of firms worldwide. We calculate each firm's annual Europe sales according to their geographic segment sales.\footnote{See \cite[page~527]{bartram2006impact} for detailed steps of calculation.} Firms showing non-zero foreign Europe sales continuously across all three sub-periods: the pre-euro period (1993--1998), post-euro period (1999--2007), and the financial crisis period, (2008--2011) are finally used to compose our MNCs samples of three areas.\footnote{Based on our choice of single equation-by-equation ordinary least squares methodology and our purpose to examine the impact of euro' launch on firm value as well as euro's performance in crisis, the firms we selected into the sample must publicly trade across all three sub-periods with at least 48 monthly observations within each sub-period. In this way, we also keep a balanced panel data sample and minimize any technical problems raised by unbalanced data in econometrics.}
+
+Secondly, in order to benchmark the effects of the Euro on the MNCs samples, we select the firms without any foreign sales from 1993 to 2011 to compose our non-MNCs samples in each corresponding area. Although the profit of non-MNCs cannot be affected by exchange rate movements via foreign sales directly, it could be affected directly either via exports or imports. \citet{dominguez2006exchange} also argue that even firms that do not conduct international business directly could be affected by the exchange rate through competition with foreign firms in the same industry. Therefore, we expect to see that the non-MNCs experience exchange rate exposure as well, but with a lower exchange rate exposure relative to the MNCs.
+
+Finally, the eurozone sample comprises 161 MNCs and 194 Non-MNCs; the non-eurozone Europe sample comprises 147 MNCs and 160 non-MNCs; and the outside Europe sample comprises 141 MNCs and 1,014 non-MNCs. In total, 1,817 non-financial firms are included in our core test sample. Table~\ref{Tab:1} provides descriptive statistics of MNCs and Non-MNCs in the test sample by areas. We compare them in terms of market capitalization, total assets, total sales, foreign sales in percentage to total sales, and foreign sales in Europe (hereafter, Europe sales) in percentage to total sales. MNCs tend to be large firms which have higher market capitalization, total assets, and sales compared to non-MNCs across all regions. For example, the median market capitalization, total assets, and total sales of MNCs are \EUR1225.6 million, \EUR1198.8 million, and \EUR1170.9 million, respectively, while the median values for the non-MNCs are \EUR131.8 million, 264.5 million, and 258.9 million. The MNCs has 56.0\%{} of foreign sales and 30.6\%{} Europe sales in median, but there are significant differences across areas: median foreign sales and Europe sales for MNCs are 63.0\%{} and 36\%{} in eurozone, 62.8\%{} and 36\%{} in non-eurozone Europe, and only 40.6\%{} and 21.4\%{} in outside of Europe.
+
+Market capitalization (year-end), total assets, total debt, foreign sales, foreign assets, foreign income, export, and geographic segment 1--10 descriptions and sales are annual data, while firm-level stock returns, market indices returns (value-weighted) are monthly data. They are all taken from Thomson One Banker (Thomson financial, Datastream, and Worldscope) over the period of 1993M1--2011M12.The exchange rate (nominal effective) data are monthly obtained from the IMF's \textit{International Financial Statistics}.
+
+
+\section{Stock Market Risk and Foreign Exchange Volatility}\label{Sec:3}
+Table~\ref{Tab:2} presents the means and standard deviations of stock market indices returns by areas over three periods: pre-euro period (1993M1--1998M12), post-euro period (1999M1--2007M12), and crisis period (2008M1--2011M12).\footnote{We follow the Business Cycle Dating Committee of the National Bureau of Economic Research to define the December 2007 as the end (the peak) of the expansion that began in November 2001.We divide subsample periods using US subprime crisis date instead of eurozone debt-crisis date in part of that US crisis induced a global economic crisis and in part of that eurozone debt-crisis started in late 2009 giving us too less observations for the crisis period analysis.} And we also use $F$-test to exam if the change of stock market volatility is statistically significant. In the eurozone, market indices return variances are significantly smaller after the Euro's launch in Austria, Spain, Italy, and Portugal; significantly larger in Germany, Finland, and Luxemburg; and not significantly different in Belgium, France, Ireland, and the Netherlands. In the non-eurozone Europe, market indices return variances are significantly smaller after Euro's launch in Switzerland and Poland and not significantly different in Norway, Denmark, the United Kingdom, and Sweden. In the outside of Europe, market indices return variances are significantly smaller after Euro's launch in Japan but not significantly different in the United States. If we test according to general market indices of Eurozone, Europe, and world, the return variances are not significantly different before and after Euro's launch.
+
+Continuing from Table~\ref{Tab:2}, Table~\ref{Tab:3} provides the means and standard deviations of exchange rate changes in percentage. In the eurozone, all the countries experience a statistically significant decrease in exchange rate volatility after the Euro's launch. However, the situation is different in non-eurozone countries, as Norway and Poland suffered a statistically significant increase in exchange rate volatility while the other four countries did not. Outside of Europe, Japan is the one experiencing a decreased exchange rate volatility of local currency after 1999 while the United States does not.
+
+Overall, these findings on stock and foreign exchange rate markets volatilities offer preliminary evidence that, despite the euro bringing in exchange rate stabilization consistently across eurozone countries, it did not make stock returns of eurozone nonfinancial firms less volatile in most of the eurozone countries. Additionally, the financial crisis of 2008 increases the volatility of both stock market and foreign exchange market significantly worldwide. Both the eurozone and non-eurozone Europe have a significant increase at 1\%{} level in stock market volatility compared to the post-euro period. The standard deviation of eurozone market indices has raised 33.08\%, and this number goes up to 35.51\%{} when non-eurozone markets are included into the index.\footnote{Among the 19 test sample countries, Germany, Poland, and Sweden are three exceptions that their stock market volatility do not change significantly before and after the crisis of 2008. Finland and Luxemburg even surprisingly have a significantly lower volatile during 2008--2011 compared to 1999--2007. However, it is not lower than the volatile in the pre-euro period. F-test results for change caused by the crisis of 2008 are available on request.}
+
+
+\section{Firm-level market risk and exchange rate risk exposure}\label{Sec:4}
+\subsection{First stage estimates across subsamples}
+Following equation~(\ref{Eq:1}), we perform the first stage equation-by-equation OLS regressions to examine the euro's impact on firm-level stock risk and exchange rate exposure. Main results of median and mean values of market beta and exchange rate exposure coefficients ($\delta$) are reported by area in Table~\ref{Tab:4}--\ref{Tab:6}, as well as corresponding $p$-values, number of positive/negative exchange exposure coefficients, and percentage of significant (at 5\%{} level or better) exchange exposure coefficients.
+
+We begin our analysis by comparing the market beta of MNCs and non-MNCs. The beta is a measure of a stock's price volatility in relation to the rest of the market. In general, in Table~\ref{Tab:4}--\ref{Tab:6}, MNCs have bigger market beta than non-MNCs across all three different periods of subsamples. Take the eurozone test sample as an example, MNCs have an average market beta of 0.735 over the full period of 1993M1--2011M12, which is around 1.5 times higher than 0.262 of non-MNCs. This finding is consistent with the expectation that stock prices of small firms with no foreign sales face less market system risk. Besides, the difference between the beta of MNCs and non-MNCs is biggest in the eurozone and smallest in the outside of Europe. This is probably because that the market capitalization proportion of non-MNCs to MNCs is smallest in the eurozone test sample (2.0\%) and largest in the outside of Europe test sample (11.8\%), i.e. the difference of the market capitalization of non-MNCs and MNCs is smallest in the eurozone test sample and largest in the outside of Europe test sample.
+
+In the class of MNCs samples, the median values of market beta are 0.814, 0.630, and 0.922 for the pre-euro period, post-euro period, and crisis period in the eurozone area, respectively. The market risk experienced a decrease after the introduction of the euro, but this decrease is not stable. It goes back quickly to a level as high as it was in the pre-euro period during 2008--2011. This surprising phenomenon consistently exists outside of Europe. The median values of market beta for outside of Europe are 0.930, 0.899, and 1.432.\footnote{The appearance of beta larger than 1 happens only in MNCs test sample of non-eurozone and outside Europe area during 2008--2011.It likely stems from the small number of large capitalization stocks in the market indices sample and the use of a market-cap-weighted local market index in the regression. When we use local market index of big companies (e.g. NASA100) instead of total local market index (TOTMKUS), or add an additional market index (e.g. world market index), or pool MNCs and non-MNCs samples together, this beta larger than 1 phenomenon disappears. Results are available up on request.} In the class of non-MNCs samples, this surprising phenomenon exists as well across all the regions. For instance, the median market beta of non-MNCs is 0.277, 0.140, and 0.236 for the pre-euro period, post-euro period, and crisis period in the eurozone; 0.453, 0.452, and 0.600 in the non-eurozone Europe; and 0.948, 0.647, and 0.660 in the outside of Europe.\footnote{\citet{bartram2006impact} provide the similar evidence that multinationals which have foreign Europe sales experience a decrease in market beta after the introduction of the Euro, but their sample period stops in August 2001, so no evidences of a later rise in market beta are provided in their paper.} The only exception exists in non-eurozone MNCs test sample. Its market beta moves up gradually without any significant downs or ups until 2011.
+
+Comparing the pre-euro period to the post-euro period, median beta has a 22.6\%{} (eurozone) and 3.33\%{} (outside Europe) decrease for MNCs respectively, while a 49.5\%{} (eurozone Europe) and 31.8\%{} (outside) decrease for non-MNCs respectively. The non-financial firms in the eurozone experience an obvious larger decrease of market risk compared to other areas, and non-MNCs experience an obvious larger decrease of market risk compared to MNCs. During the crisis period, the eurozone firms that once had the largest decrease in post-euro period also experience a comparatively large increase in market risk for both MNCs (46.3\%) and non-MNCs (68.8\%).
+
+After controlling for the general market risk, exchange rate exposures are reflected in coefficient $\delta$. Usually, a firm's stock return can be affected by unexpected exchange rate movements through a variety of channels: (1)~a firm may produce at home for exports, (2)~a firm may produce at home with imports, and (3)~a firm may produce for foreign sales abroad. According to the definition of multinationals, a MNC's stock return must be affected by exchange rate movements via channel~(3), but it can also be affected by channel~(1) and/or~(2) if it has export sales and/or import purchases at the same time. For example, a depreciation of the home currency should increase firm value via foreign sales (making revenue increase in terms of home currency) and via export sales (making exports more competitive), while firm value can be reduced via imports (making imported raw/intermediate material cost higher in home currency). When a firm has exports, imports, and foreign sales at the same time, the sign of exposure coefficient is determined by the net effect of all three effects. Given that exposures to foreign exchange rate risk have different signs, we follow \citet{bartram2006impact} in reporting the exposure coefficient ($\delta$) with the positive and negative signs separately.\footnote{\citet{dominguez2006exchange} and \citet{hutson2010firm} use the absolute value of the exposure coefficients since both of them have a mixed sample of MNCs and non-MNCs and they don't give a further analysis on different exchange exposure channels in MNCs.} For the same firm, it may have a positive exchange exposure coefficient this year but a negative exchange exposure next year. Hence, we see the number of firms with positive/negative exchange exposure coefficients varies across sub-periods.
+
+In Table~\ref{Tab:4}--\ref{Tab:6}, the positive $\delta$ which may represent the MNCs having an import effect larger than the sum effect of foreign sales and exports is getting larger by time across areas.\footnote{Recall that we use the nominal effective exchange rate, so an increase in exchange rate represents the home currency appreciation.} The median $\delta$ of MNCs between the pre- and post-euro period increases 47.3\%{} outside of Europe, 21.4\%{} in non-eurozone Europe, but only 18.1\%{} in eurozone. However, when we compare the increases between the post-euro and crisis period across areas, the median $\delta$ of MNCs has the largest increase (50.3\%) in eurozone, while only 29.6\%{} and 26.9\%{} increase in non-eurozone Europe and outside of Europe, respectively.
+
+In contrast to the positive $\delta$, the negative $\delta$ may represent the MNCs which have the sum effect of foreign sales and exports larger than the import effect. An increase in the negative $\delta$ means a decrease in the absolute value of negative $\delta$, i.e. less exposure to the exchange rate risk. Although the eurozone MNCs are not the ones having the largest decrease in the absolute value of exchange rate risk exposure between the pre- and post-euro period, they have a second large decrease (18.3\%) which is much higher than the MNCs of the non-eurozone Europe (2.1\%).\footnote{MNCs in the outside of Europe have the largest decrease (30.6\%) in the absolute value of exchange rate risk exposure.} But, like the positive $\delta$ in Table~\ref{Tab:4}--\ref{Tab:6}, the negative $\delta$ of MNCs in the eurozone has the largest increase in the absolute value of exchange rate risk exposure among the three areas during the crisis period. The exchange rate risk exposure in absolute value increases 55.6\%{} in the eurozone compared to the post-euro period, while only 11.6\%{} in the outside of Europe.\footnote{For non-eurozone Europe, surprisingly, the exchange risk exposure in absolute value even does not increase but continue to decrease in the crisis period.} Furthermore, the eurozone MNCs have an average larger proportion of statistically significant positive (11.5\%) and negative (13.3\%) exchange exposures in the crisis period not only compared to the pre- and post-euro period, but also compared to non-eurozone MNCs and outside of Europe MNCs in the same crisis period.\footnote{In the non-eurozone and outside of Europe, we don't find that exchange rate risk exposures are larger in the crisis period than in the pre-crisis period.}
+
+Overall, whether MNCs have dominant import effect or dominant export and foreign sale effect, relative to other areas, eurozone MNCs perform better (experience less increase in exchange rate risk exposure) after the Euro's adoption, but worse (experience a larger increase in exchange rate risk exposure) during the crisis period. Additionally, non-MNCs have generally higher exchange rate risk exposures than MNCs, i.e. the firm value of non-MNCs is more likely to be affected by unexpected exchange rate movements. This may due to those non-MNCs being affected by the unexpected exchange rate movements indirectly, and thus don't have an effective way to measure and hedge this risk. However, the proportions of statistically significant exposures of non-MNCs are not necessarily bigger than the MNCs.
+
+
+\subsection{First stage estimates in dynamics}
+Although Table~\ref{Tab:4}--\ref{Tab:6} provides a lot of valuable information, there are still some important questions that have not been answered. For example, from our previous analysis, we find that the market risk first goes down in the post-euro period and then goes up in the crisis period. However, when did the market risk reach the bottom and then returned to the peak? Is the introduction of the euro right the reason for this down trend? Moreover, were the market risk and exchanger rate risk exposures kept at a low and stable level until the crisis of 2007/2008? In order to gain a full picture of the movements of market risk and exchange rate exposures over 1993--2011, we employ the OLS rolling regression and recursive regression respectively.
+
+An OLS rolling regression makes it possible for us to check for changes in the regression coefficients over time. Here, we run an OLS regression, with the specification in equation~(\ref{Eq:1}), over a rolling window of 36 observations (i.e. with fixed 36 months).\footnote{The choice of 36 months was guided by the need to have enough rolling estimates before 1999 to assess Euro's introduction effect. Most of the results have been replicated with rolling window of 48 and 60 months with no noticeable changes.} As a new observation becomes available, the previous initial observation is dropped from the regression equation. Eventually, this yields a vector of estimated coefficients possibly changing over time. In our study, we have 193 windows (and therefore 193 estimated vectors) for each firm and 351067 windows for the full sample.\footnote{The advantage of rolling regression is its simplicity. However, it has the disadvantage of losing the estimation of the coefficients for the first $n$ observations (with $n=36$ months in our specification). This hampers the possibility to assess how the market beta and exchange rate risk exposure changed in the period 1993M1--1995M12.}
+
+Figure~\ref{Fig:1A} and~\ref{Fig:2A} show the first stage rolling estimates of market beta and exchange rate risk exposure $\delta$ over the ending dates by regions, respectively. The estimated $\beta$ or $\delta$ at $t$ is based on data from $t-36$ to $t$, a window of three years. In Figure~\ref{Fig:1A}, the trend of market beta is consistent with our previous findings from Table~\ref{Tab:4}--\ref{Tab:6}. For MNCs in the eurozone in panel A, the market beta first went down from around 0.9 in the beginning of 1996 to around 0.4 in the late 2001. The market betas for late 2001 are the estimates based on data from late 1998 to late 2001. In late 2009, it rose gradually to peak at around 1 and slid down slowly again since then. For non-MNCs in the eurozone, the market beta has a similar moving trend (at a lower level) but with a comparatively flat section between the late 2001 and late 2005. This scenario is repeated outside of Europe with just a few slight changes. For MNCs, the market beta first went down to touch its bottom around late 2001, but rose to the peak around 2006/2007, earlier than the eurozone area. Furthermore, another trough appears around the middle of 2008. These findings seem to be in line with the fact that the U.S. subprime mortgage crisis has taken place a couple of years earlier than the Eurozone debt-crisis.
+
+Panel B of Figure~\ref{Fig:1A} presents a continuously and gradual up trend for both MNCs betas and non-MNCs betas just like the indication of Table~\ref{Tab:4}--\ref{Tab:6}. This inconsistent phenomenon by regions raises a question: is the trough in the beta trend of eurozone and outside of Europe around euro's launch really caused by the euro's launch? If so, then why does the outside of Europe have a similar visible trough as the eurozone, but non-eurozone Europe does not? We will revisit this question in the section of robust checks.\footnote{\citet{bartram2006impact} find the smallest decrease of beta ($-0.115$) for the non-eurozone Europe MNCs after the introduction of the euro, but a much larger one for the eurozone ($-0.208$) and outside of Europe MNCs ($-0.359$). They have a longer period before 1999 and much shorter period after 1999. The different length of test sample periods could be the reason for Bartram and Karolyi's finding of a decreasing beta and our finding of an increasing beta.}
+
+In Figure~\ref{Fig:2A} of rolling estimates for exchange rate risk exposure, consistent evidence is shown in Table~\ref{Tab:4}--\ref{Tab:6} that, compared to non-eurozone Europe and outside of Europe MNCs, eurozone MNCs experience a smaller increase in positive exposure and even a decrease in the absolute value of negative exposure between 1999 and 2007, but experience a larger increase in positive exposure and a larger decrease in negative exposure between 2008 and 2011. The movements of exchange rate exposure for non-MNCs seem to not follow any rules across areas.\footnote{Recursive rolling regressions are also done for three regions and provide consistent results to the rolling regressions. The estimates of recursive regression at time t incorporate all the information from the beginning of the sample, up to time t. The results set off the disadvantage that an observation receiving full weight for estimating in one period is relegated to having a weight of zero in the next. Figures of recursive regressions are available up on request.}
+
+Altogether, all of this evidence indicates that a stock market risk trough coincided with the introduction of the euro in not only the eurozone but also other areas, while the eurozone had the largest decrease and the lowest bottom. However, this low stock market risk phenomenon lasted only temporarily around 1999--2002. Since then, market beta rose back to its former level gradually before the crisis of 2008, and shot up to an even higher number in the crisis period. With respect to exchange rate risk exposure, firms in the eurozone experienced a smaller exposure after the introduction of the euro relative to the crisis period, while firms in other areas experienced the opposite: a larger exposure after the introduction of the euro relative to the crisis period.
+
+
+
+\section{Explaining Firm-level Market Risk and Exchange Rate Risk Exposure}\label{Sec:5}
+In this section, we attempt to find the determinants of firm-level market risk and exchange rate risk exposure by running a second stage regression. We take the estimated coefficients from equation~(\ref{Eq:1}) and regress these on a variety of potential explanatory variables.
+\begin{subequations}
+  \begin{align}
+    {\hat{\beta}}_{ij}  & = \gamma_{0}^{\beta}  + \gamma_{1}^{\beta}  V_{ij} + \varepsilon_{ij}^{\beta}  \label{Eq:2a} \\
+    {\hat{\delta}}_{ij} & = \gamma_{0}^{\delta} + \delta_{1}^{\delta} V_{ij} + \varepsilon_{ij}^{\delta} \label{Eq:2b}
+  \end{align}
+\end{subequations}
+${\hat{\beta}}_{ij}$ and ${\hat{\delta}}_{ij}$ are the estimated $\beta$ or $\delta$ from the first stage regression of equation~(\ref{Eq:1}), and $V_{ij}$ is the potential static or dynamic explanatory variables.
+
+
+\subsection{Firm size and industry affiliation}
+Firm size is a very common explanatory variable for market beta and the exchange rate risk exposure. Our prior about the relationship between firm size and exposure is ambiguous as \citet{dominguez2006exchange} stated: ``on the one hand, large firms may be more likely to be engaged in international activities, and therefore more likely to be affected by the exchange rate movements; on the other hand, larger firms may be more likely to hedge exchange rate risk, so that smaller firms may be more likely to be exposed''. The results of \citet{dominguez2006exchange} and \citet{hutson2010openness} show that this relationship may be nonlinear. In our study, we examine this relationship in two ways. One way, we regress the ${\hat{\beta}}_{ij}$ and ${\hat{\delta}}_{ij}$ from equation~(\ref{Eq:1}) on the market capitalization directly. The other way, we use a one-zero size dummy as our explanatory variable. One is for the large-sized (top half) firms according to the firm-level market capitalization. We notice that using a size dummy explanatory variable is more likely to bring us a significant coefficient of firm size to both market beta and the exposure reflector $\delta$.\footnote{These results are available upon request. We also examined by (1) using separate dummies for three tiers (top-third, medium-third, and small-third) as \citet{dominguez2006exchange} did, and (2) using a different cutline for size dummy, such as \EUR150 million used in \citet{hutson2010firm}. Results are not much improved.} This indicates that the relationship between market beta (exposure $\delta$) and the firm size may be nonlinear.
+
+To further test the preliminary nonlinearity, we introduce an interaction model:
+\begin{subequations}
+  \begin{align}
+    {\hat{\beta}}_{ij}  & = \gamma_{0}^{\beta}  
+                          + \gamma_{1}^{\beta} V_{ij}
+                          + \gamma_{2}^{\beta} D_{ij} \left(V_{ij}-V_{50}\right)
+                          + \varepsilon_{ij}^{\beta} \label{Eq:3a} \\
+    {\hat{\delta}}_{ij} & = \gamma_{0}^{\delta}
+                          + \gamma_{1}^{\delta} V_{ij}
+                          + \gamma_{2}^{\delta} D_{ij} \left(V_{ij}-V_{50}\right)
+                          + \varepsilon_{ij}^{\delta} \label{Eq:3b}
+  \end{align}
+\end{subequations}
+
+The estimated $\beta$ and $\delta$ are obtained from the first stage regression. ${V}_{ij}$ is the market capitalization and $V_{50}$ is the median of $V_{ij}$. We set $D_{ij}=1$ if $V_{ij}\geq V_{50}$. If $\gamma_2 \neq 0$ and $\gamma_2 \neq \gamma_1$ can be obtained from the same estimation equation, we can confirm that the relationship between firm size and exposure is a kind of nonlinear. Table~\ref{Tab:4}--\ref{Tab:6} presents the results of both $\gamma^{\beta}$ and $\gamma^{\delta}$. In Panel A, B and C, $\gamma_1$ and $\gamma_2$ have close absolute values but opposite signs in full sample period as well as three sub periods. It implies that, for those firms having a less-than-median market capitalization size, both market and exchange exposures are getting larger along with the firm size at a relatively quick speed (steeper slope). However, for those firms having a larger-than-median market capitalization size, both market and exchange exposures are getting larger along with the firm size at a very slow speed (close-to-flat slope or even slightly negative slope). This may due to that the relationship between hedging ability and firm size is nonlinear. The difference of hedging ability between large firms could be very small while between medium to small firms could be fairly large. In addition, according to our results in Table~\ref{Tab:7}, the coefficient of firm size varies across different periods. The significance of results could also largely depend on which area and what trigger value\footnote{In the report of Table~\ref{Tab:4}, $V_{50}$ is used as a trigger value.} is examined.
+
+Industry affiliation is another aspect to explain the exchange rate risk exposure. On the one side, some industries may be more likely to have international transactions while others may not. On the other side, the levels of competitive among industries could be different and thus generate different levels of exposure.\footnote{\citet{marston2001effects}, \citet{allayannis2001exposure} and \citet{bodnar2002pass} explicitly modeled some indirect effect, mark-ups and pass-through in trade respectively, generated through industry competition. They find that ``firms in some industries may be able to pass on to their customers increased costs or prices that results from exchange rate movements, while others will have less flexibility to do so. The more competitive the industry and the less differentiated the product, the greater the exchange exposure''.} Our 10 industry categories are formed on the basis of four-digit SIC codes. Signs on the industry dummies are not consistent across areas. The industries that are commonly exposed are \textit{high-technology manufacturing, wholesale trade,} and \textit{hotel and business services}.
+
+
+
+\subsection{Other time-varying explanatory variables}
+Besides firm size and industry affiliation, the existing literatures also find some other firm-level factors may affect the exchange rate risk exposure, such as foreign sales, foreign assets, leverage, etc. One thing need to be noticed is that we have a long sample period (19~years) and these variables may vary largely over time. In order to catch the possible variability, we examine this relationship in a dynamic context. We use the rolling estimated beta ($\delta$) as the dependent variable and use the rolling mean of foreign sales (foreign assets, etc.) as the independent variable. Take the Eurozone MNCs test sample as an example, we get one estimated beta ($\delta$) observation and one mean observation of foreign sales (foreign assets, etc.) from one multinational firm at one end-time point of the rolling regression. Over the entire sample period of 1993--2011, we have totally 193 such rolling end-time points. At each rolling end-time point, we have 161 MNCs. Therefore, we have 161 estimated $\delta$ observations and 161 mean observations of foreign sales to run the second stage regression at one end-time point. Finally, we get 193 estimated coefficients ($\gamma$) on foreign sales (foreign assets, etc.) over the entire sample period.
+
+Figure~\ref{Fig:3} presents the rolling relationship between market beta and five explanatory variables: Europe sales, foreign sales, foreign assets, foreign income, and total debt, respectively. Although all five rolling relationships vary over time, most of the time, they are positive. It indicates that the more foreign sales (foreign assets, etc.) a multinational firm has, the higher stock market risk it is exposed to. The second stage rolling relationship of exchange rate risk exposure is presented in Figure~\ref{Fig:4}. All five rolling relationships vary over time around zero within the range of $-0.05$ to $0.05$. For the positive-exposure firms, Europe sales have 14\%{} statistically significant results over the full period, while other explanatory variables only have 6 to 8\%{} (significant at 5\%{} level). For the negative-exposure firms, the debt ratio has 17\%{} statistically significant results over the full period, while other explanatory variables only have 6 to 8\%{} (significant at 5\%{} level). Within the significant results, foreign sales and foreign income have a positive impact on the exposure at most of the time. Foreign assets and debt ratio, however, have a negative impact at most of the time.
+
+
+
+\section{Robustness Checks}\label{Sec:6}
+We also investigate several factors that may influence the robustness of our regression results. First, any crisis that occurred near the date of the Euro's launch may influence market beta and the exchange rate risk exposure as well. The Asian financial crisis of 1997/1998 caused a loss of confidence by domestic and foreign investors in all emerging markets. It led to a fall in capital inflows and an increase in capital outflows that triggered a very large nominal depreciation and a stock market crash, not only in Asia but also outside of Asia due to financial contagion.\footnote{See \citet{johnson2000corporate} for explanation of Asian financial crisis and more references.} Hong Kong's Hang Seng Index, Japan's Nikkei 225, London's FTSE 100 Index, Frankfurt's DAX index, and New York's Dow Jones all sank at that time. \citet{bartram2006impact} argue that market participants anticipated the introduction of the euro, so that its effect should be reflected in stock prices already in 1998. If so, it's very difficult to distinguish the impact of the Euro's launch from the impact of Asian financial crisis. Unfortunately, we are not able to run a robust test on this.
+
+Second, the burst of the information technology bubble (also referred to as the Internet bubble and the dot-com boom) caused the American recession in 2001. From early 1998 through February 2000, there is a huge rise, persistence, and then subsequent fall of Internet stock prices.\footnote{See \citet{ofek2003dotcom} for more references.} The period of this Internet bubble overlaps the euro's launch date, and it potentially drive up the market beta during 1998--2000. If this is true, then the impact of euro's launch is underestimated in our study. We exclude all the firms in Telecom, Media, and Technology/Internet (TMT) sectors from our test sample based on industry sector information categorized by First Research and Datastream SIC codes.\footnote{6.2\%{} of MNCs and 5.7\%{} of non-MNCs are deleted from eurozone samples, 12.2\%{} and 6.9\%{} from non-eurozone Europe samples, and 19.9\%{} and 5.8\%{} from outside Europe samples.} We repeat all the rolling regressions in three areas and find that if we include the firms in TMT sector in the test sample, then the market beta is raised by around 13\%{} in eurozone countries, around 14\%{} in non-eurozone Europe countries, and around 20\%{} in outside-of-Europe countries during 1998--2000.\footnote{It is reflected in the gap of rolling graph lines between ``Beta'' and ``Beta (no TMT sectors)'' during 2001--2003 in Figure~\ref{Fig:5A}.} This difference is more apparent in MNCs than in non-MNCs, and may indicate that Internet bubble exists more possibly in MNCs rather than non-MNCs. However, excluding the firms in TMT sectors does not change any of our major conclusions. Figure~\ref{Fig:5A} and~\ref{Fig:6A} present the market beta and exchange exposure $\delta$ results based on the data of firms not in TMT sectors.
+
+Third, the value of the euro plummeted immediately after its launch and continued to be a weak currency throughout 2000 and 2001. In 2002, the value of the euro finally began to rise rapidly. This hurt firms based in Europe but generated profits abroad (especially in the Americas) due to an unfavorable exchange rate. France and Germany both entered recessions towards the end of 2001, but each of their recessions had ended after a mere six months. United Kingdom, which is an EU member but not a eurozone country, managed to avoid sliding into recession during this period. In our non-eurozone Europe test sample, UK firms account for 57.1\%{} of total MNCs and 55.6\%{} of total non-MNCs. This explains why we didn't see a recession trough (i.e. the ``V'' phenomenon) in our non-eurozone Europe sample results.
+
+Fourth, we clean out the export effect on the exchange rate risk exposure. In section 1.4.2, we discussed that unexpected exchange rate movements could affect the stock price directly through three channels: export, import, and foreign sales. Excluding the firms that have exports in any year from 1993--2011, the export effect on the exchange rate risk exposure can be deleted.\footnote{16.1\%{} of MNCs and 23.2\%{} of non-MNCs are deleted from the eurozone samples, 24.5\%{} and 31.3\%{} from the non-eurozone Europe samples, and 51.8\%{} and 18.7\%{} from the outside of Europe samples.} The rolling lines of $\beta$ and $\delta$ with ``no exporter'' behind in Figure~\ref{Fig:5A} and~\ref{Fig:6A} present the net effect of the import effect and the foreign sales effect. Our results are robust regardless of the export effect on market beta and the exchange rate risk exposure.\footnote{\citet{bodnar2002exchange} established an exchange rate exposure model to capture different forms of exchange rate risk exposure. According to their model, a pure multinational firm that has a foreign to total sales ratio at 50\%{} should have a $\delta$ of $0.5$, i.e. $-0.5$ in the context of this paper. The shortage of firm-level import data prevents us to give a further empirical analysis on this.}
+
+Fifth, we examine the robustness of our regression results on a much broader test sample. From the raw data sample of 31,323 non-financial firms, 6,574 firms that have public trading records at least four years before and four years after the euro's launch to constitute our broad data sample are selected. This selection balances the trade-off between keeping a large number of firms and keeping each firm with enough time-series observations. Our sample of 876 non-financial firms (including both MNCs and non-MNCs) from the eurozone, 746 from the non-eurozone Europe, and 4,952 from outside of Europe, are regressed by regions using both equation-by-equation OLS (including rolling regression) and panel data OLS (including rolling regression). The results and inferences are largely robust to this alternative broad test sample. Because the broad test samples are very balanced in regard to industry affiliations, this examination addresses the concern about the sensitivity of our results to the industry classification simultaneously.
+
+
+
+\section{Conclusions}\label{Sec:7}
+Our study investigates the effect of the Euro's launch as a common currency on 6,574 firms in nineteen countries. It evaluates the hypothesis that a common currency leads to lower foreign exchange rate risk and, thus, lower foreign exchange rate exposures of nonfinancial firms. Our first important result is that the introduction of the Euro leads to lower market risk exposures for multinational firms in and outside of Europe. However, this low stock market risk phenomenon has a sign of lasting only temporarily. Before the crisis of 2008, market betas had risen back to its former level gradually. It's difficult to judge that the rising back is because that the Euro's launch effect is temporary or is driven by the potential coming crisis. During the financial crisis period, market betas shot up to an even higher level.
+
+Our second important result is with respect to exchange rate risk exposure. Firms in the eurozone experience a smaller exposure in the post-euro period relative to the crisis period, while firms in other areas experience the opposite: a larger exposure in the post-euro period relative to the crisis period. The empirical results have important policy implications as they demonstrate that the benefits of currency stabilization for nonfinancial companies only exist in the short run. Also these benefits could turn out to be damaging during the financial crisis period.
+
+The third important result comes from the second stage regression that regressing the estimated exposures on a variety of potential explanatory variables. We find that it is difficult to identify the determinants of the exposure, because the relationship between the exposure and its determinants varies over time and also differs across firm classifications. A firm's size may not have a linear relationship with the exchange rate exposure. A large scale multinational firm, which is expected to be exposed more to exchange rate risk, may have a low exchange rate exposure because of its hedging activities. Hedging activities are not all linear and the exchange rate risks cannot always be finely hedged.
+
+Ours is the most comprehensive firm-level analysis of foreign exchange exposures to date, covering both multinational and non-multinational firms in three regions ---the eurozone, Noneuro Europe and outside of Europe--- for the pre-euro, post-euro-and-pre-crisis and crisis periods. It capitalizes on an interesting and important experiment in the introduction of the Euro. We, however, acknowledge several aspects of this study that could be improved. For example, our study sets the crisis period between 2008 and 2011 according to the US financial crisis starting date instead of the Euro crisis starting date. If enough data are available after the late 2009, we could try to set the crisis period differently and get better evidence on firm-level exchange exposure in the Euro's crisis. Furthermore, the exclusion of Asian market firms (only Japan is included) could affect the appropriateness of our benchmarking of affected firms. However, our event-study approach limits our ability to make any improvement since the data of Asian firms in the pre-euro period are rarely available. Finally, as described earlier in the paper, to some extent, we could say that the level of exchange rate exposure of a firm depends on the success of its hedging activity, what hedging strategies they use, and if those hedging strategies are efficient. Meanwhile, the financial market development of a country is another important factor behind that will influence a firm's hedging strategy decision, strategy efficiency, and hedging opportunities, and thus impact the exchange rate exposure eventually. However, firm-level data on hedging activity is limited for most countries, therefore hindering further explanation on exchange rate exposure puzzle from the hedging aspect.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begingroup\setlength{\parindent}{0pt}\singlespacing\small
+\clearpage
+% TABLE 1
+\begin{sidewaystable}\centering\small\setlength{\tabcolsep}{4.5pt}
+    \caption{Descriptive Statistics of Firms in Samples}\label{Tab:1}
+  \begin{tabular}{lc*{3}{c}*{3}{c}*{3}{c}*{3}{c}*{3}{c}}
+    \toprule
+    &&
+    \multicolumn{3}{c}{\textbf{Market}} &
+    \multicolumn{3}{c}{\textbf{Total}} &
+    \multicolumn{3}{c}{\textbf{}} &
+    \multicolumn{3}{c}{\textbf{Foreign}} &
+    \multicolumn{3}{c}{\textbf{Foreign Europe}} \\
+        &&
+    \multicolumn{3}{c}{\textbf{capitalization}} &
+    \multicolumn{3}{c}{\textbf{assets}} &
+    \multicolumn{3}{c}{\textbf{Sales}} &
+    \multicolumn{3}{c}{\textbf{sales (\%)}} &
+    \multicolumn{3}{c}{\textbf{sales (\%)}} \\
+    \cmidrule{3-17}
+                      & N      & Q1      & Q2       & Q3       & Q1      & Q2       & Q3       & Q1      & Q2       & Q3       & Q1     & Q2     & Q3     & Q1     & Q2     & Q3 \\
+    \midrule
+
+    \multicolumn{16}{l}{\textbf{Eurozone}}\\
+    \textbf{MNCs}     & 161  & 237.5 & 1248.3 & 5617.7 & 422.1 & 1597.2 & 7145.9 & 538.4 & 1712.4 & 7463.5 & 52.0 & 63.0 & 73.7 & 27.4 & 36.0 & 44.7 \\
+    \textbf{Non-MNCs} & 194  & 10.6  & 25.3   & 93.1   & 16.2  & 46.0   & 164.8  & 10.3  & 38.1   & 109.2  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0 \\
+    \\
+    \multicolumn{16}{l}{\textbf{Non-Eurozone Europe}} \\
+    \textbf{MNCs}     & 147  & 229.2 & 861.1  & 3057.9 & 258.8 & 881.1  & 3200.6 & 282.0 & 867.3  & 4356.5 & 52.6 & 62.8 & 76.5 & 24.6 & 36.0 & 47.2 \\
+    \textbf{Non-MNCs} & 160  & 18.1  & 42.5   & 147.0  & 25.7  & 64.9   & 192.5  & 17.8  & 68.1   & 233.1  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0 \\
+    \\
+    \multicolumn{16}{l}{\textbf{Outside Europe}} \\
+    \textbf{MNCs}     & 141  & 485.9 & 1536.0 & 6650.8 & 411.8 & 1363.1 & 5226.2 & 361.4 & 1141.0 & 4525.7 & 30.6 & 40.6 & 53.2 & 15.9 & 21.4 & 28.2 \\
+    \textbf{Non-MNCs} & 1014 & 76.6  & 180.7  & 591.6  & 159.4 & 371.8  & 1085.9 & 153.6 & 383.5  & 1112.5 & 0.0  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0 \\
+    \\
+    \multicolumn{16}{l}{\textbf{All Firms}} \\
+    \textbf{MNCs}     & 449  & 296.1 & 1225.6 & 5134.4 & 314.2 & 1198.8 & 4950.4 & 353.1 & 1170.9 & 4852.3 & 40.7 & 56.0 & 69.4 & 21.1 & 30.6 & 42.8 \\
+    \textbf{Non-MNCs} & 1368 & 47.6  & 131.8  & 451.6  & 87.5  & 264.5  & 773.9  & 81.0  & 258.9  & 821.3  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0 \\
+    \bottomrule
+  \end{tabular}
+\tabfigfoot{This table reports statistics on the test sample of MNCs and Non-MNCs by area. N is the number of firms. Market capitalization, total assets, and sales are in million Euros. Foreign sales and foreign Europe sales are percentage of total sales. Q1, Q2, and Q3 refer to the 25\%{} quartile, 50\%{} quartile, and 75\%{} quartile respectively.}
+\end{sidewaystable}
+
+
+\clearpage
+% TABLE 2
+\begin{table}[!t]\small\setlength{\tabcolsep}{3.8pt}\centering
+  \caption{Statistics Summary of Stock Market Indices Return}\label{Tab:2}
+  \resizebox{\linewidth}{!}{\begin{tabular}{l%
+                S[table-format = 1.3]%1
+                S[table-format = 2.3]%2
+                S[table-format = 1.3]%3
+                S[table-format = 1.3]%4
+                S[table-format = +1.3]%5
+                S[table-format = 1.3]%6
+                S[table-format = 1.3]%7
+                S[table-format = 1.3]%8
+                S[table-format = 1.3]%9
+                S[table-format = 1.4]}
+    \toprule
+     &
+    \multicolumn{8}{c}{\textbf{Market Indices Return}} & \multicolumn{2}{c}{\textbf{Test for}} \\
+     &
+    \multicolumn{2}{c}{\textbf{93M1-98M12}} &
+    \multicolumn{2}{c}{\textbf{99M1-07M12}} &
+    \multicolumn{2}{c}{\textbf{08M1-11M12}} &
+    \multicolumn{2}{c}{\textbf{93M1-11M12}} &
+    \multicolumn{2}{c}{\textbf{change}}\\
+    \cmidrule{2-11}
+    \textbf{Country} & {\textbf{Mean}} & {\textbf{SD}} & {\textbf{Mean}} & {\textbf{SD}} & {\textbf{Mean}} & {\textbf{SD}} & {\textbf{Mean}} & {\textbf{SD}} & {\textbf{F-test}} & {\textbf{p-value}} \\
+    \midrule
+    AUT      & 0.673 &  4.741 & 1.279 & 3.730 & -0.913 & 8.460 & 0.626 & 5.396 & 1.616 & 0.0122 \\
+    BEL      & 1.942 &  4.150 & 0.514 & 4.150 & -0.393 & 6.812 & 0.774 & 4.886 & 1.000 & 0.4940 \\
+    DEU      & 1.633 &  4.808 & 0.662 & 5.666 & -0.441 & 6.255 & 0.737 & 5.569 & 1.389 & 0.0696 \\
+    ESP      & 2.476 &  6.050 & 0.787 & 4.711 & -0.680 & 6.529 & 1.012 & 5.661 & 1.649 & 0.0095 \\
+    FIN      & 3.443 &  7.458 & 1.311 & 9.250 & -1.065 & 7.445 & 1.484 & 8.474 & 1.538 & 0.0266 \\
+    FRA      & 1.589 &  5.340 & 0.831 & 4.961 & -0.553 & 6.194 & 0.779 & 5.390 & 1.159 & 0.2433 \\
+    IRL      & 2.480 &  4.841 & 0.548 & 5.052 & -1.216 & 8.059 & 0.787 & 5.882 & 1.089 & 0.3532 \\
+    ITA      & 2.017 &  7.432 & 0.569 & 4.969 & -1.062 & 6.943 & 0.683 & 6.333 & 2.237 & 0.0001 \\
+    LUX      & 2.169 &  4.551 & 0.756 & 6.333 &  0.429 & 4.832 & 1.133 & 5.544 & 1.937 & 0.0016 \\
+    NLD      & 2.113 &  4.647 & 0.518 & 4.889 & -0.590 & 7.537 & 0.789 & 5.547 & 1.107 & 0.3257 \\
+    PRT      & 2.155 &  6.041 & 0.617 & 4.344 & -1.130 & 6.250 & 0.735 & 5.457 & 1.933 & 0.0010 \\
+    EUROZONE & 1.807 &  4.290 & 0.651 & 4.405 & -0.477 & 5.862 & 0.779 & 4.769 & 1.054 & 0.3985 \\
+    \\
+    CHE      & 1.952 &  5.111 & 0.489 & 3.851 & -0.382 & 4.490 & 0.768 & 4.483 & 1.762 & 0.0039 \\
+    DNK      & 1.707 &  4.778 & 1.076 & 4.845 & -0.186 & 6.959 & 1.010 & 5.357 & 1.028 & 0.4550 \\
+    GBR      & 1.390 &  3.593 & 0.525 & 3.788 &  0.145 & 5.569 & 0.718 & 4.178 & 1.112 & 0.3184 \\
+    NOR      & 1.599 &  5.910 & 1.485 & 5.391 & -0.154 & 8.059 & 1.176 & 6.209 & 1.202 & 0.1932 \\
+    POL      & 0.952 & 13.194 & 1.438 & 7.405 & -0.423 & 7.351 & 0.889 & 9.284 & 3.175 & 0.0000 \\
+    SWE      & 2.379 &  6.019 & 0.955 & 6.537 &  0.254 & 6.654 & 1.257 & 6.426 & 1.180 & 0.2291 \\
+    EUROPE   & 1.823 &  4.257 & 0.695 & 4.297 & -0.423 & 5.823 & 0.816 & 4.707 & 1.019 & 0.4596 \\
+    \\
+    JPN      & 0.076 &  5.468 & 0.497 & 4.633 & -1.060 & 6.001 & 0.037 & 5.223 & 1.393 & 0.0599 \\
+    USA      & 1.769 &  3.770 & 0.409 & 4.107 &  0.063 & 6.002 & 0.766 & 4.510 & 1.186 & 0.2213 \\
+    WORLD    & 1.456 &  4.483 & 0.566 & 4.436 & -0.034 & 5.060 & 0.721 & 4.611 & 1.021 & 0.4560 \\
+    \bottomrule
+  \end{tabular}}
+  \vspace{-\baselineskip}
+\tabfigfoot{This table summarizes statistics for the stock market indices return. The means and standard deviations of market indices return is presented in three different subsample periods as well as in the full sample period. The test for change is based on the null hypothesis that the variance of market indices return does not change significantly before (1993--1998) and after (1999--2007) the Euro's launch. The \textit{F}-statistic is the ratio of the larger variance to the smaller variance. The reported \textit{p}-values are the corresponding two-sided significance levels of the \textit{F}-test.}
+\end{table}
+
+
+\clearpage
+% TABLE 3
+\begin{table}[!t]\small\setlength{\tabcolsep}{3.8pt}\centering
+  \caption{Statistics Summary of Exchange Rate Change}\label{Tab:3}
+    \resizebox{\linewidth}{!}{\begin{tabular}{l%
+                S[table-format = +1.3]%1
+                S[table-format = 1.3]%2
+                S[table-format = +1.3]%3
+                S[table-format = 1.3]%4
+                S[table-format = +1.3]%5
+                S[table-format = 1.3]%6
+                S[table-format = +1.3]%7
+                S[table-format = 1.3]%8
+                S[table-format = 1.3]%9
+                S[table-format = 1.4]}
+    \toprule
+    & \multicolumn{8}{c}{\textbf{Exchange Rate Volatility}} & \multicolumn{2}{c}{\textbf{Test for}} \\
+     &
+    \multicolumn{2}{c}{\textbf{93M1-98M12}} &
+    \multicolumn{2}{c}{\textbf{99M1-07M12}} &
+    \multicolumn{2}{c}{\textbf{08M1-11M12}} &
+    \multicolumn{2}{c}{\textbf{93M1-11M12}} &
+    \multicolumn{2}{c}{\textbf{change}}\\
+    \cmidrule{2-11}
+    \textbf{Country} & {\textbf{Mean}} & {\textbf{SD}} & {\textbf{Mean}} & {\textbf{SD}} & {\textbf{Mean}} & {\textbf{SD}} & {\textbf{Mean}} & {\textbf{SD}} & {\textbf{F-test}} & {\textbf{p-value}} \\
+    \midrule
+    AUT &  0.011 & 0.628 &  0.014 & 0.451 & -0.044 & 0.636 &  0.001 & 0.551 & 1.939 & 0.0009 \\
+    BEL & -0.022 & 0.829 &  0.036 & 0.653 & -0.035 & 0.934 &  0.003 & 0.773 & 1.612 & 0.0127 \\
+    DEU &  0.041 & 0.930 &  0.052 & 0.785 & -0.073 & 1.035 &  0.022 & 0.886 & 1.404 & 0.0567 \\
+    ESP & -0.240 & 1.129 &  0.026 & 0.482 & -0.030 & 0.727 & -0.070 & 0.795 & 5.486 & 0.0000 \\
+    FIN &  0.179 & 1.532 &  0.046 & 0.781 & -0.064 & 1.076 &  0.065 & 1.127 & 3.848 & 0.0000 \\
+    FRA &  0.029 & 0.800 &  0.035 & 0.649 & -0.059 & 0.849 &  0.014 & 0.741 & 1.519 & 0.0248 \\
+    IRL & -0.121 & 1.299 &  0.065 & 1.034 & -0.096 & 1.373 & -0.028 & 1.196 & 1.578 & 0.0160 \\
+    ITA & -0.080 & 1.831 &  0.074 & 0.699 & -0.050 & 0.857 & -0.001 & 1.199 & 6.862 & 0.0000 \\
+    LUX & -0.043 & 0.502 &  0.022 & 0.432 & -0.023 & 0.741 & -0.008 & 0.530 & 1.350 & 0.0791 \\
+    NLD & -0.016 & 0.791 &  0.035 & 0.685 & -0.042 & 0.879 &  0.002 & 0.760 & 1.333 & 0.0890 \\
+    PRT & -0.139 & 0.956 &  0.021 & 0.404 & -0.028 & 0.542 & -0.040 & 0.655 & 5.600 & 0.0000 \\
+    \\
+    CHE &  0.138 & 1.366 & -0.001 & 0.863 &  0.584 & 2.290 &  0.166 & 1.439 & 2.505 & 0.0000 \\
+    DNK &  0.038 & 0.873 &  0.019 & 0.618 & -0.045 & 0.824 &  0.012 & 0.748 & 1.995 & 0.0006 \\
+    GBR &  0.189 & 1.505 &  0.023 & 1.109 & -0.416 & 2.194 & -0.017 & 1.527 & 1.842 & 0.0021 \\
+    NOR & -0.097 & 1.121 &  0.132 & 1.375 &  0.004 & 1.780 &  0.033 & 1.397 & 1.505 & 0.0330 \\
+    POL & -0.905 & 1.478 &  0.164 & 2.243 & -0.420 & 2.922 & -0.296 & 2.246 & 2.303 & 0.0001 \\
+    SWE & -0.149 & 1.640 &  0.032 & 1.226 &  0.060 & 1.848 & -0.019 & 1.505 & 1.789 & 0.0031 \\
+    \\
+    JPN &  0.413 & 2.956 & -0.044 & 2.021 &  0.797 & 2.790 &  0.278 & 2.526 & 2.139 & 0.0002 \\
+    USA &  0.378 & 1.234 & -0.144 & 1.094 &  0.032 & 1.882 &  0.058 & 1.351 & 1.272 & 0.1294 \\
+    \bottomrule
+  \end{tabular}}
+  \vspace{-\baselineskip}
+\tabfigfoot{This table summarizes statistics for the exchange rate change. The means and standard deviations of percentage change in exchange rate are presented in three different subsample periods as well as in the full sample period. The test for change is based on the null hypothesis that the variance of exchange rate percentage change does not change significantly before (1993--1998) and after (1999--2007) the Euro's launch. The \textit{F}-statistic is the ratio of the larger variance to the smaller variance. The reported \textit{p}-values are the corresponding two-sided significance levels of the \textit{F}-test.}
+\end{table}
+
+
+\clearpage
+% TABLE 4
+\begin{table}[!t]\small\centering
+  \caption{Stability of Firm-level Regression across Subsamples (Panel A)}\label{Tab:4}
+  \begin{tabular}{ll*{4}{c}*{4}{c}}
+    \toprule
+    \multicolumn{10}{c}{\textbf{Panel A: Eurozone}}\\
+    \midrule
+     & & 
+    \multicolumn{4}{c}{\textbf{MNCs}} & \multicolumn{4}{c}{\textbf{Non-MNCs}}\\
+    \midrule
+    & & \textbf{93M1-} & \textbf{99M1-} & \textbf{08M1-} & \textbf{93M1-} & \textbf{93M1-} & \textbf{99M1-} & \textbf{08M1-} & \textbf{93M1-}\\
+    & & \textbf{98M12} & \textbf{07M12} & \textbf{11M12} & \textbf{11M12} & \textbf{98M12} & \textbf{07M12} & \textbf{11M12} & \textbf{11M12}\\
+     \midrule
+     $\beta$      & Median    & 0.814    & 0.630    & 0.922    & 0.735    & 0.277    & 0.140    & 0.236    & 0.262\\
+                  & Mean      & 0.795    & 0.677    & 0.953    & 0.785    & 0.371    & 0.216    & 0.342    & 0.301\\
+                  & p-value   & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)\\
+                  & \%sig.    & 87.6     & 76.4     & 86.3     & 95.0     & 27.8     & 21.1     & 26.3     & 43.3\\
+     \midrule
+     $\delta_{+}$ & Median    & 0.540    & 0.638    & 0.959    & 0.514    & 0.625    & 0.983    & 1.286    & 0.522\\
+                  & Mean      & 0.768    & 0.857    & 1.396    & 0.576    & 1.419    & 1.612    & 2.210    & 0.840\\
+                  & p-value   & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)\\
+                  & no. pos   & 65       & 69       & 78       & 75       & 79       & 85       & 91       & 90\\
+                  & \%sig.pos & 10.8     & 2.9      & 11.5     & 5.3      & 3.8      & 2.4      & 6.6      & 5.6\\
+     \midrule
+     $\delta_{-}$ & Median    & $-$0.857 & $-$0.800 & $-$1.245 & $-$0.510 & $-$0.996 & $-$1.077 & $-$1.263 & $-$0.829\\
+                  & Mean      & $-$1.002 & $-$0.976 & $-$2.080 & $-$0.653 & $-$1.542 & $-$2.154 & $-$2.822 & $-$1.443\\
+                  & p-value   & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)\\
+                  & no. neg   & 96       & 92       & 83       & 86       & 115      & 109      & 99       & 104\\
+                  & \%sig.neg & 10.4     & 4.3      & 13.3     & 9.3      & 5.2      & 4.6      & 9.1      & 11.5\\
+     \midrule
+     \multicolumn{2}{l}{No. firms} & 161      & 161      & 161      & 161      & 194      & 194      & 190      & 194\\
+     \bottomrule
+  \end{tabular}
+\tabfigfoot{This table reports the market beta and exchange rate exposure ($\delta$) results of firm-level regressions of MNCs and Non-MNCs across three different sub-samples as well as the full sample in eurozone. Positive and negative deltas are reported separately. All significance levels are set at 5\%{} based on Newey-West corrected standard errors.}
+\end{table}
+
+
+\clearpage
+% TABLE 5
+\begin{table}[!t]\small\centering
+  \caption{Stability of Firm-level Regression across Subsamples (Panel B)}\label{Tab:5}
+  \begin{tabular}{ll*{4}{c}*{4}{c}}
+    \toprule
+    \multicolumn{10}{c}{\textbf{Panel B: Non-Eurozone Europe}}\\
+    \midrule
+     & & 
+    \multicolumn{4}{c}{\textbf{MNCs}} & \multicolumn{4}{c}{\textbf{Non-MNCs}}\\
+    \midrule
+    & & \textbf{93M1-} & \textbf{99M1-} & \textbf{08M1-} & \textbf{93M1-} & \textbf{93M1-} & \textbf{99M1-} & \textbf{08M1-} & \textbf{93M1-}\\
+    & & \textbf{98M12} & \textbf{07M12} & \textbf{11M12} & \textbf{11M12} & \textbf{98M12} & \textbf{07M12} & \textbf{11M12} & \textbf{11M12}\\
+     \midrule
+    $\beta$      & Median    & 0.840    & 0.912    & 1.214    & 0.970    & 0.453    & 0.452    & 0.600    & 0.477\\
+                 & Mean      & 0.829    & 1.013    & 1.246    & 1.005    & 0.440    & 0.542    & 0.663    & 0.569\\
+                 & p-value   & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)\\
+                 & \%sig.    & 83.7     & 88.4     & 89.1     & 100.0    & 39.4     & 51.9     & 53.2     & 72.5\\
+    \midrule
+    $\delta_{+}$ & Median    & 0.453    & 0.550    & 0.713    & 0.375    & 0.567    & 0.627    & 1.026    & 0.544\\
+                 & Mean      & 0.695    & 0.645    & 1.001    & 0.460    & 0.845    & 0.848    & 1.306    & 0.705\\
+                 & p-value   & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)\\
+                 & no. pos   & 38       & 48       & 88       & 59       & 76       & 87       & 100      & 96\\
+                 & \%sig.pos & 10.5     & 4.2      & 15.9     & 6.8      & 7.9      & 4.6      & 13.0     & 9.4\\
+    \midrule
+    $\delta_{-}$ & Median    & $-$0.662 & $-$0.648 & $-$0.423 & $-$0.291 & $-$0.622 & $-$0.512 & $-$0.295 & $-$0.349\\
+                 & Mean      & $-$0.787 & $-$0.832 & $-$1.017 & $-$0.402 & $-$0.956 & $-$0.908 & $-$0.847 & $-$0.517\\
+                 & p-value   & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)\\
+                 & no. neg   & 109      & 99       & 59       & 88       & 84       & 73       & 58       & 64\\
+                 & \%sig.neg & 25.7     & 10.1     & 5.1      & 10.2     & 10.7     & 4.1      & 3.4      & 1.6\\
+    \bottomrule
+  \end{tabular}
+\tabfigfoot{This table reports the market beta and exchange rate exposure ($\delta$) results of firm-level regressions of MNCs and Non-MNCs across three different sub-samples as well as the full sample in non-eurozone Europe. Positive and negative deltas are reported separately. All significance levels are set at 5\%{} based on Newey-West corrected standard errors.}
+\end{table}
+
+
+\clearpage
+% TABLE 6
+\begin{table}[!t]\small\centering
+  \caption{Stability of Firm-level Regression across Subsamples (Panel C)}\label{Tab:6}
+  \begin{tabular}{ll*{4}{c}*{4}{c}}
+    \toprule
+    \multicolumn{10}{c}{\textbf{Panel C: Outside of Europe}}\\
+    \midrule
+     & & 
+    \multicolumn{4}{c}{\textbf{MNCs}} & \multicolumn{4}{c}{\textbf{Non-MNCs}}\\
+    \midrule
+    & & \textbf{93M1-} & \textbf{99M1-} & \textbf{08M1-} & \textbf{93M1-} & \textbf{93M1-} & \textbf{99M1-} & \textbf{08M1-} & \textbf{93M1-}\\
+    & & \textbf{98M12} & \textbf{07M12} & \textbf{11M12} & \textbf{11M12} & \textbf{98M12} & \textbf{07M12} & \textbf{11M12} & \textbf{11M12}\\
+     \midrule
+    $\beta$      & Median    & 0.930    & 0.899    & 1.432    & 1.051    & 0.948    & 0.647    & 0.660    & 0.793\\
+                 & Mean      & 0.976    & 1.050    & 1.419    & 1.115    & 0.938    & 0.707    & 0.778    & 0.817\\
+                 & p-value   & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)\\
+                 & \%sig.    & 83.7     & 78.7     & 92.1     & 98.6     & 85.9     & 74.1     & 60.7     & 94.7\\
+     \midrule
+    $\delta_{+}$ & Median    & 0.351    & 0.517    & 0.656    & 0.313    & 0.403    & 0.317    & 0.449    & 0.211\\
+                 & Mean      & 0.609    & 0.755    & 1.001    & 0.387    & 0.507    & 0.515    & 0.706    & 0.287\\
+                 & p-value   & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)\\
+                 & no. pos   & 36       & 59       & 71       & 29       & 753      & 377      & 485      & 578\\
+                 & \%sig.pos & 5.6      & 5.1      & 2.8      & 0.0      & 8.6      & 4.0      & 7.4      & 6.1\\
+     \midrule
+    $\delta_{-}$ & Median    & $-$0.745 & $-$0.517 & $-$0.577 & $-$0.572 & $-$0.208 & $-$0.400 & $-$0.576 & $-$0.240\\
+                 & Mean      & $-$1.107 & $-$0.754 & $-$0.845 & $-$0.674 & $-$0.445 & $-$0.554 & $-$0.905 & $-$0.428\\
+                 & p-value   & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)  & (0.000)\\
+                 & no. neg   & 105      & 82       & 69       & 112      & 260      & 636      & 529      & 436\\
+                 & \%sig.neg & 18.1     & 6.1      & 8.7      & 20.5     & 3.1      & 7.2      & 7.8      & 5.7\\
+     \midrule
+    \multicolumn{2}{l}{No. firms} & 141              & 141                 & 140                 & 141                 & 1014                & 1014                & 1014                & 1014\\
+    \bottomrule
+  \end{tabular}
+\tabfigfoot{This table reports the market beta and exchange rate exposure ($\delta$) results of firm-level regressions of MNCs and Non-MNCs across three different sub-samples as well as the full sample in outside of Europe. Positive and negative deltas are reported separately. All significance levels are set at 5\%{} based on Newey-West corrected standard errors.}
+\end{table}
+
+\clearpage
+% TABLE 7
+\begin{table}[!t]\small\setlength{\tabcolsep}{4.2pt}\centering
+  \caption{Firm-level Exposure and Firm Size}\label{Tab:7}
+    \begin{tabular}{l*{4}{c}*{4}{c}}
+      \toprule
+      \multicolumn{9}{c}{\textbf{Panel A: Eurozone}}\\
+      \midrule
+       & \multicolumn{4}{c}{\textbf{MNCs}} & \multicolumn{4}{c}{\textbf{Non-MNCs}}\\
+       \midrule
+      & \textbf{1993m1-} & \textbf{1999m1-} & \textbf{2008m1-} & \textbf{1993m1-} & \textbf{1993m1-} & \textbf{1999m1-} & \textbf{2008m1-} & \textbf{1993m1-}\\
+      & \textbf{1998m12} & \textbf{2007m12} & \textbf{2011m12} & \textbf{2011m12} & \textbf{1998m12} & \textbf{2007m12} & \textbf{2011m12} & \textbf{2011m12}\\
+       \midrule
+       \multirow{2}{*}{$\gamma_{1}^{\beta}$}
+      & \boldmath$0.383$  & \boldmath$0.258$  & \boldmath$0.206$  & \boldmath$0.260$  & $-6.118$  & $5.284$   & $5.470$             & \boldmath$10.549$ \\
+      & (0.000)           & (0.000)           & (0.000)           & (0.000)           & (0.287)   & (0.143)   & (0.175)             & (0.000)\\
+      \midrule
+       \multirow{2}{*}{$\gamma_{2}^{\beta}$}
+      & \boldmath$-0.380$ & \boldmath$-0.257$ & \boldmath$-0.211$ & \boldmath$-0.260$ & $6.181$   & $-5.239$  & $-5.486$            & \boldmath$-10.558$\\
+      & (0.000)           & (0.000)           & (0.000)           & (0.000)           & (0.283)   & (0.147)   & (0.174)             & (0.000)\\
+       \midrule
+       \multirow{2}{*}{$\gamma_{1}^{\delta_{+}}$}
+      & 0.236             & \boldmath$0.310$  & \boldmath$0.347$  & \boldmath$0.304$  & $-14.198$ & $1.082$   & \boldmath$19.228$  & \boldmath$13.622$ \\
+      & (0.000)           & (0.002)           & (0.000)           & (0.000)           & (0.246)   & (0.789)   & (0.001)             & (0.001)\\
+       \midrule
+       \multirow{2}{*}{$\gamma_{2}^{\delta_{+}}$}
+      & -0.225            & \boldmath$-0.307$ & \boldmath$-0.351$ & \boldmath$-0.302$ & $14.239$  & $-1.133$  & \boldmath$-19.263$ & \boldmath$-13.641$ \\
+      & (0.176)           & (0.003)           & (0.000)           & (0.000)           & (0.245)   & (0.780)   & (0.001)             & (0.001)\\
+       \midrule
+        \multirow{2}{*}{$\gamma_{1}^{\delta_{-}}$}
+      & \boldmath$0.437$  & \boldmath$0.257$  & $0.085$           & \boldmath$0.245$  & $-4.281$  & $10.806$  & $-6.845$            & \boldmath$7.977$ \\
+      & (0.000)           & (0.001)           & (0.245)           & (0.000)           & (0.408)   & (0.061)   & (0.203)             & (0.026)\\
+       \midrule
+        \multirow{2}{*}{$\gamma_{2}^{\delta_{-}}$}
+      & \boldmath$-0.435$ & \boldmath$-0.257$ & $-0.090$          & \boldmath$-0.246$ & $4.493$   & $-10.727$ & $6.853$             & \boldmath$-7.957$ \\
+      & (0.000)           & (0.001)           & (0.225)           & (0.000)           & (0.390)   & (0.063)   & (0.203)             & (0.027)\\
+       \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[!h]\small\setlength{\tabcolsep}{4.2pt}\centering
+    \begin{tabular}{l*{4}{c}*{4}{c}}
+      \toprule
+      \multicolumn{9}{c}{\textbf{Panel B: Non-eurozone Europe}}\\
+      \midrule
+      & \multicolumn{4}{c}{\textbf{MNCs}} & \multicolumn{4}{c}{\textbf{Non-MNCs}}\\
+       \midrule
+      & \textbf{1993m1-} & \textbf{1999m1-} & \textbf{2008m1-} & \textbf{1993m1-} & \textbf{1993m1-} & \textbf{1999m1-} & \textbf{2008m1-} & \textbf{1993m1-}\\
+      & \textbf{1998m12} & \textbf{2007m12} & \textbf{2011m12} & \textbf{2011m12} & \textbf{1998m12} & \textbf{2007m12} & \textbf{2011m12} & \textbf{2011m12}\\
+       \midrule
+      \multirow{2}{*}{$\gamma_{1}^{\beta}$}
+      & \boldmath$0.663$  & $0.131$  & $0.049$           & $0.160$           & \boldmath$10.965$  & $1.751$  & $4.884$           & $4.022$ \\
+      & (0.000)           & (0.264)  & (0.643)           & (0.064)           & (0.003)            & (0.439)  & (0.075)           & (0.069)\\
+       \midrule
+      \multirow{2}{*}{$\gamma_{2}^{\beta}$}
+      & \boldmath$-0.664$ & $-0.133$ & $-0.056$          & $-0.163$          & \boldmath$-10.941$ & $-1.733$ & $-4.880$          & $-3.975$ \\
+      & (0.000)           & (0.257)  & (0.601)           & (0.060)           & (0.003)            & (0.445)  & (0.076)           & (0.073)\\
+       \midrule
+      \multirow{2}{*}{$\gamma_{1}^{\delta_{+}}$}
+      & \boldmath$0.868$  & $0.309$  & $0.301$           & \boldmath$0.329$  & $3.808$            & $0.891$  & \boldmath$7.346$  & $4.054$ \\
+      & (0.003)           & (0.165)  & (0.057)           & (0.014)           & (0.397)            & (0.756)  & (0.041)           & (0.149)\\
+       \midrule
+      \multirow{2}{*}{$\gamma_{2}^{\delta_{+}}$}
+      & \boldmath$-0.868$ & $-0.318$ & \boldmath$-0.339$ & \boldmath$-0.335$ & $-3.810$           & $-0.848$ & \boldmath$-7.364$ & $-4.047$ \\
+      & (0.003)           & (0.158)  & (0.042)           & (0.013)           & (0.397)            & (0.769)  & (0.041)           & (0.151)\\
+       \midrule
+      \multirow{2}{*}{$\gamma_{1}^{\delta_{-}}$}
+      & \boldmath$0.591$  & $0.065$  & $0.148$           & $0.100$           & \boldmath$15.219$  & $4.004$  & $-1.202$          & $4.441$ \\
+      & (0.000)           & (0.640)  & (0.246)           & (0.398)           & (0.005)            & (0.282)  & (0.788)           & (0.189)\\
+       \midrule
+      \multirow{2}{*}{$\gamma_{2}^{\delta_{-}}$}
+      & \boldmath$-0.591$ & $-0.066$ & $0.149$           & $-0.102$          & \boldmath$-15.143$ & $-3.996$ & $1.235$           & $-4.374$ \\
+      & (0.000)           & (0.634)  & (0.260)           & (0.391)           & (0.005)            & (0.284)  & (0.783)           & (0.197)\\
+       \bottomrule
+    \end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[!t]\small\setlength{\tabcolsep}{4.2pt}\centering
+    \begin{tabular}{l*{4}{c}*{4}{c}}
+      \toprule
+      \multicolumn{9}{c}{\textbf{Panel C: Outside Europe}}\\
+      \midrule
+      & \multicolumn{4}{c}{\textbf{MNCs}} & \multicolumn{4}{c}{\textbf{Non-MNCs}}\\
+       \midrule
+      & \textbf{1993m1-} & \textbf{1999m1-} & \textbf{2008m1-} & \textbf{1993m1-} & \textbf{1993m1-} & \textbf{1999m1-} & \textbf{2008m1-} & \textbf{1993m1-}\\
+      & \textbf{1998m12} & \textbf{2007m12} & \textbf{2011m12} & \textbf{2011m12} & \textbf{1998m12} & \textbf{2007m12} & \textbf{2011m12} & \textbf{2011m12}\\
+       \midrule
+        \multirow{2}{*}{$\gamma_{1}^{\beta}$}
+      & $0.140$  & $0.059$  & \boldmath$-0.207$ & $-0.021$ & $0.145$           & \boldmath$-0.800$ & $0.665$           & $-0.347$ \\
+      & (0.244)  & (0.507)  & (0.004)           & (0.733)  & (0.491)           & (0.006)           & (0.200)           & (0.128)\\
+       \midrule
+        \multirow{2}{*}{$\gamma_{2}^{\beta}$}
+      & $-0.142$ & $-0.062$ & \boldmath$0.201$  & $0.018$  & $-0.152$          & \boldmath$0.799$  & $-0.666$          & $0.344$ \\
+      & (0.245)  & (0.491)  & (0.007)           & (0.778)  & (0.472)           & (0.006)           & (0.200)           & (0.133)\\
+       \midrule
+        \multirow{2}{*}{$\gamma_{1}^{\delta_{+}}$}
+      & $0.150$  & $-0.025$ & \boldmath$-0.335$ & $0.028$  & $-0.084$          & $-0.431$          & \boldmath$-2.074$ & \boldmath$-0.690$ \\
+      & (0.523)  & (0.897)  & (0.002)           & (0.853)  & (0.730)           & (0.416)           & (0.026)           & (0.018)\\
+       \midrule
+      \multirow{2}{*}{$\gamma_{2}^{\delta_{+}}$}
+      & $-0.150$ & $0.023$  & \boldmath$0.334$  & $-0.026$ & $0.077$           & $0.431$           & \boldmath$2.074$  & \boldmath$0.687$ \\
+      & (0.528)  & (0.906)  & (0.002)           & (0.861)  & (0.753)           & (0.417)           & (0.027)           & (0.019)\\
+       \midrule
+      \multirow{2}{*}{$\gamma_{1}^{\delta_{-}}$}
+      & $0.111$  & $0.045$  & $-0.020$          & $-0.013$ & \boldmath$0.952$  & \boldmath$-1.060$ & \boldmath$1.330$  & $0.044$ \\
+      & (0.433)  & (0.638)  & (0.825)           & (0.848)  & (0.019)           & (0.002)           & (0.045)           & (0.905)\\
+       \midrule
+      \multirow{2}{*}{$\gamma_{2}^{\delta_{-}}$}
+      & $-0.112$ & $-0.052$ & $0.013$           & $0.008$  & \boldmath$-0.963$ & \boldmath$1.051$  & \boldmath$-1.342$ & $-0.064$ \\
+      & (0.432)  & (0.595)  & (0.885)           & (0.904)  & (0.019)           & (0.002)           & (0.045)           & (0.864)\\
+       \bottomrule
+  \end{tabular}
+\tabfigfoot{This table reports the coefficients of firm size in the second stage regressions: $\hat{\beta}_{ij} = \gamma_{0}^{\beta} + \gamma_{1}^{\beta} V_{ij} + \gamma_{2}^{\beta} D_{ij} \left(V_{ij}-V_{50}\right) +\varepsilon_{ij}^{\beta}$ and $\hat{\delta}_{ij} = \gamma_{0}^{\delta} + \gamma_{1}^{\delta} V_{ij} + \gamma_{2}^{\delta} D_{ij} \left(V_{ij}-V_{50}\right) +\varepsilon_{ij}^{\delta}$, where $D_{ij}=1$ if $V_{ij}\geq V_{50}$. The estimated $\beta$ and $\delta$ are obtained from the first stage regression. $V$ is the market capitalization and $V_{50}$ is the median of $V$. \textit{P}-values are reported in the parentheses. Bolded numbers are coefficients at 5\%{} significance level.}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIGURE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIGURE 1 Panel A
+\clearpage\setcounter{figure}{0}
+\begin{sidewaysfigure}\centering
+  \caption{Market Beta ($\beta $) First Stage Rolling Regression (MNCs vs. Non-MNCs)}\label{Fig:1A}
+  \textbf{Panel A: Eurozone}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig1AL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig1AR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated beta at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+% FIGURE 1 Panel B
+\clearpage\setcounter{figure}{0}
+\begin{sidewaysfigure}\centering
+  \caption{Market Beta ($\beta $) First Stage Rolling Regression (MNCs vs. Non-MNCs)}\label{Fig:1B}
+  \textbf{Panel B: Non-eurozone Europe}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig1BL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig1BR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated beta at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+% FIGURE 1 Panel C
+\clearpage\setcounter{figure}{0}
+\begin{sidewaysfigure}\centering
+  \caption{Market Beta ($\beta $) First Stage Rolling Regression (MNCs vs. Non-MNCs)}\label{Fig:1C}
+  \textbf{Panel C: Outside of Europe}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig1CL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig1CR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated beta at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+
+% FIGURE 2 Panel A
+\clearpage\setcounter{figure}{1}
+\begin{sidewaysfigure}\centering
+  \caption{Exchange Rate Exposure ($\delta $) First Stage Rolling Regression (MNCs vs. Non-MNCs)}\label{Fig:2A}
+  \textbf{Panel A: Eurozone}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig2ATL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig2ATR.pdf}\\[\baselineskip]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig2ABL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig2ABR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\delta$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+% FIGURE 2 Panel B
+\clearpage\setcounter{figure}{1}
+\begin{sidewaysfigure}\centering
+  \caption{Exchange Rate Exposure ($\delta $) First Stage Rolling Regression (MNCs vs. Non-MNCs)}\label{Fig:2B}
+  \textbf{Panel B: Non-eurozone Europe}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig2BTL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig2BTR.pdf}\\[\baselineskip]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig2BBL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig2BBR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\delta$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+% FIGURE 2 Panel C
+\clearpage\setcounter{figure}{1}
+\begin{sidewaysfigure}\centering
+  \caption{Exchange Rate Exposure ($\delta $) First Stage Rolling Regression (MNCs vs. Non-MNCs)}\label{Fig:2C}
+  \textbf{Panel C: Outside of Europe}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig2CTL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig2CTR.pdf}\\[\baselineskip]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig2CBL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig2CBR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\delta$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+
+% FIGURE 3
+\clearpage\setcounter{figure}{2}
+\begin{sidewaysfigure}\centering
+  \caption{Eurozone Market Beta ($\beta$) Second Stage Rolling Regression (MNCs)}\label{Fig:3}
+  $\hat{\beta}_{ij} = \gamma_{0}^{\beta} + \gamma_{1}^{\beta} V_{ij} + \varepsilon_{ij}^{\beta}$\\[1ex]
+  \includegraphics[width=1.0\linewidth]{./figures/Fig3.png}
+    \vspace{-\baselineskip}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\gamma$ at $t$ is based on data from $-36$ to $t$.}
+\end{sidewaysfigure}
+
+
+% FIGURE 4
+\clearpage\setcounter{figure}{3}
+\begin{sidewaysfigure}\centering
+  \caption{Eurozone Exchange Rate Exposure ($\delta$) Second Stage Rolling Regression (MNCs)}\label{Fig:4}
+  $\hat{\delta}_{ij} = \gamma_{0}^{\delta} + \gamma_{1}^{\delta} V_{ij} + \varepsilon_{ij}^{\delta}$\\[1ex]
+  \includegraphics[width=1.0\linewidth]{./figures/Fig4.pdf}
+  \vspace{-\baselineskip}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\gamma$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+
+% FIGURE 5 Panel A
+\clearpage\setcounter{figure}{4}
+\begin{sidewaysfigure}\centering
+  \caption{Market Beta ($\beta$) First Stage Rolling Regression Robustness Check (MNCs vs. Non-MNCs)}\label{Fig:5A}
+  \textbf{Panel A: Eurozone}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig5AL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig5AR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\beta$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+% FIGURE 5 Panel B
+\clearpage\setcounter{figure}{4}
+\begin{sidewaysfigure}\centering
+  \caption{Market Beta ($\beta$) First Stage Rolling Regression Robustness Check (MNCs vs. Non-MNCs)}\label{Fig:5B}
+  \textbf{Panel B: Non-Eurozone Europe}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig5BL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig5BR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\beta$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+% FIGURE 5 Panel C
+\clearpage\setcounter{figure}{4}
+\begin{sidewaysfigure}\centering
+  \caption{Market Beta ($\beta$) First Stage Rolling Regression Robustness Check (MNCs vs. Non-MNCs)}\label{Fig:5C}
+  \textbf{Panel C: Outside of Europe}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig5CL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig5CR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\beta$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+
+% FIGURE 6 Panel A
+\clearpage\setcounter{figure}{5}
+\begin{sidewaysfigure}\centering
+  \caption{Exchange Rate Exposure ($\delta$) First Stage Rolling Regression Robustness Check (MNCs vs. Non-MNCs)}\label{Fig:6A}
+  \textbf{Panel A: Eurozone}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig6ATL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig6ATR.pdf}\\[\baselineskip]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig6ABL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig6ABR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\delta$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+% FIGURE 6 Panel B
+\clearpage\setcounter{figure}{5}
+\begin{sidewaysfigure}\centering
+  \caption{Exchange Rate Exposure ($\delta$) First Stage Rolling Regression Robustness Check (MNCs vs. Non-MNCs)}\label{Fig:6B}
+  \textbf{Panel B: Non-Eurozone Europe}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig6BTL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig6BTR.pdf}\\[\baselineskip]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig6BBL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig6BBR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\delta$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+% FIGURE 6 Panel C
+\clearpage\setcounter{figure}{5}
+\begin{sidewaysfigure}\centering
+  \caption{Exchange Rate Exposure ($\delta$) First Stage Rolling Regression Robustness Check (MNCs vs. Non-MNCs)}\label{Fig:6C}
+  \textbf{Panel C: Outside of Europe}\\[1ex]
+  $R_{ijt}^{s} = \alpha_{ij} + \beta_{ij} R_{jt}^{m} + \delta_{ij} X_{jt} + \varepsilon_{ijt}$\\[1ex]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig6CTL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig6CTR.pdf}\\[\baselineskip]
+  \includegraphics[width=0.475\linewidth]{./figures/Fig6CBL.pdf}\hfill\includegraphics[width=0.475\linewidth]{./figures/Fig6CBR.pdf}
+    \tabfigfoot{This rolling regression figure shows the ending points of window size of 36 months. The estimated $\delta$ at $t$ is based on data from $t-36$ to $t$.}
+\end{sidewaysfigure}
+
+\endgroup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\nocite{*}
+\bibliography{main}
+
+\end{document}
