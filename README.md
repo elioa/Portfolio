@@ -27,4 +27,5 @@ I'm a LaTeX programmer and I help my clients with:
 * `pdflatex`/`xelatex`
 
 I have account on overleaf, GitHub, and BitBucket.
-I work as freelancer on UpWork.com, Freelancer.co.uk, and with direct contancts.
+
+I work as a freelancer on UpWork.com, Freelancer.co.uk, and with direct contacts.
