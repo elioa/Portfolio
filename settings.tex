@@ -23,7 +23,7 @@
     \begin{center}\titlesize
         #1\\
         \vfill
-        \fleuronsize{#2}
+        \textcolor{COLV}{\fleuronsize{#2}}
         \vfill
         \null
     \end{center}\clearpage
@@ -42,7 +42,7 @@
         #1\\
     \end{center}
 }
-\newcommand{\centerfleuron}[1]{\vfill\begin{center}\fleuronsize{#1}\end{center}\vfill\null}
+\newcommand{\centerfleuron}[1]{\vfill\begin{center}\color{COLV}\fleuronsize{#1}\end{center}\vfill\null}
 \newcommand{\collaboration}[2]{%
     \vfill
     \begin{minipage}{0.6\linewidth}\raggedright\Large#1\end{minipage}%
@@ -50,7 +50,7 @@
 }
 \newcommand{\pcollaboration}[1]{{\LARGE #1}\\\strut\\}
 \newcommand{\feedback}[2][\large]{%
-    \begin{minipage}{\linewidth}#1
+    \begin{minipage}{\linewidth}\tt#1
     ``#2''
     \end{minipage}\\[1.5\baselineskip]
 }
