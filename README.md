@@ -15,7 +15,7 @@ I'm a LaTeX programmer and I help my clients with:
 * Help with thesis, master thesis, documents, CV, ...
 * IEEE and other template adaptations
 * Book publishing adaptations
-* Conversion from MSWord (.doc) to LaTeX2ε (.tex)
+* Conversion from MSWord `.doc` to LaTeX2ε `.tex`
 * BibTEX research and coding
 * TikZ graphs, diagrams, flowcharts, and design
 * Template (class) creation
@@ -27,5 +27,4 @@ I'm a LaTeX programmer and I help my clients with:
 * `pdflatex`/`xelatex`
 
 I have account on overleaf, GitHub, and BitBucket.
-
-![My Logo test](/TikZimages/logotest.png)
+I work as freelancer on UpWork.com, Freelancer.co.uk, and with direct contancts.
