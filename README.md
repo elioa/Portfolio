@@ -6,7 +6,7 @@ This is my LaTeX portfolio.
 
 ![My Logo](/TikZimages/logoofficial.png)
 
-Personal web site: badroomtales.me
+Personal web site: http://www.badroomtales.me/
 
 # Type of collaborations
 
@@ -28,4 +28,4 @@ I'm a LaTeX programmer and I help my clients with:
 
 I have account on overleaf, GitHub, and BitBucket.
 
-![My Logo](/TikZimages/logotest.png)
+![My Logo test](/TikZimages/logotest.png)
