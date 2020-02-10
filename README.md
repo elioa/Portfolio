@@ -28,4 +28,4 @@ I'm a LaTeX programmer and I help my clients with:
 
 I have account on overleaf, GitHub, and BitBucket.
 
-I work as a freelancer on UpWork.com, Freelancer.co.uk, and with direct contacts.
+I work as a freelancer on UpWork.com, Freelancer.co.uk, and with direct contacts at elio.farina@gmail.com
