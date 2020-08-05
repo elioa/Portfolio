@@ -1,0 +1,308 @@
+\newcommand{\version}{}
+\newcommand{\lang}{}
+
+
+% COLORI
+\newcommand{\colorecella}{\cellcolor[gray]{.93}}
+\newcommand{\colorecolonnai}{.85}
+\newcommand{\colorecolonnaii}{.98}
+\setlength\arrayrulewidth{1.5pt}\arrayrulecolor[gray]{.95}
+
+% TITOLO
+\newcommand{\titolo}[2]{
+\renewcommand{\lang}{#1}
+\renewcommand{\version}{#2}
+\scalebox{3.2}{\textsf{{Curriculum Vitae}}}\\[-8pt]
+\includegraphics[height=2pt,width=\textwidth+1cm]{./immagini/banda.pdf}
+\ifthenelse{\equal{\lang}{ITA}}{%
+\ifthenelse{\equal{\version}{life}}{\textsf{Completo}}{\textsf{R\'esum\'e}}
+}%
+{%
+\ifthenelse{\equal{\version}{life}}{\textsf{Complete}}{\textsf{R\'esum\'e}
+}%
+}%
+}
+
+
+% TITOLI ITA/ENG
+\newcommand{\titolosezione}{}
+
+
+% titoli sezioni
+\newcommand{\sezione}[3]{%
+\ifthenelse{\equal{\lang}{ITA}}{\renewcommand{\titolosezione}{#1}}{\renewcommand{\titolosezione}{#2}}
+
+%\hypertarget{\titolovalii}{}%
+\pdfbookmark[0]{\titolosezione}{\titolosezione}%
+\begin{flushright}
+\scalebox{2.3}{\textsf{\phantom{p} \titolosezione}}%\label{#5}
+\end{flushright}
+
+\vspace{-1.4em}
+\reflectbox{\includegraphics[height=2pt,width=\textwidth]{./immagini/banda.pdf}}\\
+
+\input #3
+}
+
+% titolo paragrafo
+\newcommand{\paragrafo}[2]{%
+\pdfbookmark[1]{#1}{#1}%
+\null\hfill{\textsf{\large\phantom{p} #2}}\\%
+
+}
+
+
+
+% TABELLA BASE
+\newcolumntype{L}{>{\columncolor[gray]{\colorecolonnai}\raggedleft\arraybackslash}p{153pt}}
+\newcolumntype{R}{>{\columncolor[gray]{\colorecolonnaii}}X}
+
+% tabella
+\newcommand{\initab}[1]{%
+\begin{tabularx}{\textwidth}{|L|R|}
+\hline
+#1
+\hline
+\end{tabularx}%
+}
+
+% colonne base
+\newcommand{\due}[2]{
+\cellcolor[gray]{\colorecolonnai}{\small #1}	& #2
+}
+
+\newcommand{\duelong}[2]{
+\cellcolor[gray]{\colorecolonnai}{\small #1}	& \parbox[t]{\textwidth-170pt}{#2\\[-0.85em]}
+}
+
+% tabelle speciali
+% LAVORO
+\newcommand{\lavoro}[5]{%
+\pdfbookmark[1]{#1}{#1}%
+\initab{%
+\due{\Periododilavoro}{\small #2}\\
+\due{\Nomeeindirizzodeldatoredilavoro}{\colorecella #3}\\
+\due{\Tipodiimpiego}{\em #4}\\
+\due{\Principalimansionieresponsabilita}{\small #5}\\
+}%
+}
+
+% LAVORO FISIO
+\newcommand{\lavorofisio}[5]{%
+\pdfbookmark[1]{#1}{#1}%
+\initab{%
+\due{\Periododilavoro}{\small #2}\\
+\due{\Nomeeindirizzodeldatoredilavoro}{\colorecella #3}\\
+\due{\Tipodiimpiego}{\em #4}\\
+\due{\Tipologiadipazienti}{\small #5}\\
+}%
+}
+
+% DOCENZA
+\newcommand{\docenza}[5]{%
+\pdfbookmark[1]{#1}{#1}%
+\initab{%
+\due{\Periododelcorso}{\small #2}\\
+\due{\Organizzatoreesede}{\colorecella #3}\\
+\due{\Target}{\em #4}\\
+\due{\Contenutidelcorso}{\small #5}\\
+}%
+}
+
+% SCUOLA
+\newcommand{\scuola}[3]{%
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\Periododistudi}{\small #2}\\
+\due{\Nomeetipodiistitutodiistruzione}{\colorecella #3}\\
+}%
+}
+
+% DIPLOMA
+\newcommand{\diploma}[4]{%
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\Anno}{\small #2}\\
+\due{\Nomeetipodiistitutodiistruzione}{\colorecella #3}\\
+\due{\Qualifica}{\em #4}\\
+}%
+}
+
+
+% UNIVERSITÀ PADOVA
+\newcommand{\universitaPD}[5]{
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\Periododistudi}{\small #2}\\
+\duelong{\Nomeetipodiistitutodiistruzione}{\colorecella #3}\\
+\due{\Materie}{\small #4}\\
+\due{\Qualifica}{\small\em #5}\\
+}%
+}
+
+% UNIVERSITÀ MILANO BICOCCA
+\newcommand{\universitaMIB}[7]{%
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\Periododistudi}{\small #2}\\
+\duelong{\Nomeetipodiistitutodiistruzione}{\colorecella #3}\\
+\due{\Materie}{\small #4}\\
+\due{\Qualifica}{\em #5}\\
+\due{\Voto}{#6}\\
+\due{\Titolotesi}{\small\em #7}\\
+}%
+}
+
+% ESAMI
+\newcommand{\esameastro}[3]{%
+
+\pdfbookmark[1]{#1}{#1}%
+\initab{%
+\due{\small #3}{{\em #1}. \hfill #2$^{/30}$}\\
+}%
+}
+
+\newcommand{\esamefisio}[4]{%
+
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\small #3}{{\em #1}, {\small #2~{\sc cfu}}. \hfill #4$^{/30}$}\\
+}%
+}
+
+\newcommand{\esamefisiocl}[4]{%
+
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\small #3}{{\em #1}, {\small #2~{\sc cfu}}. \hfill #4$^{/30}$ \cumlaude}\\
+}%
+}
+
+% TIROCINIO
+\newcommand{\tirocinio}[5]{%
+
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\small \Periododitirocinio}{\small #2}\\
+\duelong{\small \Nomedellistituzione}{\colorecella #3}\\
+\due{\small \Principalipatologietrattate}{\small #4}\\
+\due{\small \Principalimansioni}{\small #5}\\
+}%
+}
+
+% CORSI OPZIONALI
+\newcommand{\corsiopz}[4]{%
+
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\small \Titolodelcorsoopzionale}{\colorecella \em #2} \\
+\due{\small \Docente}{\small #3}\\
+\due{\small \Tipodicorsoecontenuti}{\small #4}\\
+}%
+}
+
+% CORSI EXTRA
+\newcommand{\corsiextra}[5]{%
+
+\pdfbookmark[1]{#1}{#1}%
+\initab{%
+\due{\small \Periododelcorso}{\small #2}\\
+\due{\small \Titolodelcorso}{\colorecella\em #3} \\
+\due{\small \Docente}{\small #4}\\
+\due{\small \Contenutidelcorso}{\small #5}\\
+}%
+}
+
+% CORSI DI AGGIORNAMENTO PROFESSIONALE FISIO
+\newcommand{\aggiornamento}[7]{%
+
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\small \Periodooreluogodelcorso}{\small #2}\\
+\due{\small \Provideroorganizzatore}{\small #3}\\
+\due{\small \Titolodelcorso}{\colorecella \em #4} \\
+\due{\small \Docente}{\small #5}\\
+\due{\small \Contenutidelcorso}{\small #6}\\
+\due{\small \ECM}{\small #7}\\
+}%
+}
+
+% CORSI DI MUSICA
+% \corsiextra
+
+% CONOSCENZE INFROMATICHE
+\newcommand{\informatica}[3]{%
+
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\small #2}{\small #3}\\
+}%
+}
+
+% LINGUE
+% lingua base
+\newcommand{\lingua}[3]{%
+
+\pdfbookmark[1]{#1}{#1}%
+\initab{%
+\due{\small #2}{\small #3}\\
+}%
+}
+
+% certificati ed esami di lingua
+\newcommand{\linguacert}[3]{%
+
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\small #2}{\small #3}\\
+}%
+}
+
+% CAPACITÀ E COMPETENZE
+\newcommand{\capacita}[3]{%
+
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{\small #2}{\small #3}\\
+}%
+}
+
+% PALLAVOLO
+\newcommand{\pallatit}[3]{%
+
+\pdfbookmark[2]{#1}{#1}%
+\initab{%
+\due{#2}{\colorecella #3}\\
+}%
+}
+
+\newcommand{\palla}[3]{%
+
+\pdfbookmark[3]{#1}{#1}%
+\initab{%
+\due{\small #2}{\small #3}\\
+}%
+}
+
+% MUSICA
+\newcommand{\musica}[5]{%
+
+\pdfbookmark[1]{#1}{#1}%
+\initab{%
+\due{\small \Periodo}{\small #2}\\
+\due{\small \Nomedelgruppo}{\colorecella  { #3}} \\
+\due{\small \Strumento}{\small #4}\\
+\due{\small \Musica}{\small #5}\\
+}%
+}
+
+% ALTRI COMANDI
+\newcommand{\copi}{\textcopyright}
+\newcommand{\reg}{$^\textrm{\footnotesize\textregistered}$}
+\newcommand{\grado}{$^\circ$}
+\newcommand{\capo}[1]{\multicolumn{1}{r}{#1}}
+
+\newcommand{\stella}{{\footnotesize \FiveStar}}
+
+\newcommand{\tipologia}{}
+\newcommand{\tipo}[1]{\textsf{#1}\renewcommand{\tipologia}{#1}}

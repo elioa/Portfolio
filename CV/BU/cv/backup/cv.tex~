@@ -1,0 +1,228 @@
+\documentclass[10pt,a4paper]{article}
+
+% pacchetti usati
+\usepackage{hhline}
+\usepackage{calc}
+\usepackage{fancyhdr}
+\usepackage{rotating}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{hyperref}
+
+
+% misure pagina Layout
+\setlength{\voffset}{-115pt}
+\addtolength{\hoffset}{-100pt}
+\setlength{\textheight}{780pt}
+\setlength{\textwidth}{550pt}
+\setlength{\headheight}{13.6pt}
+\setlength{\parindent}{0pt}
+
+% nuovi comandi
+\newcommand{\copi}{$^\textrm{\tiny\textcopyright}$}
+\newcommand{\reg}{$^\textrm{\tiny\textregistered}$}
+\newcommand{\grado}{$^\circ$}
+\newcommand{\titoloi}{\hspace{-30pt}\colorbox{mygray}{\bf\large \phantom{xXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}}\\
+
+\vspace{-21pt}}
+\newcommand{\titoloii}{\hspace{-30pt}\colorbox{mygrayi}{\scalebox{5.5}{\phantom{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}}}\\
+
+\vspace{-44pt}}
+\newcommand{\titolo}[2]{\pdfbookmark[1]{#1}{#2}\begin{tabular}{r|p{370pt}p{50pt}}
+\multicolumn{2}{l}{{\bf\large #1}}\\[4pt]}
+
+\newcommand{\titoloo}[2]{\pdfbookmark[1]{#1}{#2}\begin{tabular}{p{150pt}|p{370pt}p{50pt}}
+\multicolumn{2}{l}{{\bf\large #1}}\\[4pt]}
+
+
+\newcommand{\capo}[1]{\multicolumn{1}{r}{#1}}
+
+\definecolor{mygray}{gray}{0.8}
+\definecolor{mygrayi}{gray}{0.7}
+
+\hypersetup{
+pdfpagemode=UseOutlines,
+pdftitle={Curriculum Vitae - Elio Arturo Farina},
+pdfauthor={Elio Arturo Farina},
+pdfsubject={Curriculm Vitae},
+pdfcreator={},
+pdfproducer={latesi di Elio A. Farina},
+pdfkeywords={Informazioni personali, esperienze lavorative, istruzione, esperienze di tirocinio, capacità e competente speciali},
+pdfstartview=Fit,
+bookmarksopen=true,
+%pageanchor=true,
+%linktocpage=false,
+colorlinks=true,
+%breaklinks=true,
+linkcolor=black,
+pdfhighlight=/N,
+pdfpagelayout=OneColumn,
+%anchorcolor color black Color for anchor text.
+%citecolor color green Color for bibliographical citations in text.
+%filecolor color magenta Color for URLs which open local files.
+%menucolor color red Color for Acrobat menu items.
+%bookmarkstype=toc,
+%plainpages=false,
+}
+
+ \renewcommand{\thepage}{\arabic{page}}
+
+%interlinea
+%\linespread{0.87}
+\typeout{__*******____*_____________*}
+\typeout{_*___________*_____________*}
+\typeout{*____________*_____________*}
+\typeout{*____________*_____________*}
+\typeout{*_____________*___________*_}
+\typeout{Curriculum Vitae Elio Farina}
+\typeout{*_______________*_______*___}
+\typeout{*________________*_____*____}
+\typeout{*_________________*___*_____}
+\typeout{_*_________________*_*______}
+\typeout{__*******___________*_______}
+
+%stile di pagina
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\hspace{21pt}{\footnotesize Curriculum Vitae -- Elio A. Farina}}
+\fancyfoot[R]{{\footnotesize pagina \thepage\ di \pageref{ultimapagina}}\hspace{-4pt}}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+\titoloii
+\begin{center}
+\pdfbookmark[0]{Curriculum Vitae - Elio A. Farina}{Curriculum Vitae - Elio A. Farina}{\sc\Huge -- Curriculum Vitae {\em Europeo} --}
+\end{center}
+\vspace{20pt}
+
+\titoloi
+\titolo{Informazioni Personali}{Informazioni Personali}
+\cline{1-1}
+\input personal.tex
+\end{tabular}
+
+\vspace{15pt}
+
+\titoloi
+\titolo{Esperienze Lavorative}{Esperienze Lavorative}
+\cline{1-1}
+\input lavoro.tex
+\end{tabular}
+
+\newpage
+
+\titoloi
+\titolo{Istruzione e Formazione}{Istruzione e Formazione}
+\cline{1-1}
+\input scuola.tex
+\end{tabular}
+\vspace{15pt}
+
+\titoloi
+\titolo{Corsi opzionali seguiti durante il periodo universitario}{Corsi opzionali seguiti durante il periodo universitario}
+\cline{1-1}
+\input scuola3.tex
+\end{tabular}
+\vspace{15pt}
+
+\titoloi
+\titolo{Tirocinii formativi}{}
+\cline{1-1}
+\input scuola2.tex
+\end{tabular}
+\newpage
+\phantom{xxx}
+
+\vspace{5pt}
+
+\titoloi
+\titolo{Capacit\`a e Competenze Linguistiche}{Capacità e Competenze Linguistiche}
+\cline{1-1}
+Prima Lingua		&italiano.\\
+\cline{2-2}
+\multicolumn{1}{c}{}\\[-7pt]
+\cline{1-1}
+Seconda Lingua		&inglese;\\
+{\small capacit\`a di lettura}		&buona;\\
+{\small capacit\`a di scrittura}		&buona;\\
+\hspace{35pt}{\small capacit\`a di espressione orale}	&buona.\\
+\cline{2-2}
+\end{tabular}
+
+\vspace{15pt}
+
+\titoloi
+\titoloo{Capacit\`a e Competenze Informatiche}{Capacità e Competenze Informatiche}
+\cline{1-1}
+\input info.tex
+\cline{2-2}
+\end{tabular}
+
+\vspace{15pt}
+
+\titoloi
+\titoloo{Capacit\`a e Competenze Relazionali}{Capacità e Competenze Relazionali}
+\cline{1-1}
+\input capacita1.tex
+\cline{2-2}
+\end{tabular}
+
+\vspace{15pt}
+
+\titoloi
+\titoloo{Capacit\`a e Competenze Organizzative}{Capacità e Competenze Organizzative}
+\cline{1-1}
+\input capacita2.tex
+\cline{2-2}
+\end{tabular}
+
+\vspace{15pt}
+
+
+
+\titoloi
+\titoloo{Capacit\`a e Competenze Artistiche}{Capacità e Competenze Artistiche}
+\cline{1-1}
+\input capacita3.tex
+\cline{2-2}
+\end{tabular}
+
+\vspace{15pt}
+
+\titoloi
+\titoloo{Altre Capacit\`a e Competenze}{Altre Capacità e Competenze}
+\cline{1-1}
+\input capacita4.tex
+\cline{2-2}
+\end{tabular}
+
+\vspace{15pt}
+
+\titoloi
+\titoloo{Patente}{Patente}
+\cline{1-1}
+& Tipo B, conseguita il 7 novembre 1996.\\
+\cline{2-2}
+\end{tabular}
+
+\vspace{15pt}
+
+\begin{tabular}{p{150pt}p{370pt}}
+&{\footnotesize Il sottoscritto \`e a conoscenza che, ai sensi dell'art.~26 della legge 15/68, le dichiarazioni mendaci, la falsit\`a negli atti e l'uso di atti falsi sono puniti ai sensi del codice penale e delle leggi speciali. Inoltre, il sottoscritto autorizza al trattamento dei dati personali, secondo quanto previsto dal Dlgs~30.06.03,~n.196.}\\[5pt]
+
+
+
+%\multicolumn{2}{r}{Lissone, 1 settembre 2005}\\[0pt]
+%\multicolumn{2}{r}{\includegraphics[width=250pt]{firma.jpg}}\\[-20pt]
+\multicolumn{2}{r}{Lissone, 1 settembre 2005}\\[30pt]
+\multicolumn{2}{r}{\rule{250pt}{0.5pt}}\\[-4pt]
+\multicolumn{2}{r}{\small{Elio Arturo Farina}}
+\end{tabular}
+
+
+\label{ultimapagina}
+\end{document}

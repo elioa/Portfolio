@@ -1,0 +1,216 @@
+\documentclass{article}
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\RequirePackage[nomessages]{fp}
+% Dimensioni derivate
+\newcommand{\dimensioni}{%
+% Dimensioni pagina
+\FPeval{PageHeightiii}{\PageHeight/3}
+\FPeval{PageHeightii}{\PageHeight-\PageHeight/3}
+\FPeval{PageWidthiii}{\PageWidth/3}
+\FPeval{PageWidthii}{\PageWidth-\PageWidth/3}
+\FPeval{PageWidthAP}{round(\PageWidth:2)}
+\FPeval{PageHeightAP}{round(\PageHeight:2)}
+% Rientro Lettrine
+\FPeval{Lettrine}{1/3}
+% Indent
+\FPeval{ParIndent}{\BaseLineSkip}
+\FPeval{ParIndentAP}{round(\ParIndent:2)}
+% Margini posizioni relative al bordo vicino
+\FPeval{LeftMargin}{round(\xLeftMargin:2)}
+\FPeval{RightMargin}{round(\PageWidth-\xRightMargin:2)}
+\FPeval{BottomMargin}{round(\yBottomMargin:2)}
+\FPeval{TopMargin}{round(\PageHeight-\yTopMargin:2)}
+% Altezza e larghezza del testo
+\FPeval{xyTextWidth}{\PageWidth-\LeftMargin-\RightMargin}
+\FPeval{xyTextHeight}{\PageHeight-\BottomMargin-\TopMargin}
+\FPeval{TextWidth}{round(\xyTextWidth:2)}
+\FPeval{TextHeight}{round(\xyTextHeight:2)}
+\FPeval{TextHeightiii}{\TextHeight/3}
+\FPeval{TextHeightii}{\TextHeight-\TextHeight/3}
+\FPeval{TextWidthiii}{\TextWidth/3}
+\FPeval{TextWidthii}{\TextWidth-\TextWidth/3}
+% Separazione della pagina
+\FPeval{yFootSkip}{\BottomMargin/(3/2)}
+\FPeval{FootSkip}{round(\BottomMargin-\yFootSkip:2)}
+% Dimensioni dei font
+\FPeval{FontSizePage}{\FontSize*2/3}
+\FPeval{FontSizeTitle}{\FontSize*5/3}
+\FPeval{FontSizeAuthor}{\FontSize*4/3}
+\FPeval{BaseLineTitle}{\FontSizeTitle*1.2}
+\FPeval{FontSizeAP}{round(\FontSize:2)}
+\FPeval{FontSizePageAP}{round(\FontSizePage:2)}
+\FPeval{FontSizeTitleAP}{round(\FontSizeTitle:2)}
+\FPeval{FontSizeAuthorAP}{round(\FontSizeAuthor:2)}
+\FPeval{BaseLineSkipAP}{round(\BaseLineSkip:2)}
+\FPeval{BaseLineTitleAP}{round(\BaseLineTitle:2)}
+% Titolo
+\FPeval{TitoloWidth}{\PageWidth-\LeftMargin*2}
+\FPeval{xTitolo}{\LeftMargin}
+\FPeval{yTitolo}{\PageHeight/9}
+\FPeval{xLogo}{\LeftMargin}
+\FPeval{yLogo}{\PageHeight*8/9-\TextWidth*0.16180/2}
+% Crediti
+\FPeval{xCrediti}{\PageWidthiii}
+\FPeval{CreditiWidth}{\PageWidthii-\LeftMargin}
+% Immagine
+\FPeval{yImmagine}{\PageHeight*3/9}
+% Separazione della virgola finale
+\FPeval{BaseLineSkipV}{5*\BaseLineSkip}
+}
+
+\newcommand{\dimePA}{%
+\FPeval{PageWidth}{210}%
+\FPeval{PageHeight}{297}%
+\FProot\solution{385}{2}%
+\FPeval{xLeftMargin}{1242150/14701-44100/14701*\solution}%
+\FPeval{xRightMargin}{1845060/14701+44100/14701*\solution}%
+\FPeval{yBottomMargin}{1756755/14701-10-62370/14701*\solution}%
+\FPeval{yTopMargin}{15+2609442/14701+62370/14701*\solution}%
+\FPeval{FontSize}{15}%
+\FPeval{BaseLineSkip}{18.35}%
+\dimensioni}
+
+\dimePA
+\geometry{paperwidth=\PageWidth mm,paperheight=\PageHeight mm,left=\LeftMargin mm,right=\RightMargin mm,top=\TopMargin mm,bottom=\BottomMargin mm,footskip=\FootSkip mm}
+\setlength{\parindent}{0pt}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{calc}
+
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+\usepackage{ebgaramond-maths}
+\usepackage[T1]{fontenc}
+\usepackage{anyfontsize}
+\usepackage{changepage}
+
+\newcommand{\titolo}[1]{\bgroup\rule{\linewidth}{1pt}\\[-14pt]
+\null\hfill\fontsize{10pt}{12pt}\sc\selectfont\strut#1\\[7pt]\egroup}
+
+\newcommand{\lavorofisio}[5]{%
+{\fontsize{14pt}{17pt}\selectfont\strut#1}\hfill\strut#2\\[-7pt]
+\begin{adjustwidth}{28pt}{28pt}
+\fontsize{10pt}{12pt}\selectfont\strut\textit{#3}\\[2pt]
+\fontsize{10pt}{12pt}\selectfont\strut#4\\[10pt]
+\end{adjustwidth}}
+
+
+\newcommand{\docenza}[5]{%
+{\fontsize{14pt}{17pt}\selectfont\strut#1}\hfill\strut#2\\[-7pt]
+\begin{adjustwidth}{28pt}{0pt}
+\fontsize{10pt}{12pt}\selectfont\strut\textit{#3}\\
+\end{adjustwidth}
+\vspace{-3.5pt}
+\begin{adjustwidth}{-21pt}{0pt}
+\begin{tabular}{@{}r@{\hspace{7pt}}p{\linewidth-56pt}}
+\fontsize{10pt}{12pt}\selectfont\strut Target: & #4\\
+\fontsize{10pt}{12pt}\selectfont\strut Contenuti: &#5\\[7pt]
+\end{tabular}
+\end{adjustwidth}
+}
+
+\begin{document}\raggedright
+%\tikz[remember picture,overlay]{
+%\draw (current page.north west) -- (current page.south east);
+%\draw (current page.north east) -- (current page.south west);
+%\draw ([yshift={0.5*\PageHeight mm-0.5*\PageWidth mm}]current page.center) circle (0.5*\PageWidth mm);
+%\draw ([yshift={-0.5*\PageHeight mm+0.5*\PageWidth mm}]current page.center) circle (0.5*\PageWidth mm);
+%}
+\bgroup{\fontsize{20pt}{20pt}\selectfont
+{\sc Elio A. Farina}\hfill \textit{R\'esum\'e}\\
+\fontsize{10pt}{12pt}\sc\selectfont
+44 Collinward Gardens\\
+Newtownabbey, Co Antrim BT36 6DS\\
+United Kingdom}\\
+elio.farina@gmail.com~$\cdot$~badroomtales.com
+\egroup
+
+\vfill
+\titolo{Occupazione attuale}
+\lavorofisio{{CCO} --- Chief Content Officier}{Da dicembre 2015 ad oggi}{UC~Academy, Bree~29A2 3074 BB, Rotterdam, The Netherlands}{Supervisione, editing e gestione dei contenuti delle \textit{Study guides} per i corsi e codifica in linguaggi \LaTeX\ e~{\sc Html}.}{}
+
+\lavorofisio{Freelancer}{Da maggio 2014 ad oggi}{Attivit\`a libero professionale di codifica in linguaggio \LaTeX.}{Codifica, conversione, consulenza e assistenza per la pubblicazione di report aziendali, pubblicazione in case editrici e riviste scientifiche, pubblicazioni personali, nonch\'e elaborazione contenuti e creazione di classi, pacchetti e template in linguaggio \LaTeX.}{}
+
+\vfill
+\titolo{Esperienze lavorative in fisioterapia}
+\lavorofisio{Libero professionista}{Da dicembre 2009 ad aprile 2014}{Assistenza domiciliare privata.}{Attivit\`a libero professionale come fisioterapista.}{pazienti privati.}
+
+\lavorofisio{Abano S.C.S. PrivatAssistenza --- ADI}{Da dicembre 2009 ad aprile 2014}{Abano {scs} ---  Consorzio PrivatAssistenza, via Ramazzotti, 22/24, Monza.}{Fisioterapista in regime libero professionale per {\sc Adi}.}{Varie patologie che necessitano di assistenza domiciliare tramite ASL o privatamente.}
+
+\lavorofisio{Kcs --- Il Parco}{Dall'11 novembre 2013 ad aprile 2014}{{KCS} ---  Caregiver, Cooperativa Sociale, via Manzoni, 7, Bergamo, presso la {R.S.A.} ``Il Parco'', viale Garibaldi, 37, Carate Brianza ({MB}).}{Fisioterapista in sostituzione malattia per {\sc R.s.a.}; fisioterapia e ginnastica di gruppo ai pazienti ricoverati nella struttura.}{anziani.}
+
+\lavorofisio{CDI Stefania Invernizzi}{Dal 9 luglio 2012 al 14 febbraio 2013}{ital enferm sas, via Papa Giovanni XXIII, 16, 20047, Brugherio ({MI}), presso il Centro Diurno Integrato ``Stefania Invernizzi'', via Mantova, 8, Muggi\`o~({MB)}.}{Fisioterapista in regime libero professionale per il {\sc C.d.i.}; fisioterapia e ginnastica di gruppo agli ospiti della struttura.}{anziani.}
+
+\lavorofisio{CDI Vodia Cremoncini}{Dal 22 maggio al 20 giugno 2012 e dal 6 al 24 agosto}{ital enferm sas, via Papa Giovanni XXIII, 16, 20047, Brugherio ({MI}), presso il Centro Diurno Integrato ``Vodia Cremoncini'', via Saponaro, 23, Milano.}{Sostituzione per aspettativa; fisioterapista in regime libero professionale per il {\sc C.d.i.}; fisioterapia e ginnastica di gruppo agli ospiti della struttura.}{anziani.}
+
+\lavorofisio{RSA Martinelli --- ADI}{Dal 17 marzo 2009 al 31 dicembre 2011}{Fondazione Ricovero Martinelli {onlus}, via Laura Vicu\~na, 2, Cinisello Balsamo~({MI}).}{Fisioterapista in regime libero professionale per {\sc R.s.a.} e {\sc Adi}; fisioterapia e ginnastica di gruppo ai pazienti ricoverati nella struttura e assistenza domiciliare sul territorio.}{anziani.}
+
+
+\clearpage
+\titolo{Attivit\`a di docenza}
+\docenza{Corso ASA Vedano II}{29 maggio 2013}{Abano {scs} ---  Consorzio PrivatAssistenza, Sala Consigliare del comune di Vedano al Lambro.}{Ausiliario socio assistenziale e assistenti familiari.}{Mobilizzazione paziente allettato e salvaguardia salute dell'operatore.}
+
+\docenza{Corso assistenti familiari Milano}{Da giugno a ottobre 2012}{Studio Imagines, via Guerzoni, 15, Milano.}{Assistenti familiari.}{Fisioterapia e riabilitazione, posture, ausili, trasferimenti, sicurezza.}
+
+\docenza{Corso assistenti familiari Cinisello II}{Ottobre 2012}{Acli Service, via Marconi, 48, Cinisello Balsamo.}{Assistenti familiari.}{Fisioterapia e riabilitazione, posture, ausili, trasferimenti, sicurezza.}
+
+\docenza{Corso ASA Vedano I}{10 maggio 2012}{Abano {scs} ---  Consorzio PrivatAssistenza, Sala Consigliare del comune di Vedano al Lambro.}{Ausiliario socio assistenziale e assistenti familiari.}{Posture.}
+
+\docenza{Corso assistenti familiari II livello Cinisello}{Da marzo a giugno 2012}{Acli Service, via Marconi, 48, Cinisello Balsamo.}{Assistenti familiari II livello per assistenza a utenti con malattia di Alzheimer o {\sc sla}.}{Posture, ausili, mobilizzazioni, esercizi per il rachide.}
+
+\docenza{Corso assistenti familiari Cinisello}{Da febbraio a marzo 2012}{Acli Service, via Marconi, 48, Cinisello Balsamo.}{Assistenti familiari.}{Fisioterapia e riabilitazione, posture, ausili, trasferimenti, sicurezza.}
+
+\newcommand{\paragrafo}[1]{{\fontsize{10pt}{12pt}\selectfont#1}\\[7pt]}
+
+\newcommand{\diploma}[4]{{\fontsize{14pt}{17pt}\selectfont#1}\hfill#2\\
+\begin{adjustwidth}{28pt}{28pt}
+\it #3\\
+\end{adjustwidth}}
+
+\newcommand{\universitaPD}[5]{#1\hfill#2\\#3\\#4\\ #5}
+
+\newcommand{\universitaMIB}[7]{{\fontsize{14pt}{17pt}\selectfont#1}\hfill#2\\
+\begin{adjustwidth}{28pt}{28pt}
+3: #3\\
+4: #4\\
+5: #5\\
+6: #6\\
+7: #7
+\end{adjustwidth}}
+
+
+\newcommand{\universita}[4]{{\fontsize{14pt}{17pt}\selectfont#1}\hfill#2\\
+\begin{adjustwidth}{28pt}{28pt}
+\textit{#3}\\
+#4\\[14pt]
+\end{adjustwidth}}
+
+\vfill
+\titolo{Istruzione}
+
+%\paragrafo{Scuola superiore}
+%\diploma{Diploma di maturit\`a scientifica}{1999}{Liceo Scientifico Statale {\em ``Paolo Frisi''} di Monza.}{diploma di maturit\`a scientifica.}
+
+%\vspace{21pt}
+%\paragrafo{Universit\`a}
+
+%\universita{Astronomia}{Da ottobre 1999 ad agosto 2004}{Universit\`a degli Studi di Padova, Facolt\`a di Scienze {\sc mm. ff. nn.}, Dipartimento di Astronomia,\\ {Corso di Laurea in Astronomia} Vecchio Ordinamento.}{Ho frequentato tutti i corsi dei quattro anni del Vecchio Ordinamento del Corso di Laurea in Astronomia e superato con profitto gli esami del primo biennio.}
+
+
+\universita{Fisioterapia}{Da ottobre 2006 a novembre 2009}%
+{Universit\`a degli Studi di Milano~--~Bicocca, Facolt\`a di Medicina,\\ Corso di Laurea in Fisioterapia abilitante alla professione di Fisioterapista.}%
+{Dottore in Fisioterapia, laurea conseguita l'11 novembre 2009\\ con votazione centodieci/centodecimi~110$^{/110}$.\\ Titolo ``\textit{Screening su soggetti in et\`a evolutiva: studio preliminare}''.}
+
+\vfill
+\titolo{Trattamento dei dati personali}
+Il sottoscritto autorizza al trattamento dei dati personali secondo quanto previsto dal D.lgs.~30.06.03, n.~196.
+
+\vfill
+\null\hfill Newtownabbey, \today\\[-7pt]
+\null\hfill\begin{minipage}{0.5\linewidth}\centering
+\resizebox{0.8\linewidth}{!}{\input{firman.tex}}\\[-16pt]
+\rule{\linewidth}{0.5pt}
+\end{minipage}
+
+\end{document}

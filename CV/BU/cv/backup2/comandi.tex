@@ -1,0 +1,152 @@
+\newcommand{\colorecella}{\cellcolor[gray]{.93}}
+\newcommand{\colorecolonnai}{.85}
+\newcommand{\colorecolonnaii}{.98}
+\setlength\arrayrulewidth{1.5pt}\arrayrulecolor[gray]{.95}
+
+\newcommand{\titolo}[3]{%
+\hypertarget{#3}{}
+\pdfbookmark[0]{#3}{#3}%\begin{center}
+\reflectbox{\includegraphics[height=2pt,width=\textwidth]{banda.pdf}}\\
+
+\vspace{-44pt}
+\begin{flushright}
+\scalebox{2.3}{\textsf{\phantom{p} #1}}\label{#2}
+\end{flushright}
+
+\vspace{-2pt}
+\input #2
+%\end{center}
+}
+
+\newcommand{\initab}{\begin{tabularx}{\textwidth}{|>{\columncolor[gray]{\colorecolonnai}}p{153pt}|>{\columncolor[gray]{\colorecolonnaii}}X|}
+\cellcolor[gray]{1}&\cellcolor[gray]{1}\\[-13pt]
+}
+
+\newcommand{\initabtit}[1]{\begin{tabularx}{\textwidth}{|>{\columncolor[gray]{\colorecolonnai}}p{153pt}|>{\columncolor[gray]{\colorecolonnaii}}X|}
+\cellcolor[gray]{1}&\cellcolor[gray]{1}\\[-13pt]
+\multicolumn{2}{>{\columncolor[gray]{1}}r}{\textsf{\large #1}}
+}
+
+
+
+\newcommand{\due}[2]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small #1}	& #2
+}
+
+\newcommand{\duevuo}[1]{
+& #1
+}
+
+\newcommand{\duecol}[2]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small #1}	& \colorecella #2
+}
+
+\newcommand{\scuola}[3]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\pdfbookmark[1]{#3}{#3}\small #1}	& \colorecella #2
+}
+
+\newcommand{\lavoro}[5]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\pdfbookmark[1]{#5}{#5}\small Periodo di lavoro}	&  {\small #1}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Nome e indirizzo del datore di lavoro}	& \colorecella #2\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Tipo di impiego}				& {\em #3}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Principali mansioni e responsabilit\`a}	& {\small #4}\\
+}
+
+\newcommand{\lavorofisio}[5]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\pdfbookmark[1]{#5}{#5}\small Periodo di lavoro}	&  {\small #1}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Nome e indirizzo del datore di lavoro}	& \colorecella #2\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Tipologia di impiego}				& {\em #3}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Tipologia di pazienti}	& {\small #4}\\
+}
+
+\newcommand{\docenza}[5]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\pdfbookmark[1]{#5}{#5}\small Periodo del corso}	&  {\small #1}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Organizzatore e sede}	& \colorecella #2\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Target}				& {\em #3}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Contenuti del corso}	& {\small #4}\\
+}
+
+
+\newcommand{\tirocinio}[4]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Periodo di tirocinio} 	& {\small #1}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Nome dell'istituzione} 	& \colorecella #2 \\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Principali patologie trattate}& {\small #3}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Principali mansioni}		& {\small #4}\\
+}
+
+\newcommand{\corsiopz}[3]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Titolo del corso opzionale} &\colorecella  {\em #1} \\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Docente}		& {\small #2}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Tipo di corso e contenuti}		& {\small #3}\\
+}
+
+\newcommand{\corsiextra}[4]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Periodo}		& {\small #1}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Titolo del corso} 	&\colorecella  {\em #2} \\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Docente}		& {\small #3}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Contenuti}		& {\small #4}\\
+}
+
+\newcommand{\aggiornamento}[7]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Periodo, ore, luogo del corso}		& {\small #1}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Provider o organizzatore}		& {\small #2}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Titolo del corso} 	&\colorecella  {\em #3} \\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Docente}		& {\small #4}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Contenuti del corso}		& {\small #5}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small ECM}		& {\small #6}\\
+%\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Certificato rilasciato}		& {\small #6}\\
+}
+
+\newcommand{\esame}[4]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small #3} 	&  {\em #1}, {\small #2{} {\sc cfu}}. \hfill #4$^{/30}$ \\
+}
+
+
+
+
+\newcommand{\esamelode}[4]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small #3} 	&  {\em #1}, {\small #2{} {\sc cfu}}. \hfill #4$^{/30}$ {\em con lode} \\
+}
+
+\newcommand{\esameastro}[3]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small #3} 	&  {\em #1}. \hfill #2$^{/30}$ \\
+}
+
+
+\newcommand{\musica}[4]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Periodo}		& {\small #1}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Nome del gruppo} 	&\colorecella  { #2} \\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Strumento}		& {\small #3}\\
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Musica}		& {\small #4}\\
+}
+
+
+\newcommand{\pallasoc}[1]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Societ\`a}	& {\colorecella  #1}
+}
+
+\newcommand{\pallaruo}[1]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small Ruolo}	& {\small #1}
+}
+
+\newcommand{\palla}[2]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small #1}	& {\small #2}
+}
+
+\newcommand{\pallai}[2]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small #1}	& {\small #2}
+}
+
+\newcommand{\pallaii}[2]{
+\multicolumn{1}{|>{\columncolor[gray]{\colorecolonnai}}r|}{\small #1}	& {\small #2}
+}
+
+
+% nuovi comandi
+\newcommand{\copi}{\textcopyright}
+\newcommand{\reg}{$^\textrm{\footnotesize\textregistered}$}
+\newcommand{\grado}{$^\circ$}
+\newcommand{\capo}[1]{\multicolumn{1}{r}{#1}}
+
+\newcommand{\tipologia}{}
+\newcommand{\tipo}[1]{\textsf{#1}\renewcommand{\tipologia}{#1}}
